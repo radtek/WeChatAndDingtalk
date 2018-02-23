@@ -1,0 +1,82 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <title>微信登录</title>
+    <link rel="stylesheet" href="~/css/animate.css">
+    <link rel="stylesheet" href="~/css/weui.css">
+    <link rel="stylesheet" href="~/css/jq-weui-css.css">
+    <link rel="stylesheet" href="~/css/phone.css">
+    <script type="text/javascript" src="~/scripts/jquery.js"></script>
+    <script type="text/javascript" src="~/scripts/fastclick.js"></script>
+    <script>
+        var PageData = {
+            Code: '@ViewData["Code"]',
+            Email: '@ViewData["Email"]'
+        };
+    </script>
+</head>
+<body>
+    <div class="bound_content">
+        <div class="weui_msg animated bounceLnLeft">
+            <div class="weui_icon_area">
+                @*<i class="weui_icon_success weui_icon_msg italent_img"></i>*@
+                <img width="78" height="74" src="~/images/email_logo.png" />
+            </div>
+            <div class="weui_text_area">
+                <p class="login_zh weui_media_box">即将登录iTalent，请确认是本人操作</p>
+                <p class="weui_msg_desc">登录帐号：<span>@ViewData["Email"]</span></p>
+            </div>
+            <div class="weui_opr_area">
+                <p class="weui_btn_area">
+                    <a href="javascript:;" class="weui_btn weui_btn_primary confirm_login">确认登录</a>
+                    <a href="javascript:;" class="weui_btn weui_btn_default cancel_login">取消</a>
+                </p>
+            </div>
+            <div class="weui_extra_area tz_page use_email_pro" data-index="1">
+                <div class="info_sm">当前账号已绑定微信，如需切换账号请先解除绑定</div>
+                <a href="~/user/info" class="use_info">解除绑定</a>
+            </div>
+        </div>
+    </div>
+    <!-- <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> -->
+    <script type="text/javascript" src="~/scripts/jq-weui.js"></script>
+    <script type="text/javascript">
+		$(function(){
+			//消除ios下click的300毫秒的延迟
+		    FastClick.attach(document.body);
+		    function ajaxFn(data) {
+		        $.ajax({
+		            url: '../QrCode/_Submit?r='+Math.random(),
+		            type: 'post',
+		            data: data
+		        }).done(function () {
+		            WeixinJSBridge.call('closeWindow');
+		        });
+		    }
+		    $('.confirm_login').click(function () {
+		        var data ={};
+		        data.type = 2;
+		        data.code = PageData.Code;
+		        ajaxFn(data);
+		    });
+		    $('.cancel_login').click(function () {
+		        var data = {};
+		        data.type = 3;
+		        data.code = PageData.Code;
+		        ajaxFn(data);
+		    });
+		})
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Beisen.AppConnect.Common", "Beisen.AppConnect.Common", "{F16C56E7-2366-45B3-ABA7-87FBBEAD24D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beisen.AppConnect.Infrastructure", "..\Src\Beisen.AppConnect.Infrastructure\Beisen.AppConnect.Infrastructure.csproj", "{BB2B20FD-8E98-4212-9AE0-3ADAAFEC9F61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beisen.AppConnect.ServiceImp", "..\Src\Beisen.AppConnect.ServiceImp\Beisen.AppConnect.ServiceImp.csproj", "{EED6123B-58CC-4FF3-863E-A41E2F3EE39B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beisen.AppConnect.ServiceInterface", "..\Src\Beisen.AppConnect.ServiceInterface\Beisen.AppConnect.ServiceInterface.csproj", "{B1AB9F8A-A470-4C4D-B9CE-6684BD2E6E03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beisen.AppConnect.Api.Controller", "..\Src\Beisen.AppConnect.Api.Controller\Beisen.AppConnect.Api.Controller.csproj", "{F8C43CB8-33B5-48FD-A990-0DB23991AAC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beisen.AppConnect.WeChatSDK", "..\Src\Beisen.AppConnect.WeChatSDK\Beisen.AppConnect.WeChatSDK.csproj", "{66525EE9-9B42-4E58-97DE-2861232E8E69}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Beisen.AppConnect.Api", "Beisen.AppConnect.Api", "{A3348673-5037-4A07-B9A5-FC1E874B521E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Beisen.AppConnect.SDK", "Beisen.AppConnect.SDK", "{E39F5F63-E4AB-461E-9258-03F8C92BA9F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Beisen.AppConnect.Bussiness", "Beisen.AppConnect.Bussiness", "{CAEDF9EE-39EB-4D08-A3E3-86FFF2A3D699}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beisen.AppConnect.Api.WebSite", "..\Src\Beisen.AppConnect.Api.WebSite\Beisen.AppConnect.Api.WebSite.csproj", "{0B597B32-B8D5-46D4-AE80-68E10ECF8D2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beisen.AppConnect.DingTalkSDK", "..\Src\Beisen.AppConnect.DingTalkSDK\Beisen.AppConnect.DingTalkSDK.csproj", "{A5DF3F3E-D2CA-4CBA-9E44-D7306B472043}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB2B20FD-8E98-4212-9AE0-3ADAAFEC9F61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB2B20FD-8E98-4212-9AE0-3ADAAFEC9F61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB2B20FD-8E98-4212-9AE0-3ADAAFEC9F61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB2B20FD-8E98-4212-9AE0-3ADAAFEC9F61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EED6123B-58CC-4FF3-863E-A41E2F3EE39B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EED6123B-58CC-4FF3-863E-A41E2F3EE39B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EED6123B-58CC-4FF3-863E-A41E2F3EE39B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EED6123B-58CC-4FF3-863E-A41E2F3EE39B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1AB9F8A-A470-4C4D-B9CE-6684BD2E6E03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1AB9F8A-A470-4C4D-B9CE-6684BD2E6E03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1AB9F8A-A470-4C4D-B9CE-6684BD2E6E03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1AB9F8A-A470-4C4D-B9CE-6684BD2E6E03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8C43CB8-33B5-48FD-A990-0DB23991AAC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8C43CB8-33B5-48FD-A990-0DB23991AAC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8C43CB8-33B5-48FD-A990-0DB23991AAC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8C43CB8-33B5-48FD-A990-0DB23991AAC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66525EE9-9B42-4E58-97DE-2861232E8E69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66525EE9-9B42-4E58-97DE-2861232E8E69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66525EE9-9B42-4E58-97DE-2861232E8E69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66525EE9-9B42-4E58-97DE-2861232E8E69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B597B32-B8D5-46D4-AE80-68E10ECF8D2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B597B32-B8D5-46D4-AE80-68E10ECF8D2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B597B32-B8D5-46D4-AE80-68E10ECF8D2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B597B32-B8D5-46D4-AE80-68E10ECF8D2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5DF3F3E-D2CA-4CBA-9E44-D7306B472043}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5DF3F3E-D2CA-4CBA-9E44-D7306B472043}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5DF3F3E-D2CA-4CBA-9E44-D7306B472043}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5DF3F3E-D2CA-4CBA-9E44-D7306B472043}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BB2B20FD-8E98-4212-9AE0-3ADAAFEC9F61} = {F16C56E7-2366-45B3-ABA7-87FBBEAD24D7}
+		{EED6123B-58CC-4FF3-863E-A41E2F3EE39B} = {CAEDF9EE-39EB-4D08-A3E3-86FFF2A3D699}
+		{B1AB9F8A-A470-4C4D-B9CE-6684BD2E6E03} = {CAEDF9EE-39EB-4D08-A3E3-86FFF2A3D699}
+		{F8C43CB8-33B5-48FD-A990-0DB23991AAC0} = {A3348673-5037-4A07-B9A5-FC1E874B521E}
+		{66525EE9-9B42-4E58-97DE-2861232E8E69} = {E39F5F63-E4AB-461E-9258-03F8C92BA9F3}
+		{0B597B32-B8D5-46D4-AE80-68E10ECF8D2C} = {A3348673-5037-4A07-B9A5-FC1E874B521E}
+		{A5DF3F3E-D2CA-4CBA-9E44-D7306B472043} = {E39F5F63-E4AB-461E-9258-03F8C92BA9F3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E5390832-8225-44AE-829B-F960E878E649}
+	EndGlobalSection
+EndGlobal

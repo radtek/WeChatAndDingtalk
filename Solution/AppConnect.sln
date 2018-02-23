@@ -1,0 +1,166 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Beisen.AppConnect.Common", "Beisen.AppConnect.Common", "{F16C56E7-2366-45B3-ABA7-87FBBEAD24D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beisen.AppConnect.Infrastructure", "..\Src\Beisen.AppConnect.Infrastructure\Beisen.AppConnect.Infrastructure.csproj", "{BB2B20FD-8E98-4212-9AE0-3ADAAFEC9F61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beisen.AppConnect.ServiceImp", "..\Src\Beisen.AppConnect.ServiceImp\Beisen.AppConnect.ServiceImp.csproj", "{EED6123B-58CC-4FF3-863E-A41E2F3EE39B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beisen.AppConnect.ServiceInterface", "..\Src\Beisen.AppConnect.ServiceInterface\Beisen.AppConnect.ServiceInterface.csproj", "{B1AB9F8A-A470-4C4D-B9CE-6684BD2E6E03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beisen.AppConnect.Api.Controller", "..\Src\Beisen.AppConnect.Api.Controller\Beisen.AppConnect.Api.Controller.csproj", "{F8C43CB8-33B5-48FD-A990-0DB23991AAC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beisen.AppConnect.Web.WebSite", "..\Src\Beisen.AppConnect.Web.WebSite\Beisen.AppConnect.Web.WebSite.csproj", "{37BC522E-090E-49ED-B946-92DE4CDB5C31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beisen.AppConnect.WeChatSDK", "..\Src\Beisen.AppConnect.WeChatSDK\Beisen.AppConnect.WeChatSDK.csproj", "{66525EE9-9B42-4E58-97DE-2861232E8E69}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Beisen.AppConnect.Test", "Beisen.AppConnect.Test", "{C63D83A1-438F-4303-AE6C-7CB93D046ACA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beisen.AppConnect.ServiceImp.Test", "..\Src\Beisen.AppConnect.ServiceImp.Test\Beisen.AppConnect.ServiceImp.Test.csproj", "{8FFC1242-09E8-44E6-91EF-AB29390E44D0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Beisen.AppConnect.Web", "Beisen.AppConnect.Web", "{EF8082D1-852B-430B-BC8F-993F6E06410F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Beisen.AppConnect.Api", "Beisen.AppConnect.Api", "{A3348673-5037-4A07-B9A5-FC1E874B521E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Beisen.AppConnect.SDK", "Beisen.AppConnect.SDK", "{E39F5F63-E4AB-461E-9258-03F8C92BA9F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Beisen.AppConnect.Bussiness", "Beisen.AppConnect.Bussiness", "{CAEDF9EE-39EB-4D08-A3E3-86FFF2A3D699}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beisen.AppConnect.Api.WebSite", "..\Src\Beisen.AppConnect.Api.WebSite\Beisen.AppConnect.Api.WebSite.csproj", "{0B597B32-B8D5-46D4-AE80-68E10ECF8D2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beisen.AppConnect.DingTalkSDK", "..\Src\Beisen.AppConnect.DingTalkSDK\Beisen.AppConnect.DingTalkSDK.csproj", "{A5DF3F3E-D2CA-4CBA-9E44-D7306B472043}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beisen.AppConnect.Infrastructure.Test", "..\Src\Beisen.AppConnect.Infrastructure.Test\Beisen.AppConnect.Infrastructure.Test.csproj", "{9CCEB69D-8CBA-4017-A0EE-2F58518D3843}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beisen.AppConnect.CloudClient", "..\Src\Beisen.AppConnect.CloudClient\Beisen.AppConnect.CloudClient.csproj", "{8B536971-B46E-4701-8FF5-CD9F48799279}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beisen.AppConnect.CloudClient.Test", "..\Src\Beisen.AppConnect.CloudClient.Test\Beisen.AppConnect.CloudClient.Test.csproj", "{7A53BB06-C5CF-4CCB-B534-9A35AB52ABC4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Beisen.AppConnect.Cloud", "Beisen.AppConnect.Cloud", "{358F9397-9A2A-4332-8468-94FD21F749A4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Beisen.AppConnect.Tool", "Beisen.AppConnect.Tool", "{879B55FE-A0C1-41A6-9DFB-781609F8D6A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beisen.AppConnect.Tool", "..\Src\Beisen.AppConnect.Tool\Beisen.AppConnect.Tool.csproj", "{7D53A705-B3FE-4F04-91B8-A0E55AFE0092}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Beisen.AppConnectISV.ServiceImp", "Beisen.AppConnectISV.ServiceImp", "{332FCE72-8352-40A1-A72C-97C36FE162F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beisen.AppConnectISV.Model", "..\Src\Beisen.AppConnect.ISV.Model\Beisen.AppConnectISV.Model.csproj", "{996BF7A7-B38B-4B10-925C-C138219566F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beisen.AppConnectISV.ServiceImp", "..\Src\Beisen.AppConnectISV.ServiceImp\Beisen.AppConnectISV.ServiceImp.csproj", "{293377B0-BE21-4C74-88B0-45C3029C4D4C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Beisen.AppConnectISV.Infrastructure", "Beisen.AppConnectISV.Infrastructure", "{34F789DA-610D-4DC7-938A-DA84BA0109B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Beisen.AppConnectISV.BusinessCore", "Beisen.AppConnectISV.BusinessCore", "{8D1B0411-A656-4F3B-BF68-4118DAD4F278}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beisen.AppConnectISV.Infrastructure", "..\Src\Beisen.AppConnectISV.Infrastructure\Beisen.AppConnectISV.Infrastructure.csproj", "{03BD2526-0E63-4362-A737-72B955E9B21E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beisen.AppConnectISV.BusinessCore", "..\Src\Beisen.AppConnectISV.BusinessCore\Beisen.AppConnectISV.BusinessCore.csproj", "{9772F770-93C8-4EA1-9EE2-E08B17F62142}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beisen.AppConnectISV.Test", "..\Src\Beisen.AppConnectISV.Test\Beisen.AppConnectISV.Test.csproj", "{E0156798-DEF6-44D7-9E3A-F9B46AA788F4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB2B20FD-8E98-4212-9AE0-3ADAAFEC9F61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB2B20FD-8E98-4212-9AE0-3ADAAFEC9F61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB2B20FD-8E98-4212-9AE0-3ADAAFEC9F61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB2B20FD-8E98-4212-9AE0-3ADAAFEC9F61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EED6123B-58CC-4FF3-863E-A41E2F3EE39B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EED6123B-58CC-4FF3-863E-A41E2F3EE39B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EED6123B-58CC-4FF3-863E-A41E2F3EE39B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EED6123B-58CC-4FF3-863E-A41E2F3EE39B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1AB9F8A-A470-4C4D-B9CE-6684BD2E6E03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1AB9F8A-A470-4C4D-B9CE-6684BD2E6E03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1AB9F8A-A470-4C4D-B9CE-6684BD2E6E03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1AB9F8A-A470-4C4D-B9CE-6684BD2E6E03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8C43CB8-33B5-48FD-A990-0DB23991AAC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8C43CB8-33B5-48FD-A990-0DB23991AAC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8C43CB8-33B5-48FD-A990-0DB23991AAC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8C43CB8-33B5-48FD-A990-0DB23991AAC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37BC522E-090E-49ED-B946-92DE4CDB5C31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37BC522E-090E-49ED-B946-92DE4CDB5C31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37BC522E-090E-49ED-B946-92DE4CDB5C31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37BC522E-090E-49ED-B946-92DE4CDB5C31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66525EE9-9B42-4E58-97DE-2861232E8E69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66525EE9-9B42-4E58-97DE-2861232E8E69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66525EE9-9B42-4E58-97DE-2861232E8E69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66525EE9-9B42-4E58-97DE-2861232E8E69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FFC1242-09E8-44E6-91EF-AB29390E44D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FFC1242-09E8-44E6-91EF-AB29390E44D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FFC1242-09E8-44E6-91EF-AB29390E44D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FFC1242-09E8-44E6-91EF-AB29390E44D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B597B32-B8D5-46D4-AE80-68E10ECF8D2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B597B32-B8D5-46D4-AE80-68E10ECF8D2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B597B32-B8D5-46D4-AE80-68E10ECF8D2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B597B32-B8D5-46D4-AE80-68E10ECF8D2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5DF3F3E-D2CA-4CBA-9E44-D7306B472043}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5DF3F3E-D2CA-4CBA-9E44-D7306B472043}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5DF3F3E-D2CA-4CBA-9E44-D7306B472043}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5DF3F3E-D2CA-4CBA-9E44-D7306B472043}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CCEB69D-8CBA-4017-A0EE-2F58518D3843}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CCEB69D-8CBA-4017-A0EE-2F58518D3843}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CCEB69D-8CBA-4017-A0EE-2F58518D3843}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CCEB69D-8CBA-4017-A0EE-2F58518D3843}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B536971-B46E-4701-8FF5-CD9F48799279}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B536971-B46E-4701-8FF5-CD9F48799279}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B536971-B46E-4701-8FF5-CD9F48799279}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B536971-B46E-4701-8FF5-CD9F48799279}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A53BB06-C5CF-4CCB-B534-9A35AB52ABC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A53BB06-C5CF-4CCB-B534-9A35AB52ABC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A53BB06-C5CF-4CCB-B534-9A35AB52ABC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A53BB06-C5CF-4CCB-B534-9A35AB52ABC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D53A705-B3FE-4F04-91B8-A0E55AFE0092}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D53A705-B3FE-4F04-91B8-A0E55AFE0092}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D53A705-B3FE-4F04-91B8-A0E55AFE0092}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D53A705-B3FE-4F04-91B8-A0E55AFE0092}.Release|Any CPU.Build.0 = Release|Any CPU
+		{996BF7A7-B38B-4B10-925C-C138219566F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{996BF7A7-B38B-4B10-925C-C138219566F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{996BF7A7-B38B-4B10-925C-C138219566F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{996BF7A7-B38B-4B10-925C-C138219566F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{293377B0-BE21-4C74-88B0-45C3029C4D4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{293377B0-BE21-4C74-88B0-45C3029C4D4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{293377B0-BE21-4C74-88B0-45C3029C4D4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{293377B0-BE21-4C74-88B0-45C3029C4D4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03BD2526-0E63-4362-A737-72B955E9B21E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03BD2526-0E63-4362-A737-72B955E9B21E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03BD2526-0E63-4362-A737-72B955E9B21E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03BD2526-0E63-4362-A737-72B955E9B21E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9772F770-93C8-4EA1-9EE2-E08B17F62142}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9772F770-93C8-4EA1-9EE2-E08B17F62142}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9772F770-93C8-4EA1-9EE2-E08B17F62142}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9772F770-93C8-4EA1-9EE2-E08B17F62142}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0156798-DEF6-44D7-9E3A-F9B46AA788F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0156798-DEF6-44D7-9E3A-F9B46AA788F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0156798-DEF6-44D7-9E3A-F9B46AA788F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0156798-DEF6-44D7-9E3A-F9B46AA788F4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BB2B20FD-8E98-4212-9AE0-3ADAAFEC9F61} = {F16C56E7-2366-45B3-ABA7-87FBBEAD24D7}
+		{EED6123B-58CC-4FF3-863E-A41E2F3EE39B} = {CAEDF9EE-39EB-4D08-A3E3-86FFF2A3D699}
+		{B1AB9F8A-A470-4C4D-B9CE-6684BD2E6E03} = {CAEDF9EE-39EB-4D08-A3E3-86FFF2A3D699}
+		{F8C43CB8-33B5-48FD-A990-0DB23991AAC0} = {A3348673-5037-4A07-B9A5-FC1E874B521E}
+		{37BC522E-090E-49ED-B946-92DE4CDB5C31} = {EF8082D1-852B-430B-BC8F-993F6E06410F}
+		{66525EE9-9B42-4E58-97DE-2861232E8E69} = {E39F5F63-E4AB-461E-9258-03F8C92BA9F3}
+		{8FFC1242-09E8-44E6-91EF-AB29390E44D0} = {C63D83A1-438F-4303-AE6C-7CB93D046ACA}
+		{0B597B32-B8D5-46D4-AE80-68E10ECF8D2C} = {A3348673-5037-4A07-B9A5-FC1E874B521E}
+		{A5DF3F3E-D2CA-4CBA-9E44-D7306B472043} = {E39F5F63-E4AB-461E-9258-03F8C92BA9F3}
+		{9CCEB69D-8CBA-4017-A0EE-2F58518D3843} = {C63D83A1-438F-4303-AE6C-7CB93D046ACA}
+		{8B536971-B46E-4701-8FF5-CD9F48799279} = {358F9397-9A2A-4332-8468-94FD21F749A4}
+		{7A53BB06-C5CF-4CCB-B534-9A35AB52ABC4} = {C63D83A1-438F-4303-AE6C-7CB93D046ACA}
+		{7D53A705-B3FE-4F04-91B8-A0E55AFE0092} = {879B55FE-A0C1-41A6-9DFB-781609F8D6A8}
+		{996BF7A7-B38B-4B10-925C-C138219566F7} = {332FCE72-8352-40A1-A72C-97C36FE162F8}
+		{293377B0-BE21-4C74-88B0-45C3029C4D4C} = {332FCE72-8352-40A1-A72C-97C36FE162F8}
+		{03BD2526-0E63-4362-A737-72B955E9B21E} = {34F789DA-610D-4DC7-938A-DA84BA0109B0}
+		{9772F770-93C8-4EA1-9EE2-E08B17F62142} = {8D1B0411-A656-4F3B-BF68-4118DAD4F278}
+		{E0156798-DEF6-44D7-9E3A-F9B46AA788F4} = {C63D83A1-438F-4303-AE6C-7CB93D046ACA}
+	EndGlobalSection
+EndGlobal

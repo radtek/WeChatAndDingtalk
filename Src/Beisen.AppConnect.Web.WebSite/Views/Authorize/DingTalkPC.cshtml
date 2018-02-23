@@ -1,0 +1,57 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script type="text/javascript" src="https://g.alicdn.com/dingding/dingtalk-pc-api/2.7.0/index.js"></script>
+    <title>DingTalk</title>
+</head>
+<body>
+    <script type="text/javascript">
+    var _config = {
+        agentId: '@Model.AgentId',
+        corpId: '@Model.AppId',
+        timeStamp: '@Model.TimeStamp',
+        nonceStr: '@Model.NonceStr',
+        signature: '@Model.Signature'
+    };
+        DingTalkPC.config({
+        agentId: _config.agentId,
+        corpId: _config.corpId,
+        timeStamp: _config.timeStamp,
+        nonceStr: _config.nonceStr,
+        signature: _config.signature,
+        jsApiList: ['runtime.info', 'device.notification.alert', 'runtime.permission.requestAuthCode']  // 必填，需要使用的jsapi列表
+    });
+
+        DingTalkPC.ready(function() {
+            DingTalkPC.runtime.permission.requestAuthCode({
+            corpId: _config.corpId,
+            onSuccess: function(info) {
+                location.href = "@Model.RedirectUri" + "&code=" + info.code + "&state=" + "@Model.State";
+            },
+            onFail: function(err) {
+                alert('DingTalkPC error: ' + JSON.stringify(err));
+            }
+        });
+    });
+
+        DingTalkPC.error(function(err) {
+            DingTalkPC.device.notification.alert({
+                message: "Message" + JSON.stringify(err),
+                title: "DingTalkPC Error",//可传空
+                buttonName: "确定",
+                onSuccess: function () {
+                    /*回调*/
+                },
+                onFail: function (err) { }
+            });
+    });
+    </script>
+</body>
+</html>

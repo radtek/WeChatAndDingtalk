@@ -1,0 +1,491 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EED6123B-58CC-4FF3-863E-A41E2F3EE39B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Beisen.AppConnect.ServiceImp</RootNamespace>
+    <AssemblyName>Beisen.AppConnect.ServiceImp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Beisen.ActivityEngine.ServiceInterface">
+      <HintPath>..\..\..\..\packages\Beisen.ActivityEngine.ServiceInterface.1.1.0.1\lib\net35\Beisen.ActivityEngine.ServiceInterface.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.Amqp, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.Amqp.1.1.0.19\lib\net40\Beisen.Amqp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.BeisenUser.ServiceImp, Version=1.6.0.1114, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.BeisenUser.1.1.0.282\lib\net45\Beisen.BeisenUser.ServiceImp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.BeisenUser.ServiceInterface, Version=1.6.0.1114, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.BeisenUser.1.1.0.282\lib\net45\Beisen.BeisenUser.ServiceInterface.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.BeisenUserExternal.ServiceInterface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.BeisenUserExternal.ServiceInterface.1.1.0.24\lib\net45\Beisen.BeisenUserExternal.ServiceInterface.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.CassandraV2, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.CassandraV2.1.1.0.124\lib\net45\Beisen.CassandraV2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.CassandraV2.CqlClient">
+      <HintPath>..\..\..\..\packages\Beisen.CassandraV2.1.1.0.124\lib\net45\Beisen.CassandraV2.CqlClient.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.Common.1.1.0.24\lib\net45\Beisen.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.Configuration, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.Configuration.1.1.0.29\lib\net45\Beisen.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.Configuration.XmlSerializers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.Configuration.1.1.0.29\lib\net45\Beisen.Configuration.XmlSerializers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.ConnectionPool, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.ConnectionPool.1.1.0.331\lib\net45\Beisen.ConnectionPool.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.Data.1.1.0.5\lib\net45\Beisen.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.Definition, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.Definition.1.1.0.17\lib\net45\Beisen.Definition.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.Definition.Client, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.Definition.1.1.0.17\lib\net45\Beisen.Definition.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.DfsClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.DfsClient.1.1.0.180\lib\net45\Beisen.DfsClient.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.DTC.Client, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.DTC.Client.1.1.0.2\lib\net40\Beisen.DTC.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.DynamicScript.SDK, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Beisen.DynamicScript.SDK.1.1.0.470\lib\net45\Beisen.DynamicScript.SDK.dll</HintPath>
+    </Reference>
+    <Reference Include="Beisen.Entity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.Entity.1.1.0.7\lib\net45\Beisen.Entity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.EntityFramework.Extensions">
+      <HintPath>..\..\..\..\packages\Beisen.EntityFramework.Extensions.1.0.2.23\lib\net35\Beisen.EntityFramework.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.ESB.ClientProxyFactory, Version=1.5.2.9, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.ESB.ClientProxyFactory.1.1.0.321\lib\net40\Beisen.ESB.ClientProxyFactory.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.Kafka">
+      <HintPath>..\..\..\..\packages\Beisen.XLog.1.1.0.279\lib\net45\Beisen.Kafka.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.Logging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.Logging.1.1.0.67\lib\net45\Beisen.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.Logging.Collector, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.Logging.Collector.1.1.0.35\lib\net45\Beisen.Logging.Collector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.Membership2, Version=1.5.0.1227, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.BeisenUser.1.1.0.282\lib\net45\Beisen.Membership2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.Microservices.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Beisen.Microservices.Common.1.1.0.504\lib\net45\Beisen.Microservices.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Beisen.MultiTenant.CoreV3, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.MultiTenantCoreV3.1.1.0.225\lib\net40\Beisen.MultiTenant.CoreV3.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.MultiTenantV5.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.MultiTenantV5.ServiceInterface.1.1.0.537\lib\net45\Beisen.MultiTenantV5.Model.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.MultiTenantV5.ModelOperationSDK">
+      <HintPath>..\..\..\..\packages\Beisen.MultiTenantV5.ServiceInterface.1.1.0.537\lib\net45\Beisen.MultiTenantV5.ModelOperationSDK.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.MultiTenantV5.ServiceInterface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.MultiTenantV5.ServiceInterface.1.1.0.537\lib\net45\Beisen.MultiTenantV5.ServiceInterface.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.MVCExtension2, Version=1.5.0.1227, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.BeisenUser.1.1.0.282\lib\net45\Beisen.MVCExtension2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.MySqlData, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.MySqlData.1.1.0.7\lib\net45\Beisen.MySqlData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.NativeRedis, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.NativeRedis.1.1.0.18\lib\net45\Beisen.NativeRedis.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.PlatformServices.ServiceInterface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.PlatformServices.ServiceInterface.1.1.0.18\lib\net35\Beisen.PlatformServices.ServiceInterface.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.Queue, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.Queue.1.1.0.3\lib\net45\Beisen.Queue.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.RedisV2, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.RedisV2.1.1.0.346\lib\net45\Beisen.RedisV2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.SearchV3, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.SearchV3.1.1.0.577\lib\net45\Beisen.SearchV3.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.SMSMailPlatformServices.ServiceInterface">
+      <HintPath>..\..\..\..\packages\Beisen.SMSMailPlatformServices.ServiceInterface.1.1.0.46\lib\net45\Beisen.SMSMailPlatformServices.ServiceInterface.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.UserFramework">
+      <HintPath>..\..\..\..\packages\Beisen.UserFramework.SDK.1.1.0.252\lib\net45\Beisen.UserFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.UserFramework.SDK.Account">
+      <HintPath>..\..\..\..\packages\Beisen.UserFramework.SDK.Account.1.1.0.27\lib\net45\Beisen.UserFramework.SDK.Account.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.UserPreference.ServiceInterface">
+      <HintPath>..\..\..\..\packages\Beisen.UserPreference.ServiceInterface.1.1.0.18\lib\net40\Beisen.UserPreference.ServiceInterface.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.XLog">
+      <HintPath>..\..\..\..\packages\Beisen.XLog.1.1.0.279\lib\net45\Beisen.XLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\..\..\..\packages\Castle.3.2.0.0\lib\net40\Castle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\..\..\..\packages\Castle.3.2.0.0\lib\net40\Castle.Windsor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ccr.Core">
+      <HintPath>..\..\..\..\packages\Ccr.Core.1.5.507.0\lib\net35\Ccr.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EffiProz">
+      <HintPath>..\..\..\..\packages\EffiProz.1.4.3926.17773\lib\net35\EffiProz.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Enyim.Caching">
+      <HintPath>..\..\..\..\packages\Enyim.Caching.1.0.6.0\lib\net35\Enyim.Caching.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.9.0, Culture=neutral, PublicKeyToken=b32731d11ce58905">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\log4net.1.2.10.1\lib\net11\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\..\..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage">
+      <HintPath>..\..\..\..\packages\WindowsAzure.Storage.4.3.0\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySpace.DataRelay.Client, Version=1.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\MySpace.DataRelay.1.1.0.13\lib\net45\MySpace.DataRelay.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySpace.DataRelay.Common, Version=1.3.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\MySpace.DataRelay.1.1.0.13\lib\net45\MySpace.DataRelay.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySpace.Shared">
+      <HintPath>..\..\..\..\packages\MySpace.Shared.1.1.0.7\lib\net35\MySpace.Shared.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\MySql.Data.6.9.8\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\NPOI.2.2.1\lib\net40\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\NPOI.2.2.1\lib\net40\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\NPOI.2.2.1\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\NPOI.2.2.1\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="PowerCollections">
+      <HintPath>..\..\..\..\packages\PowerCollections.1.0.2141.24679\lib\net35\PowerCollections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RabbitMQ.Client, Version=2.8.7.0, Culture=neutral, PublicKeyToken=89e7d7c5feba84ce, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\RabbitMQ.Client.2.8.7.1\lib\net35\RabbitMQ.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\RestSharp.105.2.3.3\lib\net45\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Common, Version=3.9.25.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\ServiceStack.Common.3.9.25.1\lib\net35\ServiceStack.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces, Version=3.9.25.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.NativeRedis.1.1.0.18\lib\net45\ServiceStack.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Redis, Version=3.9.25.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.NativeRedis.1.1.0.18\lib\net45\ServiceStack.Redis.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Text, Version=3.9.24.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\ServiceStack.Common.3.9.25.1\lib\net35\ServiceStack.Text.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Threading.Tasks.Dataflow, Version=4.5.24.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Microsoft.Tpl.Dataflow.4.5.24\lib\portable-net45+win8+wpa81\System.Threading.Tasks.Dataflow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\..\..\..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\..\..\..\packages\Microsoft.AspNet.Mvc.5.2.2\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\..\..\..\packages\Microsoft.AspNet.Razor.3.2.2\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages">
+      <HintPath>..\..\..\..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment">
+      <HintPath>..\..\..\..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor">
+      <HintPath>..\..\..\..\packages\Microsoft.AspNet.WebPages.3.2.2\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Wintellect.PowerThreading">
+      <HintPath>..\..\..\..\packages\Wintellect.PowerThreading.1.0.0.0\lib\net35\Wintellect.PowerThreading.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivateServiceProvider.cs" />
+    <Compile Include="Consumers\AccountStaffConsumer.cs" />
+    <Compile Include="Consumers\ConsumerActivater.cs" />
+    <Compile Include="Consumers\ConsumerPipeline.cs" />
+    <Compile Include="Consumers\IConsumerActivater.cs" />
+    <Compile Include="Consumers\IConsumerPipeline.cs" />
+    <Compile Include="Consumers\IServiceConsumer.cs" />
+    <Compile Include="ExternalProvider\VerifyAppAccountProvider.cs" />
+    <Compile Include="MRestProvider\AppAccountMRestProvider.cs" />
+    <Compile Include="Persistance\AppUserAccountDao.cs" />
+    <Compile Include="Persistance\BindBatchDao.cs" />
+    <Compile Include="Persistance\CallbackContentDao.cs" />
+    <Compile Include="Persistance\MenuDao.cs" />
+    <Compile Include="Persistance\MessageDao.cs" />
+    <Compile Include="Persistance\MobileVerificationDao.cs" />
+    <Compile Include="Persistance\QRCodeLoginDao.cs" />
+    <Compile Include="Persistance\TemplateMappingDao.cs" />
+    <Compile Include="Provider\AppUserAccountProvider.cs" />
+    <Compile Include="Provider\Authorize\AuthorizeProvider.cs" />
+    <Compile Include="Persistance\TokenDao.cs" />
+    <Compile Include="Provider\ApiTemplate\DefaultApiTemplate.cs" />
+    <Compile Include="Persistance\AppAccountDao.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Provider\Authorize\CallbackPrivateState.cs" />
+    <Compile Include="Provider\Authorize\CallbackPrivateAndPublicState.cs" />
+    <Compile Include="Provider\Authorize\CallbackPublicState.cs" />
+    <Compile Include="Provider\Authorize\CallbackStateBase.cs" />
+    <Compile Include="Provider\Authorize\CallbackStateFactory.cs" />
+    <Compile Include="Provider\AppAccountProvider.cs" />
+    <Compile Include="Provider\ApiTemplate\TemplateConst.cs" />
+    <Compile Include="Provider\BindBatchProvider.cs" />
+    <Compile Include="Provider\Bind\BindHandlerFactory.cs" />
+    <Compile Include="Provider\Bind\EmailBindHandler.cs" />
+    <Compile Include="Provider\Bind\IBindHandler.cs" />
+    <Compile Include="Provider\Bind\LoginBindHandler.cs" />
+    <Compile Include="Provider\Bind\MobileBindHandler.cs" />
+    <Compile Include="Provider\CallbackContentProvider.cs" />
+    <Compile Include="Provider\MenuProvider.cs" />
+    <Compile Include="Provider\Message\DingTalkMessage.cs" />
+    <Compile Include="Provider\Message\IMessage.cs" />
+    <Compile Include="Provider\Message\MessageFactory.cs" />
+    <Compile Include="Provider\Message\MessageProvider.cs" />
+    <Compile Include="Provider\Message\WeChatEnterpriseMessage.cs" />
+    <Compile Include="Provider\Message\WeChatServiceMessage.cs" />
+    <Compile Include="Provider\Message\WeChatWorkMessage.cs" />
+    <Compile Include="Provider\MobileVerificationProvider.cs" />
+    <Compile Include="Provider\Proxy\BeisenUserProxy.cs" />
+    <Compile Include="Provider\Proxy\EmailProxy.cs" />
+    <Compile Include="Provider\QrCodeLoginProvider.cs" />
+    <Compile Include="Provider\JsApi\DingTalkTicket.cs" />
+    <Compile Include="Provider\JsApi\TicketBase.cs" />
+    <Compile Include="Provider\JsApi\TicketFactory.cs" />
+    <Compile Include="Provider\JsApi\JsApiProvider.cs" />
+    <Compile Include="Provider\RegisterProvider.cs" />
+    <Compile Include="Provider\SMSProvider.cs" />
+    <Compile Include="Provider\TenantProvider.cs" />
+    <Compile Include="Provider\StaffProvider.cs" />
+    <Compile Include="Provider\TemplateMappingProvider.cs" />
+    <Compile Include="Provider\TestProvider.cs" />
+    <Compile Include="Provider\Token\DingTalkToken.cs" />
+    <Compile Include="Provider\Token\TokenBase.cs" />
+    <Compile Include="Provider\Token\TokenFactory.cs" />
+    <Compile Include="Provider\Token\TokenProvider.cs" />
+    <Compile Include="Provider\Token\WeChatEnterpriseToken.cs" />
+    <Compile Include="Provider\Token\WeChatServiceToken.cs" />
+    <Compile Include="Provider\Token\WeChatWorkToken.cs" />
+    <Compile Include="Provider\UserInfoMappingProvider.cs" />
+    <Compile Include="RabbitMQ\AccountStaffEmpHandler.cs" />
+    <Compile Include="RabbitMQ\Handler\DimissionRecordExcuter.cs" />
+    <Compile Include="RabbitMQ\IRabbitMQHandlerQueue.cs" />
+    <Compile Include="RabbitMQ\Message\AccountStaffMessage.cs" />
+    <Compile Include="RabbitMQ\QueueProcess.cs" />
+    <Compile Include="RabbitMQ\RabbitMqHandler.cs" />
+    <Compile Include="RabbitMQ\RabbitMQHandlerQueue.cs" />
+    <Compile Include="Service\AppAccountService.cs" />
+    <Compile Include="Service\ExcelService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Beisen.AppConnect.DingTalkSDK\Beisen.AppConnect.DingTalkSDK.csproj">
+      <Project>{a5df3f3e-d2ca-4cba-9e44-d7306b472043}</Project>
+      <Name>Beisen.AppConnect.DingTalkSDK</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Beisen.AppConnect.Infrastructure\Beisen.AppConnect.Infrastructure.csproj">
+      <Project>{bb2b20fd-8e98-4212-9ae0-3adaafec9f61}</Project>
+      <Name>Beisen.AppConnect.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Beisen.AppConnect.WeChatSDK\Beisen.AppConnect.WeChatSDK.csproj">
+      <Project>{66525ee9-9b42-4e58-97de-2861232e8e69}</Project>
+      <Name>Beisen.AppConnect.WeChatSDK</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Beisen.AppConnect.ServiceInterface\Beisen.AppConnect.ServiceInterface.csproj">
+      <Project>{b1ab9f8a-a470-4c4d-b9ce-6684bd2e6e03}</Project>
+      <Name>Beisen.AppConnect.ServiceInterface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ESB.Components.AppConnect.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Castle.Core.xml" />
+    <Content Include="Castle.Windsor.xml" />
+    <Content Include="RestSharp.xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

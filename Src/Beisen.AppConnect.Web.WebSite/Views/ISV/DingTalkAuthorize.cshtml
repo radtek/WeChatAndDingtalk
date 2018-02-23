@@ -1,0 +1,49 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script type="text/javascript" src="http://g.alicdn.com/dingding/open-develop/1.6.9/dingtalk.js"></script>
+    <title>DingTalk</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var _config = {
+            agentId: '@Model.AgentId',
+            corpId: '@Model.CorpId',
+            timeStamp: '@Model.TimeStamp',
+            nonceStr: '@Model.Nonce',
+            signature: '@Model.Signature'
+        };
+        dd.config({
+            agentId: _config.agentId,
+            corpId: _config.corpId,
+            timeStamp: _config.timeStamp,
+            nonceStr: _config.nonceStr,
+            signature: _config.signature,
+            jsApiList: [
+                'runtime.info',
+                'runtime.permission.requestAuthCode'
+            ] // 必填，需要使用的jsapi列表
+        });
+        dd.ready(function () {
+            dd.runtime.permission.requestAuthCode({
+                corpId: _config.corpId,
+                onSuccess: function (info) {
+                    location.href = " ../ISV/DingTalkAuthorize_CallBack?code=" + info.code;
+                },
+                onFail: function (err) {
+                    alert('dd error: ' + JSON.stringify(err));
+                }
+            });
+        });
+
+        dd.error(function (err) {
+            alert('dd error: ' + JSON.stringify(err));
+        });
+    </script>
+</body>
+</html>

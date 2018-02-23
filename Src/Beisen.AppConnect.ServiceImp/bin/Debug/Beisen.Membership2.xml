@@ -1,0 +1,1024 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Beisen.Membership2</name>
+    </assembly>
+    <members>
+        <member name="T:Beisen.Membership.BeisenIdentity">
+            <summary>
+            北森身份卡  上下文获取 
+            </summary>
+            <typeparam name="T">验证方式 如：FormsAuthenticationTicket</typeparam>
+        </member>
+        <member name="P:Beisen.Membership.BeisenIdentity.Token">
+            <summary>
+            用户令牌
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.BeisenIdentity.UserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.BeisenIdentity.TenantID">
+            <summary>
+            租户ID
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.BeisenIdentity.IsEnterpriseAdministrator">
+            <summary>
+            是否是企业管理员
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.BeisenIdentity.Ticket">
+            <summary>
+            上下文票据
+            </summary>
+        </member>
+        <member name="M:Beisen.Membership.BeisenIdentity.#ctor(System.Web.Security.FormsAuthenticationTicket)">
+            <summary>
+            默认构造
+            </summary>
+            <param name="ticket"></param>
+        </member>
+        <member name="P:Beisen.Membership.BeisenIdentity.IsAuthenticated">
+            <summary>
+            是否已经认证
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.BeisenIdentity.Name">
+            <summary>
+            票据名字
+            </summary>
+        </member>
+        <member name="T:Beisen.Membership.BeisenPrincipal">
+            <summary>
+            北森自定义凭证
+            </summary>
+        </member>
+        <member name="M:Beisen.Membership.BeisenPrincipal.IsInRole(System.String)">
+            <summary>
+            确定当前用户是否属于指定的角色
+            </summary>
+            <param name="role"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Beisen.Membership.BeisenPrincipal.Identity">
+            <summary>
+            获取当前用户的标识
+            </summary>
+        </member>
+        <member name="T:Beisen.Membership.CookieHelper">
+            <summary>
+            封装对Cookie的操作类lwq 
+            </summary>
+        </member>
+        <member name="M:Beisen.Membership.CookieHelper.GetCookie(System.String)">
+            <summary>
+            根据票据信息解密获取北森票据的全部信息
+            </summary>
+            <param name="ticket">加密的票据字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.Membership.CookieHelper.GetCurrentTicket">
+            <summary>
+            获取当前用户的票据
+            </summary>
+            <param name="Context"></param>
+            <returns>加密的票据</returns>
+        </member>
+        <member name="P:Beisen.Membership.ElinkFailurException.Message">
+            <summary>
+            Elink失效
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.NoJurisdictionException.Message">
+            <summary>
+            找不到当前用户
+            </summary>
+        </member>
+        <member name="T:Beisen.Membership.CookieData">
+            <summary>
+            自定义验证Cookie类lwq
+            </summary>
+        </member>
+        <member name="M:Beisen.Membership.CookieData.#ctor(Beisen.Membership.LoginResult,System.String)">
+            <summary>
+            构造
+            </summary>
+            <param name="ticketName">传入TicketName，目前是在Name中设置相关参数的。</param>
+        </member>
+        <member name="F:Beisen.Membership.CookieData.template">
+            <summary>
+            Cookie名称格式 [ UserID_Token_TenantID_UserHostAddress_UserType ]
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.CookieData.Name">
+            <summary>
+            Cookie名称
+            </summary>
+        </member>
+        <member name="M:Beisen.Membership.CookieData.EnsureParsed">
+            <summary>
+            解析
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.CookieData.UserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.CookieData.Token">
+            <summary>
+            用户令牌
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.CookieData.TenantID">
+            <summary>
+            租户id
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.CookieData.UserHostAddress">
+            <summary>
+            客户端Host地址
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.CookieData.UserType">
+            <summary>
+            用户类型  0为普通用户 1为企业管理员
+            </summary>
+        </member>
+        <member name="M:Beisen.Membership.CookieData.GetArrVal(System.String[],System.Int32)">
+            <summary>
+            从Cookie数组中取数据
+            </summary>
+            <param name="arr"></param>
+            <param name="index"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Beisen.Membership.LoginResult">
+            <summary>
+            登录验证结果
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.LoginResult.UserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.LoginResult.TenantID">
+            <summary>
+            租户ID
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.LoginResult.ValidateResult">
+            <summary>
+            登录结果类型
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.LoginResult.Token">
+            <summary>
+            令牌
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.LoginResult.Usertype">
+            <summary>
+            用户类型
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.LoginResult.UserStatus">
+            <summary>
+            用户状态 0停用 1启用 2强制密码过期
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.LoginResult.userIP">
+            <summary>
+            登录用户的ip
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.LoginResult.UserCach">
+            <summary>
+            登录用户机器标识（userid+LastActiveTime做md5）
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.UsableFunctionModel.TenantID">
+            <summary>
+            TenantID
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.UsableFunctionModel.RoleID">
+            <summary>
+            RoleID
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.UsableFunctionModel.RoleName">
+            <summary>
+            RoleName
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.UsableFunctionModel.RoleAlias">
+            <summary>
+            RoleAlias
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.UsableFunctionModel.FunctionID">
+            <summary>
+            FunctionID
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.UsableFunctionModel.FunctionName">
+            <summary>
+            FunctionName
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.UsableFunctionModel.FunctionAlias">
+            <summary>
+            FunctionAlias
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.UsableFunctionModel.FunctionURL">
+            <summary>
+            FunctuonURL
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.UsableFunctionModel.ModuleID">
+            <summary>
+            ModuleID
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.UsableFunctionModel.Modulorder">
+            <summary>
+            模块顺序
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.UsableFunctionModel.ModuleName">
+            <summary>
+            ModuleName
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.UsableFunctionModel.ModuleAlias">
+            <summary>
+            ModuleAlias
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.UsableFunctionModel.ModuleURL">
+            <summary>
+            ModuleURL
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.UsableFunctionModel.ProductID">
+            <summary>
+            ProductID
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.UsableFunctionModel.ProductName">
+            <summary>
+            ProductName
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.UsableFunctionModel.ProductAlias">
+            <summary>
+            ProductAlias
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.UsableFunctionModel.ProductURL">
+            <summary>
+            ProductURL
+            </summary>
+        </member>
+        <member name="T:Beisen.Membership.UserType">
+            <summary>
+            用户类型
+            </summary>
+        </member>
+        <member name="F:Beisen.Membership.UserType.NormalUser">
+            <summary>
+            普通用户
+            </summary>
+        </member>
+        <member name="F:Beisen.Membership.UserType.EnterpriseAdmin">
+            <summary>
+            企业管理员
+            </summary>
+        </member>
+        <member name="T:Beisen.Membership.ValidateResult">
+            <summary>
+            登录验证结果
+            </summary>
+        </member>
+        <member name="F:Beisen.Membership.ValidateResult.Successed">
+            <summary>
+            验证成功
+            </summary>
+        </member>
+        <member name="F:Beisen.Membership.ValidateResult.UserNotExist">
+            <summary>
+            验证失败 租户名、用户名、密码输入错误均为此结果
+            </summary>
+        </member>
+        <member name="F:Beisen.Membership.ValidateResult.UserIsOnline">
+            <summary>
+            用户已经在线
+            </summary>
+        </member>
+        <member name="F:Beisen.Membership.ValidateResult.UserIsLocked">
+            <summary>
+            用户已经被禁用
+            </summary>
+        </member>
+        <member name="F:Beisen.Membership.ValidateResult.Failed">
+            <summary>
+            验证失败
+            </summary>
+        </member>
+        <member name="F:Beisen.Membership.ValidateResult.PasswordExpired">
+            <summary>
+            用户password过期
+            </summary>
+        </member>
+        <member name="F:Beisen.Membership.ValidateResult.NoLoginPermission">
+            <summary>
+            没有登陆系统权限(针对未激活的用户)
+            </summary>
+        </member>
+        <member name="F:Beisen.Membership.ValidateResult.LoginModeFailed">
+            <summary>
+            登陆模式选择错误
+            </summary>
+        </member>
+        <member name="F:Beisen.Membership.ValidateResult.TokenCardFailed">
+            <summary>
+            令牌卡输入有误
+            </summary>
+        </member>
+        <member name="T:Beisen.Membership.ValidateException">
+            <summary>
+            身份验证异常
+            </summary>
+        </member>
+        <member name="M:Beisen.Membership.ValidateException.#ctor(Beisen.Membership.ValidateResult)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="result">验证结果</param>
+        </member>
+        <member name="P:Beisen.Membership.ValidateException.Message">
+            <summary>
+            异常信息
+            </summary>
+        </member>
+        <member name="T:Beisen.Membership.IWebFrameWorkClient">
+            <summary>
+            平台提供API接口  lwq
+            </summary>
+        </member>
+        <member name="M:Beisen.Membership.IWebFrameWorkClient.GetCurrentTenantId">
+            <summary>
+            轻量级（上下文获取）的获取当前租户id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.Membership.IWebFrameWorkClient.GetCurrentUserId">
+            <summary>
+            轻量级（上下文获取）的获取当前用户id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.Membership.IWebFrameWorkClient.GetCurrentTenant">
+            <summary>
+            获取当前租户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.Membership.IWebFrameWorkClient.GetCurrentUserRoleList">
+            <summary>
+            获得当前用户所有的角色
+            </summary>
+            <returns>当前用户的角色</returns>
+        </member>
+        <member name="M:Beisen.Membership.IWebFrameWorkClient.SignOut">
+            <summary>
+            退出登陆
+            </summary>
+        </member>
+        <member name="M:Beisen.Membership.IWebFrameWorkClient.GetCurrentUser">
+            <summary>
+            获得当前用户在缓存中的用户信息。
+            </summary>
+            <returns>返回当前用户。</returns>
+            <exception cref="T:Beisen.Membership.NoCurrentUserException">缓存中没有当前用户信息引发的异常。</exception>
+            <exception cref="T:Beisen.Membership.CurrentUserRepalceLoginException">当前用户已经在其他地方登陆导致的异常</exception>
+        </member>
+        <member name="M:Beisen.Membership.IWebFrameWorkClient.IsFunctionsPermited(System.String[])">
+            <summary>
+            批量验证当前用户的功能是否可用
+            </summary>
+            <param name="fullNames"></param>
+            <returns>每个功能是否可用的字典(key:FullName,value:是否可用)</returns>
+        </member>
+        <member name="M:Beisen.Membership.IWebFrameWorkClient.IsUserActivedByTicket(System.String)">
+            <summary>
+            根据http访问的票据信息 验证用户是否合法的在线用户
+            </summary>
+            <param name="ticket">用户访问的票据加密字符串  BS_auth </param>
+            <returns>合法用户  不合法返回null</returns>
+        </member>
+        <member name="M:Beisen.Membership.IWebFrameWorkClient.GetCurrentTicket">
+            <summary>
+            获取当前用户的票据
+            </summary>
+            <param name="Context"></param>
+            <returns>加密的票据</returns>
+        </member>
+        <member name="M:Beisen.Membership.IWebFrameWorkClient.SetOnlineUser(Beisen.BeisenUser.OnlineUser)">
+            <summary>
+            设置新的Token 使用户登录
+            </summary>
+            <param name="user"></param>
+        </member>
+        <member name="M:Beisen.Membership.TimerHttpModule.UnixTimestampToDateTime(System.DateTime,System.Int64)">
+            <summary>
+            unix时间戳转换成日期
+            </summary>
+            <param name="unixTimeStamp">时间戳（毫秒）</param>
+            <returns></returns>
+        </member>
+        <member name="T:Beisen.Membership.AuthorizationModule">
+            <summary>
+            Verifies that the user has permission to access the URL requested.
+            </summary>
+        </member>
+        <member name="M:Beisen.Membership.AuthorizationModule.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:Beisen.Membership.AuthorizationModule.Dispose">
+            <summary>
+            Disposes of the resources (other than memory) used by this module.
+            </summary>
+        </member>
+        <member name="M:Beisen.Membership.AuthorizationModule.Init(System.Web.HttpApplication)">
+            <summary>
+            Initializes this module and prepares it to handle requests.
+            </summary>
+            <param name="context">An HttpApplication that provides access to the methods, properties, and events common to all application objects within an ASP.NET application.</param>
+        </member>
+        <member name="T:Beisen.Membership.BeisenAuthenticate">
+            <summary>
+            Beisen 验证拦截处理
+            </summary>
+        </member>
+        <member name="M:Beisen.Membership.BeisenAuthenticate.AuthenticateHandler(System.Web.HttpContext)">
+            <summary>
+            验证拦截处理
+            </summary>
+            <param name="Context">HttpContext 上下文</param>
+        </member>
+        <member name="M:Beisen.Membership.BeisenAuthenticate.AuthenticateRedrecter(System.String,System.Web.HttpContext)">
+            <summary>
+            跨域跳转
+            </summary>
+            <param name="fromhost">跳转原始域名</param>
+            <param name="Context">HttpContext  Http上下文</param>
+        </member>
+        <member name="M:Beisen.Membership.BeisenAuthenticate.FilterWhiteList(System.Uri)">
+            <summary>
+            过滤白名单
+            </summary>
+            <param name="uri"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Beisen.Membership.ConfigConstString.IsDisplayDebugInfo">
+            <summary>
+            调试信息开关
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.ConfigConstString.UIFrameworkUrl">
+            <summary>
+            UIFramework配置地址
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.ConfigConstString.TenantCenterUrl">
+            <summary>
+            租户中心地址
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.ConfigConstString.NoLoginRedirectUrl">
+            <summary>
+            登录地址
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.ConfigConstString.NoRightRedirectUrl">
+            <summary>
+            权限转向地址
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.ConfigConstString.ErrorRedirectUrl">
+            <summary>
+            错误页面地址
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.ConfigConstString.UserReplaceLogin">
+            <summary>
+            替代登录地址
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.ConfigConstString.IsSOAVlidate">
+             <summary>
+            验证开关
+             </summary>
+        </member>
+        <member name="P:Beisen.Membership.ConfigConstString.SSOTimeOut">
+             <summary>
+            登录超时设置
+             </summary>
+        </member>
+        <member name="P:Beisen.Membership.ConfigConstString.Logo_SUPP_Url">
+            <summary>
+            上传图片的地址的前端域；
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.ConfigConstString.Recruit_Url">
+            <summary>
+            人才招聘地址
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.ConfigConstString.Assess_Url">
+            <summary>
+            测评地址
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.ConfigConstString.PruductMaintaining_Url">
+            <summary>
+            产品升级维护
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.ConfigConstString.ExternalRedirecter_Url">
+             <summary>
+            上传文件过大
+             </summary>
+        </member>
+        <member name="P:Beisen.Membership.ConfigConstString.IsValidateProductFreezing">
+             <summary>
+            验证开关
+             </summary>
+        </member>
+        <member name="P:Beisen.Membership.ConfigConstString.Url_Add">
+            <summary>
+            环境域名附加  来源自webconfig
+            </summary>
+        </member>
+        <member name="M:Beisen.Membership.BeisenExceptionHandler.UncoverException(System.Exception)">
+            <summary>
+            对异常进行拆封（MVC2对ApplicationException做了封装 ）
+            </summary>
+            <param name="SourceError"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Beisen.Membership.PoatExternalException">
+            <summary>
+            post的长度过大
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.PoatExternalException.Message">
+            <summary>
+            Post的长度过大
+            </summary>
+        </member>
+        <member name="T:Beisen.Membership.PruductMaintainException">
+            <summary>
+            找不到当前用户异常
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.PruductMaintainException.Message">
+            <summary>
+            找不到当前用户
+            </summary>
+        </member>
+        <member name="T:Beisen.Membership.WebRunTimeExcption">
+            <summary>
+            框架运行异常处理基类
+            </summary>
+        </member>
+        <member name="T:Beisen.Membership.NoCurrentUserException">
+            <summary>
+            找不到当前用户异常
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.NoCurrentUserException.Message">
+            <summary>
+            找不到当前用户
+            </summary>
+        </member>
+        <member name="T:Beisen.Membership.CurrentUserRepalceLoginException">
+            <summary>
+            登录异常 用户被替换
+            </summary>
+        </member>
+        <member name="M:Beisen.Membership.CurrentUserRepalceLoginException.#ctor(System.String)">
+            <summary>
+            用户被替换 登录异常
+            </summary>
+        </member>
+        <member name="T:Beisen.Membership.HttpContextGateWay">
+            <summary>
+            HttpContext的GateWay，用来获取当前环境下的HttpContext 
+            </summary>
+        </member>
+        <member name="P:Beisen.Membership.HttpContextGateWay.Instance">
+            <summary>
+            返回平台统一HttpContextGateWay实例
+            </summary>
+        </member>
+        <member name="M:Beisen.Membership.HttpContextGateWay.RegisterHttpContextProxy(Beisen.Membership.HttpContextProxyBase)">
+            <summary>
+            注册HttpContext代理，由代理来创建HttpContext。
+            </summary>
+            <param name="proxy">HttpContext代理</param>
+        </member>
+        <member name="M:Beisen.Membership.HttpContextGateWay.GetHttpContext">
+            <summary>
+            获得当前上下文的HttpContext
+            </summary>
+            <returns>返回当前上下文的HttpContext</returns>
+        </member>
+        <member name="P:Beisen.Membership.HttpContextGateWay.BeisenIdentity">
+            <summary>
+            北森身份证
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Beisen.Membership.HttpContextProxyBase">
+            <summary>
+            HttpContext代理的基类。
+            </summary>
+        </member>
+        <member name="M:Beisen.Membership.HttpContextProxyBase.GetHttpContext">
+            <summary>
+            获得HttpContext
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Beisen.Membership.DefaultHttpContextProxy">
+            <summary>
+            默认的HttpContext的代理实现
+            </summary>
+        </member>
+        <member name="T:Beisen.Membership.IMembershipProvider">
+            <summary>
+            Membership相关的接口
+            </summary>
+        </member>
+        <member name="M:Beisen.Membership.IMembershipProvider.GetCurrentUserMenu">
+            <summary>
+            获得当前用户的菜单Json串。
+            </summary>
+            <returns>返回当前用户的菜单所对应生成的Json串。</returns>
+        </member>
+        <member name="M:Beisen.Membership.IMembershipProvider.ValidateUser(System.String,System.String,System.String,System.Boolean,System.String,System.Int32,System.String,System.Boolean)">
+            <summary>
+            用户登录验证 并处理在线用户缓存
+            </summary>
+            <param name="tenantName">租户名</param>
+            <param name="userName">用户名</param>
+            <param name="passWord">密码</param>
+            <param name="isReplaceLogin">是否替换登录</param>
+            <param name="IPAddess">登录的ip</param>
+            <param name="loginMode">登陆方式</param>
+            <param name="tokenCardPass">令牌卡验证码</param>
+            <param name="isvalidatetokencard">强制是否验证令牌卡</param>
+            <returns>验证结果类型</returns>
+        </member>
+        <member name="M:Beisen.Membership.IMembershipProvider.ValidateUserForApi(System.Int32,System.String,System.String,System.Boolean)">
+            <summary>
+            用户登录验证 并处理在线用户缓存（OpenApi专用）
+            </summary>
+            <param name="email">用户帐号</param>
+            <param name="iPAddess">ip地址</param>
+            <param name="isOpenLogin">是否该动作为登陆tms</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.Membership.IMembershipProvider.IsUserInCache">
+            <summary>
+            App上下文中的用户是否在缓存中
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.Membership.IMembershipProvider.IsFuntionUsableByUrl(System.String)">
+            <summary>
+            当前用户功能是否可用
+            </summary>
+            <param name="URL">功能URl</param>
+            <returns>可用 ture，不可用 false</returns>
+        </member>
+        <member name="M:Beisen.Membership.IMembershipProvider.IsFuntionUsableByFullname(System.String)">
+            <summary>
+            当前用户功能是否可用
+            </summary>
+            <param name="fullname">功能的Fullname</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.Membership.IMembershipProvider.IsFuntionUsableByFullNames(System.String[])">
+            <summary>
+            批量验证当前用户功能是否可用
+            </summary>
+            <param name="fullname">功能的Fullname</param>
+            <returns>每个功能是否可用的字典(key:FullName,value:是否可用)</returns>
+        </member>
+        <member name="M:Beisen.Membership.IMembershipProvider.IsEnableTenantFunction(System.String)">
+            <summary>
+            验证当前租户是否拥有该灰度注册功能
+            </summary>
+            <param name="fullname">功能的Fullname</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.Membership.IMembershipProvider.IsEnableTenantFunction(System.Int32,System.String)">
+            <summary>
+            验证当前租户是否拥有该灰度注册功能
+            </summary>
+            <param name="fullname">功能的Fullname</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.Membership.IMembershipProvider.DeleteCUserCache(System.Int32)">
+             <summary>
+            删除用户缓存menu Function
+             </summary>
+             <param name="userID"></param>
+        </member>
+        <member name="M:Beisen.Membership.IMembershipProvider.DeleteRoleCache(System.String)">
+            <summary>
+            清空同一个自定义角色下的所有用户的缓存Menu、Function
+            </summary>
+            <param name="roleName"></param>
+        </member>
+        <member name="M:Beisen.Membership.IMembershipProvider.DeleteTenantCache(System.Int32)">
+            <summary>
+            清空同一租户下所有用户的缓存Menu  Function
+            </summary>
+            <param name="tenantID"></param>
+        </member>
+        <member name="M:Beisen.Membership.IMembershipProvider.DeleteRoleCacheByRoleId(System.Int32,System.Guid)">
+             <summary>
+            根据角色id删除角色下所有用户菜单缓存和功能
+             </summary>
+             <param name="roleName"></param>
+        </member>
+        <member name="M:Beisen.Membership.IMembershipProvider.CheckProductFreezingFunctions(System.Int32,System.Guid,System.Collections.Generic.List{System.String})">
+            <summary>
+            根据功能列表检查产品是否冻结并排除冻结的功能返回当前用户的可用功能列表
+            </summary>
+            <param name="tenantId">租户ID</param>
+            <param name="productId">产品ID</param>
+            <param name="functionList">需要检查的功能列表</param>
+            <returns>可用的功能列表</returns>
+        </member>
+        <member name="M:Beisen.Membership.IMembershipProvider.CheckProductFreezingFunctionsByView(System.Int32,System.Guid,System.String)">
+            <summary>
+            根据View列表检查产品是否冻结并排除冻结的功能返回当前用户的可用功能列表
+            </summary>
+            <param name="tenantId">租户ID</param>
+            <param name="productId">产品ID</param>
+            <param name="viewName">需要检查的View名称</param>
+            <returns>可用的功能列表</returns>
+        </member>
+        <member name="M:Beisen.Membership.BeisenMembershipProvider.GetCurrentUser">
+            <summary>
+            获取当前用户的缓存信息
+            </summary>
+            <returns>CUser</returns>
+        </member>
+        <member name="M:Beisen.Membership.BeisenMembershipProvider.GetUserListByRoleCode(System.String)">
+            <summary>
+            在当前租户下，根据角色代码，获取其用户ID列表
+            </summary>
+            <param name="roleCode">角色代码</param>
+            <returns>用户ID列表</returns>
+        </member>
+        <member name="M:Beisen.Membership.BeisenMembershipProvider.GetCurrentUserRoleList">
+            <summary>
+            获取当前用户的角色列表
+            </summary>
+            <returns>角色列表</returns>
+        </member>
+        <member name="M:Beisen.Membership.BeisenMembershipProvider.GetCurrentTenant">
+            <summary>
+            获取当前用户的所属租户信息
+            </summary>
+            <returns>ClientTenant类型</returns>
+        </member>
+        <member name="M:Beisen.Membership.BeisenMembershipProvider.GetCurrentUserMenu">
+            <summary>
+            获得当前用户的菜单Json串。
+            </summary>
+            <returns>返回当前用户的菜单所对应生成的Json串。</returns>
+        </member>
+        <member name="M:Beisen.Membership.BeisenMembershipProvider.SignOut">
+            <summary>
+            退出登陆；当缓存中的用户是自己的时候 清除缓存并退出
+            
+            </summary>
+        </member>
+        <member name="M:Beisen.Membership.BeisenMembershipProvider.ValidateUser(System.String,System.String,System.String,System.Boolean,System.String,System.Int32,System.String,System.Boolean)">
+            <summary>
+            用户登录验证 并处理在线用户缓存
+            </summary>
+            <param name="tenantName">租户名</param>
+            <param name="userName">用户名</param>
+            <param name="passWord">密码</param>
+            <param name="isReplaceLogin">是否替换登录</param>
+            <returns>验证结果类型</returns>
+        </member>
+        <member name="M:Beisen.Membership.BeisenMembershipProvider.SetOnlineUser(Beisen.BeisenUser.OnlineUser)">
+            <summary>
+            设置新的Token 使用户登录
+            </summary>
+            <param name="user"></param>
+        </member>
+        <member name="M:Beisen.Membership.BeisenMembershipProvider.IsUserInCache">
+            <summary>
+            当前上下文用户是否在缓存中
+            </summary>
+        </member>
+        <member name="M:Beisen.Membership.BeisenMembershipProvider.IsFuntionUsableByUrl(System.String)">
+            <summary>
+            当前用户功能是否可用
+            </summary>
+            <param name="URL">功能URl</param>
+            <returns>可用 ture，不可用 false</returns>
+        </member>
+        <member name="M:Beisen.Membership.BeisenMembershipProvider.IsFuntionUsableByFullname(System.String)">
+            <summary>
+            当前用户功能是否可用
+            </summary>
+            <param name="fullname">功能的Fullname</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.Membership.BeisenMembershipProvider.IsFuntionUsableByFullNames(System.String[])">
+            <summary>
+            批量验证当前用户功能是否可用
+            </summary>
+            <param name="fullname">功能的Fullname</param>
+            <returns>每个功能是否可用的字典(key:FullName,value:是否可用)</returns>
+        </member>
+        <member name="M:Beisen.Membership.BeisenMembershipProvider.IsEnableTenantFunction(System.String)">
+            <summary>
+            验证当前租户是否拥有该灰度注册功能
+            </summary>
+            <param name="fullname">功能的Fullname</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.Membership.BeisenMembershipProvider.GetSitemap">
+            <summary>
+            根据URL获取站点地图
+            </summary>      
+            <returns>功能对应的产品ID+"_"+模块ID</returns>
+        </member>
+        <member name="M:Beisen.Membership.BeisenMembershipProvider.DeleteCUserCache(System.Int32)">
+             <summary>
+            删除用户菜单缓存和功能
+             </summary>
+             <param name="userID"></param>
+        </member>
+        <member name="M:Beisen.Membership.BeisenMembershipProvider.DeleteRoleCache(System.String)">
+             <summary>
+            删除角色下所有用户菜单缓存和功能
+             </summary>
+             <param name="roleName"></param>
+        </member>
+        <member name="M:Beisen.Membership.BeisenMembershipProvider.DeleteRoleCacheByRoleId(System.Int32,System.Guid)">
+             <summary>
+            删除角色下所有用户菜单缓存和功能
+             </summary>
+             <param name="roleName"></param>
+        </member>
+        <member name="M:Beisen.Membership.BeisenMembershipProvider.DeleteRoleCache(System.Int32,System.String)">
+             <summary>
+            删除角色下所有用户菜单缓存和功能
+             </summary>
+             <param name="roleName"></param>
+        </member>
+        <member name="M:Beisen.Membership.BeisenMembershipProvider.DeleteTenantCache(System.Int32)">
+            <summary>
+            删除租户下所有用户的菜单缓存和功能
+            </summary>
+            <param name="tenantID"></param>
+        </member>
+        <member name="M:Beisen.Membership.BeisenMembershipProvider.Validatea(System.Int32,System.String,System.String,System.Boolean)">
+            <summary>
+            通过传入tenantID,userName和password对用户进行验证
+            </summary>
+            <param name="tenantID">租户ID</param>
+            <param name="userName">用户名</param>
+            <param name="password">密码</param>
+            <param name="isEncrypted">密码是否加密,密码将采用MD5加密。</param>
+            <returns>验证通过，返回true，否则，返回false</returns>
+        </member>
+        <member name="M:Beisen.Membership.BeisenMembershipProvider.Validate2a(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            通过传入tenantName,userName和password对用户进行验证
+            </summary>
+            <param name="tenantName">租户的Name</param>
+            <param name="userName">用户名</param>
+            <param name="password">密码</param>
+            <param name="isEncrypted">密码是否加密,密码将采用MD5加密。</param>
+            <returns>验证通过，返回true，否则，返回false</returns>
+        </member>
+        <member name="M:Beisen.Membership.BeisenMembershipProvider.ChangePassword(System.Int32,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            更新密码
+            </summary>
+            <param name="tenantID">租户ID</param>
+            <param name="userName">用户名</param>
+            <param name="oldPassword">旧密码</param>
+            <param name="newPassword">新密码</param>
+            <param name="isEncrypted">密码是否加密,密码将采用MD5加密。</param>
+            <returns>更新成功，返回true，否则，返回false</returns>
+        </member>
+        <member name="M:Beisen.Membership.BeisenMembershipProvider.ResetPassword(System.Int32,System.String,System.String,System.Boolean)">
+            <summary>
+            重置密码
+            </summary>
+            <param name="tenantID">租户ID</param>
+            <param name="userName">用户名</param>
+            <param name="oldPassword">旧密码</param>
+            <param name="newPassword">新密码</param>
+            <param name="isEncrypted">密码是否加密,密码将采用MD5加密。</param>
+            <returns>更新成功，返回true，否则，返回false</returns>
+        </member>
+        <member name="M:Beisen.Membership.BeisenMembershipProvider.ResetPassword(System.String,System.String,System.Boolean)">
+            <summary>
+            重置密码(不带租户id)
+            </summary>
+            <param name="userName">用户名</param>
+            <param name="newPassword">新密码</param>
+            <param name="isEncrypted">密码是否加密</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.Membership.BeisenMembershipProvider.InsertSecurityInfo(System.Int32,System.String,System.Int32,System.String,System.String,System.Boolean)">
+            <summary>
+            插入安全信息
+            </summary>
+            <param name="tenantID">租户ID</param>
+            <param name="tenantName">租户的代码</param>
+            <param name="userID">用户ID</param>
+            <param name="userName">用户名</param>
+            <param name="password">密码</param>
+            <param name="isEncrypted">密码是否加密,密码将采用MD5加密。</param>
+            <returns>新增成功，返回true，否则，返回false</returns>
+        </member>
+        <member name="M:Beisen.Membership.BeisenMembershipProvider.IsFunctionPermited(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="FunctionFullname"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.Membership.BeisenMembershipProvider.IsFunctionsPermited(System.String[])">
+            <summary>
+            批量验证当前用户的功能是否可用
+            </summary>
+            <param name="fullNames"></param>
+            <returns>每个功能是否可用的字典(key:FullName,value:是否可用)</returns>
+        </member>
+        <member name="M:Beisen.Membership.BeisenMembershipProvider.IsUserActivedByTicket(System.String)">
+            <summary>
+            根据http访问的票据信息 验证用户是否合法的在线用户
+            </summary>
+            <param name="ticket">用户访问的票据加密字符串  BS_auth </param>
+            <returns>是否合法用户</returns>
+        </member>
+        <member name="M:Beisen.Membership.BeisenMembershipProvider.GetCurrentTicket">
+            <summary>
+            获取当前用户的票据
+            </summary>
+            <param name="Context"></param>
+            <returns>加密的票据</returns>
+        </member>
+        <member name="M:Beisen.Membership.BeisenMembershipProvider.IsValidateProductFreezing">
+            <summary>
+            判断是否需要验证许可冻结状态停用的功能
+            </summary>
+            <param name="functionFullName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.Membership.BeisenMembershipProvider.CheckProductFreezingFunctions(System.Int32,System.Guid,System.Collections.Generic.List{System.String})">
+            <summary>
+            根据功能列表检查产品是否冻结并排除冻结的功能返回当前用户的可用功能列表
+            </summary>
+            <param name="tenantId">租户ID</param>
+            <param name="productId">产品ID</param>
+            <param name="functionList">需要检查的功能列表</param>
+            <returns>可用的功能列表</returns>
+        </member>
+        <member name="M:Beisen.Membership.BeisenMembershipProvider.CheckProductFreezingFunctionsByView(System.Int32,System.Guid,System.String)">
+            <summary>
+            根据View列表检查产品是否冻结并排除冻结的功能返回当前用户的可用功能列表
+            </summary>
+            <param name="tenantId">租户ID</param>
+            <param name="productId">产品ID</param>
+            <param name="viewName">需要检查的View名称</param>
+            <returns>可用的功能列表</returns>
+        </member>
+    </members>
+</doc>

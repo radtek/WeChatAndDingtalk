@@ -1,0 +1,20 @@
+﻿<?xml version="1.0"?>
+<package >
+<metadata>
+<id>Beisen.AppConnect.CloudClient</id>
+<version>1.0.0.0</version>
+<authors>beisen recruiting</authors>
+<owners>recruit</owners>
+<requireLicenseAcceptance>false</requireLicenseAcceptance>
+<description>Beisen.AppConnect.CloudClient</description>
+<releaseNotes>版本第一次构建</releaseNotes>
+<copyright>Copyright 2015</copyright>
+<tags>Beisen.AppConnect.CloudClient</tags>
+<dependencies> 
+<dependency id="Newtonsoft.Json" version="6.0.4" />
+</dependencies>
+</metadata>
+<files>
+<file src="D:\MSBuildWorkSpace\dll.Beisen.AppConnect.CloudClient\Src\Beisen.AppConnect.CloudClient\bin\Release\Beisen.AppConnect.CloudClient.dll" target="lib\net40" />
+</files>
+</package>

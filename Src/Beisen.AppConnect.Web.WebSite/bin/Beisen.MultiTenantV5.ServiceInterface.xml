@@ -1,0 +1,1480 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Beisen.MultiTenantV5.ServiceInterface</name>
+    </assembly>
+    <members>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaApplicationProvider.GetApplicationByName(System.String,System.Int32)">
+            <summary>
+            根据应用名称获取应用信息
+            </summary>
+            <param name="appName">应用编码</param>
+            <param name="ISVTenantId">租户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaApplicationProvider.CreateApplication(Beisen.MultiTenant.Model.Application)">
+            <summary>
+            创建应用信息
+            </summary>
+            <param name="model">应用信息</param>
+            <returns></returns>
+        </member>
+        <member name="T:Beisen.MultiTenant.ServiceInterface.IBehaviorMonitorProvider">
+            <summary>
+            用户行为监控(行为、权限提升、操作的日志监控等)
+            </summary>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IBehaviorMonitorProvider.InsertBehaviorLog(System.Int32,System.DateTime,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+             插入用户的行为日志
+            </summary>
+            <param name="userid">当前用户ID</param>
+            <param name="createdTime">创建时间</param>
+            <param name="metaObjectName">实体名称</param>
+            <param name="application">应用编码</param>
+            <param name="behavior">操作行为(例如导出、导入、提权、删除、编辑等)</param>
+            <param name="ip">用户的IP地址</param>
+            <param name="Terminal">终端()</param>
+            <param name="content"></param>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.ICustomListViewProvider.GetCustomListViewSettingInfo(System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            获取自定义列表设置信息
+            </summary>
+            <param name="application"></param>
+            <param name="metaObjectName"></param>
+            <param name="viewName"></param>
+            <param name="tenantID"></param>
+            <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.ICustomListViewProvider.SaveCustomListView(System.String,System.String,System.String,System.Int32,System.Int32,System.Collections.Generic.List{System.String})">
+            <summary>
+            保存自定义列表
+            </summary>
+            <param name="application"></param>
+            <param name="metaObjectName"></param>
+            <param name="viewName"></param>
+            <param name="tenantID"></param>
+            <param name="userID"></param>
+            <param name="selectedColumns"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.ICustomListViewProvider.DeleteCustomListView(System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            删除自定义列表
+            </summary>
+            <param name="application"></param>
+            <param name="metaObjectName"></param>
+            <param name="viewName"></param>
+            <param name="tenantID"></param>
+            <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider">
+            <summary>
+            wuwei:注意ESB接口及实现只能引用 Beisen.MultiTenant.Model 中的 可序列化的Model
+            </summary>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.Add(Beisen.MultiTenant.Model.ObjectData,System.Boolean,System.Boolean)">
+            <summary>
+            保存（同时存储索引及数据）
+            </summary>
+            <param name="checkRequired">是否验证元数据字段必填</param>
+            <param name="dataObject">数据对象</param>
+            <param name="isValidData">是否启用数据校验</param>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.Add(Beisen.MultiTenant.Model.MetaObject,System.Collections.Generic.List{Beisen.MultiTenant.Model.ObjectData},System.Boolean,System.Boolean)">
+            <summary>
+            批量保存数据（同时存储数据及索引）
+            </summary>
+            <param name="metaObject">元数据对象</param>
+            <param name="dataObjectList">数据集合</param>
+            <param name="checkRequired">是否验证元数据字段必填</param>
+            <param name="isValidData">是否启用数据校验</param>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.AddExportData(Beisen.MultiTenant.Model.SysMetaObjectExportData)">
+            <summary>
+            添加导出日志数据
+            </summary>
+            <param name="modelData">导出日志</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.AddOperateLogData(Beisen.MultiTenant.Model.SysMetaObjectOperateLog)">
+            <summary>
+            添加操作日志数据
+            </summary>
+            <param name="modelData">操作日志</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.AddMonitorData(Beisen.MultiTenant.Model.SysMetaObjectMonitorData)">
+            <summary>
+            添加作业监控数据
+            </summary>
+            <param name="modelData">作业监控数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.AddImportData(Beisen.MultiTenant.Model.SysMetaObjectImportData)">
+            <summary>
+            添加导入日志数据
+            </summary>
+            <param name="modelData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.Update(Beisen.MultiTenant.Model.ObjectData,System.Boolean,System.Boolean)">
+            <summary>
+            更新（同时更新数据和索引数据）
+            </summary>
+            <param name="checkRequired">是否验证元数据字段必填</param>
+            <param name="dataObject">数据对象</param>
+            <param name="isValidData">是否启用数据校验</param>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.UpdatePartially(Beisen.MultiTenant.Model.ObjectData,System.Boolean,System.Boolean)">
+            <summary>
+            更新（同时更新数据和索引数据，合并旧数据合并更新索引，不合并更新数据）
+            </summary>
+            <param name="checkRequired">是否验证元数据字段必填</param>
+            <param name="dataObject">数据对象</param>
+            <param name="isValidData">是否启用数据校验</param>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.BatchUpdate(System.Collections.Generic.List{Beisen.MultiTenant.Model.ObjectData},System.Boolean,System.Boolean)">
+            <summary>
+            批量编辑的更新接口
+            </summary>
+            <param name="dataObjectList"></param>
+            <param name="checkRequired"></param>
+            <param name="isValidData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.UpdateWithoutDistinct(Beisen.MultiTenant.Model.ObjectData,System.Boolean,System.Boolean)">
+            <summary>
+            更新（同时更新数据和索引数据）
+            </summary>
+            <param name="checkRequired">是否验证元数据字段必填</param>
+            <param name="dataObject">数据对象</param>
+            <param name="isValidData">是否启用数据校验</param>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.Update(Beisen.MultiTenant.Model.MetaObject,System.Collections.Generic.List{Beisen.MultiTenant.Model.ObjectData},System.Boolean,System.Boolean)">
+            <summary>
+            批量更新（同时更新数据及索引）
+            </summary>
+            <param name="metaObject">元数据</param>
+            <param name="dataObjectList">数据集合</param>
+            <param name="checkRequired">是否验证元数据字段必填</param>
+            <param name="isValidData">是否启用数据校验</param>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.UpdateExportData(Beisen.MultiTenant.Model.SysMetaObjectExportData)">
+            <summary>
+            更新导出日志
+            </summary>
+            <param name="modelData"></param>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.UpdateMonitorData(Beisen.MultiTenant.Model.SysMetaObjectMonitorData)">
+            <summary>
+            更新作业监控实体数据
+            </summary>
+            <param name="modelData"></param>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.UpdateImportData(Beisen.MultiTenant.Model.SysMetaObjectImportData)">
+            <summary>
+            更新导入日志
+            </summary>
+            <param name="modelData"></param>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.UpdateOwner(System.Guid,System.Int32,System.String[],System.Int32,System.Boolean)">
+            <summary>
+            更新所有者字段数据
+            </summary>
+            <param name="metaObjectId"></param>
+            <param name="tenantId"></param>
+            <param name="objectDataIDs"></param>
+            <param name="ownerID"></param>
+            <param name="checkRequired"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.UpdateOwner(System.String,System.Int32,System.String[],System.Int32,System.Boolean)">
+            <summary>
+            更新所有者字段数据
+            </summary>
+            <param name="metaObjectName"></param>
+            <param name="tenantId"></param>
+            <param name="objectDataIDs"></param>
+            <param name="ownerID"></param>
+            <param name="checkRequired"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.IsExists(System.Guid,System.Int32,System.String)">
+            <summary>
+            判断数据是否存在（同时检查elasticsearch及cassandra）
+            </summary>
+            <param name="metaObjectId">元数据id</param>
+            <param name="tenantId">租户id</param>
+            <param name="objectDataId">数据id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.IsExists(System.String,System.Int32,System.String)">
+            <summary>
+            判断数据是否存在（同时检查elasticsearch及cassandra）
+            </summary>
+            <param name="metaObjectName">元数据实体名</param>
+            <param name="tenantId">租户id</param>
+            <param name="objectDataId">数据id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.GetCount(System.Guid,System.Int32,System.String)">
+            <summary>
+            通过条件获取数据总数
+            </summary>
+            <param name="metaObjectId">元数据id</param>
+            <param name="tenantId">租户id</param>
+            <param name="filterJson">过滤器</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.GetCount(System.String,System.Int32,System.String)">
+            <summary>
+            通过条件获取数据总数
+            </summary>
+            <param name="metaObjectName">元数据实体名</param>
+            <param name="tenantId">租户id</param>
+            <param name="filterJson">过滤器</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.GetCount(System.String,System.Int32,System.Int32,Beisen.MultiTenant.Model.UIMetaDataV2.SearchCondition)">
+            <summary>
+            通过条件获取数据总数
+            </summary>
+            <param name="metaObjectName">元数据实体名</param>
+            <param name="tenantId">租户id</param>
+            <param name="filterJson">过滤器</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.ConvertSearchConditionToString(System.Int32,System.Int32,Beisen.MultiTenant.Model.UIMetaDataV2.SearchCondition)">
+            <summary>
+            将SearchCondition转换为Filter的字符串形式
+            </summary>
+            <param name="tenantId">租户id</param>
+            <param name="userId">userID</param>
+            <param name="condition">过滤器</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.GetEntityIds(System.Guid,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,Beisen.MultiTenant.Model.SortDirection},System.Int32,System.Int32)">
+            <summary>
+            分页获取数据ID
+            </summary>
+            <param name="metaObjectId">元数据ID</param>
+            <param name="tenantId">租户ID</param>
+            <param name="filterJson">过滤条件</param>
+            <param name="queryJson">查询条件</param>
+            <param name="sortFields">排序条件</param>
+            <param name="from"></param>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.GetEntityIds(System.String,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,Beisen.MultiTenant.Model.SortDirection},System.Int32,System.Int32)">
+            <summary>
+            分页获取数据ID
+            </summary>
+            <param name="metaObjectName">元数据Name</param>
+            <param name="tenantId">租户ID</param>
+            <param name="filterJson">过滤条件</param>
+            <param name="queryJson">查询条件</param>
+            <param name="sortFields">排序条件</param>
+            <param name="from"></param>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.GetEntity(System.Guid,System.Int32,System.String,System.String[])">
+            <summary>
+            获取单个实体指定列数据 
+            </summary>
+            <param name="metaObjectId">元数据id</param>
+            <param name="tenantId">租户id</param>
+            <param name="objectDataId">数据id</param>
+             <param name="columnNames">字段集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.GetEntity(System.String,System.Int32,System.String,System.String[])">
+            <summary>
+            获取实体数据集合
+            </summary>
+            <param name="metaObjectName">元数据实体名</param>
+            <param name="tenantId">租户id</param>
+            <param name="objectDataId">数据id</param>
+             <param name="columnNames">字段集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.GetEntityList(System.Guid,System.Int32,System.String[],System.String[])">
+            <summary>
+            批量获取数据
+            </summary>
+            <param name="metaObjectID">元数据id</param>
+            <param name="tenantId">租户id</param>
+            <param name="objectDataIDs">数据id集合</param>
+            <param name="columnNames">字段集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.GetEntityList(System.String,System.Int32,System.String[],System.String[])">
+            <summary>
+            批量获取数据
+            </summary>
+            <param name="metaObjectName">元数据实体名</param>
+            <param name="tenantId">租户id</param>
+            <param name="objectDataIDs">数据id集合</param>
+            <param name="columnNames">字段集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.GetEntityList(System.Guid,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,Beisen.MultiTenant.Model.SortDirection},System.String[],System.Int32,System.Int32)">
+            <summary>
+            获取数据集合
+            </summary>
+            <param name="metaObjectId">元数据id</param>
+            <param name="tenantId">租户id</param>
+             <param name="columnNames">字段集合</param>
+            <param name="filterJson">过滤器</param>
+            <param name="queryJson">查询器</param>
+            <param name="sortFields">排序字段</param>
+            <param name="from"></param>
+            <param name="size">获取个数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.GetEntityList(System.String,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,Beisen.MultiTenant.Model.SortDirection},System.String[],System.Int32,System.Int32)">
+            <summary>
+            获取数据集合
+            </summary>
+            <param name="metaObjectName">元数据实体名</param>
+            <param name="tenantId">租户id</param>
+             <param name="columnNames">字段集合</param>
+            <param name="filterJson">过滤器</param>
+            <param name="queryJson">查询器</param>
+            <param name="sortFields">排序字段</param>
+            <param name="from"></param>
+            <param name="size">获取个数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.GetEntityListWithCount(System.String,System.Int32,System.String[],System.String,System.String,System.Collections.Generic.Dictionary{System.String,Beisen.MultiTenant.Model.SortDirection},System.Int32,System.Int32)">
+            <summary>
+            返回查询到的当夜数据及总记录数
+            </summary>
+            <typeparam name="T">ObjectData</typeparam>
+            <param name="metaObjectName">元数据对象</param>
+            <param name="tenantId">租户ID</param>
+            <param name="columnNames">返回的列</param>
+            <param name="filterJson">过滤条件</param>
+            <param name="queryJson">查询条件</param>
+            <param name="sortFields">排序字段</param>
+            <param name="from">form</param>
+            <param name="size">获取记录数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.Delete(System.Guid,System.Int32,System.String)">
+            <summary>
+            删除实体数据
+            </summary>
+            <param name="metaObjectId">元数据对象ID</param>
+            <param name="tenantId">租户ID</param>
+            <param name="objectDataId">数据ID</param>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.Delete(System.String,System.Int32,System.String)">
+            <summary>
+            删除实体数据
+            </summary>
+            <param name="metaObjectName">元数据对象名称</param>
+            <param name="tenantId">租户ID</param>
+            <param name="objectDataId">数据ID</param>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.Delete(System.Guid,System.Int32,System.String[])">
+            <summary>
+            批量删除数据
+            </summary>
+            <param name="metaObjectId">元数据对象ID</param>
+            <param name="tenantId">租户ID</param>
+            <param name="objectDataIds">数据ID集合</param>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.Delete(System.String,System.Int32,System.String[])">
+            <summary>
+            批量删除数据
+            </summary>
+            <param name="metaObjectName">元数据对象名称</param>
+            <param name="tenantId">租户ID</param>
+            <param name="objectDataIds">数据ID集合</param>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.ConvertDispalyBizData(System.Int32,System.Collections.Generic.List{Beisen.MultiTenant.Model.ObjectData},Beisen.MultiTenant.Model.MetaObject,System.Boolean)">
+            <summary>
+            根据业务数据转化为提供给前端使用的业务数据类
+            </summary>
+            <param name="tenantId">租户ID</param>
+            <param name="datas">实体数据集合</param>
+            <param name="metaObj">实体</param>
+            <param name="isJoinMetaObjectOnName">Name属性是否拼接MetaObjectName作为唯一区别</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.ConvertDispalyBizDataWithoutUserEmail(System.Int32,System.Collections.Generic.List{Beisen.MultiTenant.Model.ObjectData},Beisen.MultiTenant.Model.MetaObject,System.Boolean)">
+            <summary>
+            根据业务数据转化为提供给前端使用的业务数据类。
+            专门添加个接口为了满足Ocean的需求，人员翻译出来的不要邮箱
+            </summary>
+            <param name="tenantId">租户ID</param>
+            <param name="datas">实体数据集合</param>
+            <param name="metaObj">实体</param>
+            <param name="isJoinMetaObjectOnName">Name属性是否拼接MetaObjectName作为唯一区别</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.ConvertObjectDataToBizData(System.Int32,Beisen.MultiTenant.Model.ObjectData,Beisen.MultiTenant.Model.MetaObject,System.Boolean)">
+            <summary>
+            根据业务数据转化为提供给前端使用的业务数据类
+            </summary>
+            <param name="tenantId">租户ID</param>
+            <param name="data">实体数据</param>
+            <param name="metaObj">实体</param>
+            <param name="isJoinMetaObjectOnName">Name属性是否拼接MetaObjectName作为唯一区别</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.ValidateData(Beisen.MultiTenant.Model.ObjectData,System.String,System.String)">
+            <summary>
+            进行数据校验
+            </summary>
+            <param name="dataObject"></param>
+            <param name="formName">表单编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.IsHaveDistinctData(Beisen.MultiTenant.Model.ObjectData)">
+            <summary>
+            判断是否存在重复数据(依据配置的判断条件)
+            </summary>
+            <param name="dataObject"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.GetEntityIdListByScroll(System.Guid,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,Beisen.MultiTenant.Model.SortDirection},System.Int32,System.Int32)">
+            <summary>
+            Scroll方式获取数据ID
+            </summary>
+            <param name="metaObjectId"></param>
+            <param name="tenantId"></param>
+            <param name="filterJson"></param>
+            <param name="queryJson"></param>
+            <param name="sortFields"></param>
+            <param name="from"></param>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.GetEntityIdListByScroll(System.String,System.Int32,System.String,System.String,System.Collections.Generic.Dictionary{System.String,Beisen.MultiTenant.Model.SortDirection},System.Int32,System.Int32)">
+            <summary>
+            Scroll方式获取数据ID
+            </summary>
+            <param name="metaObjectName"></param>
+            <param name="tenantId"></param>
+            <param name="filterJson"></param>
+            <param name="queryJson"></param>
+            <param name="sortFields"></param>
+            <param name="from"></param>
+            <param name="size"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataAccessProvider.GetMultipleObjectFormFieldName(System.String,System.Int32,System.Collections.Generic.List{System.String},Beisen.MultiTenant.Model.UIMetaDataV2.ComponentType)">
+            <summary>
+            将复合表单里的字段进行处理
+            </summary>
+            <param name="majorMetaObjectName">主实体名称</param>
+            <param name="tenantId">租户ID</param>
+            <param name="multipleObjectFormFieldNames">复合表单中包含关联信息的字段的列表</param>
+            <param name="componentType">组件类型</param>
+            <returns></returns>
+        </member>
+        <member name="T:Beisen.MultiTenant.ServiceInterface.IDataSourceProvider">
+            <summary>
+            wuwei:注意ESB接口及实现只能引用 Beisen.MultiTenant.Model 中的 可序列化的Model
+            </summary>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataSourceProvider.SearchStaffData(System.String,System.Int32)">
+            <summary>
+            人员查询
+            </summary>
+            <param name="keyWords">查询关键字</param>
+            <param name="showEmail">显示设置 0:只显示名称,1:名称+邮箱</param>
+            <returns>JSON</returns>
+        </member>
+        <member name="T:Beisen.MultiTenant.ServiceInterface.IFileProvider">
+            <summary>
+            add by meibaoqiang at 2015
+            </summary>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IFileProvider.UploadFile(Beisen.MultiTenant.Model.UIMetaData.FileUploadRequest)">
+            <summary>
+            文件上传
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IFileProvider.DeleteFile(System.String)">
+            <summary>
+            删除文件
+            </summary>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Beisen.MultiTenant.ServiceInterface.IMetaDataManageProvider">
+            <summary>
+            wuwei:注意ESB接口及实现只能引用 Beisen.MultiTenant.Model 中的 可序列化的Model
+            </summary>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaDataManageProvider.EditMetaField(Beisen.MultiTenant.Model.MetaDataManage.MagicMetaField)">
+            <summary>
+            更新标准字段
+            </summary>
+            <param name="fieldMeta"></param>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaDataManageProvider.AddDataSource(Beisen.MultiTenant.Model.MetaDataManage.MagicDataSource,System.Collections.Generic.List{Beisen.MultiTenant.Model.DataSourceObject})">
+            <summary>
+            添加数据源
+            </summary>
+            <param name="dataSource"></param>
+            <param name="dataSourceData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaDataManageProvider.EditDataSource(Beisen.MultiTenant.Model.MetaDataManage.MagicDataSource,System.Collections.Generic.List{Beisen.MultiTenant.Model.DataSourceObject})">
+            <summary>
+            编辑数据源
+            </summary>
+            <param name="dataSource"></param>
+            <param name="dataSourceData"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Beisen.MultiTenant.ServiceInterface.IMetaObjectProvider">
+            <summary>
+            wuwei:注意ESB接口及实现只能引用 Beisen.MultiTenant.Model 中的 可序列化的Model
+            </summary>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaObjectProvider.GetFullMetaObjectById(System.Guid)">
+            <summary>
+            通过元数据ID获取元数据对象（包含所有租户字段）
+            </summary>
+            <param name="metaObjectId">元数据ID</param>
+            <returns>元数据对象</returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaObjectProvider.GetLookUpMetaObject(System.Guid,System.Int32)">
+            <summary>
+            获取LookUp实体的名称
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaObjectProvider.GetMetaObjectAndCMPData(System.String,System.Int32)">
+            <summary>
+             获取包含CMPData的元数据对象(字段中包含控件模板信息CMPData，主要用于前台控件的渲染),
+             建议使用GetObjectMeta接口(不包含控件模板数据)
+            </summary>
+            <param name="metaObjectName"></param>
+            <param name="tenantId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaObjectProvider.GetSimpleMetaObjectAndCMPData(System.String,System.Int32)">
+            <summary>
+             简化版元数据对象(字段中包含控件模板信息CMPData，主要用于前台控件的渲染),
+             建议使用GetObjectMeta接口(不包含控件模板数据)
+            </summary>
+            <param name="metaObjectName"></param>
+            <param name="tenantId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaObjectProvider.GetAllObjectsByTenant(System.Int32,System.String)">
+            <summary>
+            获取某租户下元数据对象集合
+            </summary>
+            <param name="tenantId">租户id</param>
+            <param name="application">应用程序名</param>
+            <returns>元数据对象集合</returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaObjectProvider.GetMetaObjectByPID(System.Int32,System.String,System.String)">
+            <summary>
+            获取租户下某元数据对象下子对象
+            </summary>
+            <param name="tenantId"></param>
+            <param name="application"></param>
+            <param name="pmetaObjectID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaObjectProvider.GetAllObjectDicByTenant(System.Int32,System.String)">
+            <summary>
+            获取某租户下元数据对象集合
+            </summary>
+            <param name="tenantId">租户id</param>
+            <param name="application">应用程序名</param>
+            <returns>元数据对象集合</returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaObjectProvider.GetObjectMetaWithoutCache(System.Guid,System.Int32)">
+            <summary>
+            直接从数据库中获取元数据对象，此接口无缓存
+            </summary>
+            <param name="objectId"></param>
+            <param name="tenantId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaObjectProvider.GetObjectMeta(System.Guid,System.Int32)">
+            <summary>
+            返回的MetaObject为内存缓存，使用时请不要直接修改
+            或者可以使用MetaObject.Clone();去复制出新的元数据对象
+            </summary>
+            <param name="objectId">元数据对象ID</param>
+            <param name="tenantId">租户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaObjectProvider.GetObjectMeta(System.String,System.Int32)">
+            <summary>
+            返回的MetaObject为内存缓存，使用时请不要直接修改
+            或者可以使用MetaObject.Clone();去复制出新的元数据对象
+            </summary>
+            <param name="metaObjectFullName">元数据对象名</param>
+            <param name="tenantId">租户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaObjectProvider.GetObjectMetaId(System.String,System.Int32)">
+            <summary>
+            获取元数据id
+            </summary>
+            <param name="metaObjectFullName">元数据对象全名</param>
+            <param name="tenantId">租户id</param>
+            <returns>元数据id</returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaObjectProvider.AddObjectMeta(System.Guid,System.Int32,Beisen.MultiTenant.Model.MetaDataType,System.String,System.String,System.String,System.String,System.Boolean,Beisen.MultiTenant.Model.MetaStatus,System.Int32,System.Int32,System.Boolean,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            工具使用
+            </summary>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaObjectProvider.AddObjectMeta(System.Int32,Beisen.MultiTenant.Model.MetaDataType,System.String,System.String,System.String,System.String,System.Boolean,Beisen.MultiTenant.Model.MetaStatus,System.Int32,System.Int32,System.Boolean,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            新增元数据对象
+            </summary>
+            <param name="tenantId">租户ID</param>
+            <param name="metaDataType">元数据对象类型</param>
+            <param name="application">应用名</param>
+            <param name="name">对象名</param>
+            <param name="label">对象中文名</param>
+            <param name="description">描述</param>
+            <param name="isExtensible">是否可以扩展</param>
+            <param name="status">状态（新增、编辑、发布）</param>
+            <param name="sortNum">排序值</param>
+            <param name="createdBy">创建者</param>
+            <param name="ispublic">访问限制（公开、私有）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaObjectProvider.UpdateObjectMeta(System.Guid,System.Int32,System.String,System.String,Beisen.MultiTenant.Model.MetaStatus,System.Int32,System.Int32,System.Boolean,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            编辑元数据对象
+            </summary>
+            <param name="objectId">对象ID</param>
+            <param name="tenantId">租户ID</param>
+            <param name="label">中文名</param>
+            <param name="description">描述</param>
+            <param name="status">状态（新增、编辑、发布）</param>
+            <param name="sortNum">排序值</param>
+            <param name="modifiedBy">编辑者</param>
+            <param name="ispublic">访问控制（公开、私有）</param>
+            <param name="metaObjectName"></param>
+            <param name="iconStyle"></param>
+            <param name="titaAPPID"></param>
+            <param name="appID"></param>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaObjectProvider.DeleteObjectMeta(System.Guid,System.Int32)">
+            <summary>
+            删除元数据对象
+            </summary>
+            <param name="objectId">对象ID</param>
+            <param name="tenantId">租户ID</param>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaObjectProvider.GetFeedView(System.Int32,System.String)">
+            <summary>
+            获取Feed数据
+            </summary>
+            <param name="tenantID"></param>
+            <param name="metaObjName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaObjectProvider.CreateFeed(Beisen.MultiTenant.Model.UIMetaData.Feed.FeedView)">
+            <summary>
+            创建Feed
+            </summary>
+            <param name="fv"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaObjectProvider.AddFieldMeta(Beisen.MultiTenant.Model.MetaField,System.Int32)">
+            <summary>
+            添加元数据字段
+            </summary>
+            <param name="fieldMeta"></param>
+            <param name="createdBy"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaObjectProvider.AddFieldMeta(System.Guid,System.Guid,System.Int32,Beisen.MultiTenant.Model.MetaDataType,System.Int32,Beisen.MultiTenant.Model.DataType,Beisen.MultiTenant.Model.MetaStatus,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Int32,System.Int32,Beisen.MultiTenant.Model.IndexType,System.Boolean,System.Double,System.String,System.Int32,System.Int32,Beisen.MultiTenant.Model.Analyzer)">
+            <summary>
+            工具使用
+            </summary>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaObjectProvider.AddFieldMeta(System.Guid,System.Int32,Beisen.MultiTenant.Model.MetaDataType,System.Int32,Beisen.MultiTenant.Model.DataType,Beisen.MultiTenant.Model.MetaStatus,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Int32,System.Int32,Beisen.MultiTenant.Model.IndexType,System.Boolean,System.Double,System.String,System.Int32,System.Int32,Beisen.MultiTenant.Model.Analyzer)">
+            <summary>
+            添加元数据字段
+            </summary>
+            <param name="metaObjectId"></param>
+            <param name="tenantId"></param>
+            <param name="metaDataType"></param>
+            <param name="friendlyType"></param>
+            <param name="dataType"></param>
+            <param name="status"></param>
+            <param name="name"></param>
+            <param name="label"></param>
+            <param name="help"></param>
+            <param name="description"></param>
+            <param name="defaultValue"></param>
+            <param name="isRequired"></param>
+            <param name="length"></param>
+            <param name="precision"></param>
+            <param name="indexType"></param>
+            <param name="storeInIndex"></param>
+            <param name="boost"></param>
+            <param name="fieldSetting"></param>
+            <param name="sortNum"></param>
+            <param name="createdBy"></param>
+            <param name="analyzer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaObjectProvider.UpdateFieldMeta(Beisen.MultiTenant.Model.MetaField,System.Int32)">
+            <summary>
+            更新元数据字段
+            </summary>
+            <param name="fieldMeta"></param>
+            <param name="modifiedBy"></param>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaObjectProvider.DeleteFieldMeta(System.Guid,System.Int32,System.Guid)">
+            <summary>
+            删除元数据字段
+            </summary>
+            <param name="objectId"></param>
+            <param name="tenantId"></param>
+            <param name="fieldId"></param>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaObjectProvider.AddMetaPCRelation(Beisen.MultiTenant.Model.MetaPCRelation)">
+            <summary>
+            创建父子关系
+            </summary>
+            <param name="relation">父子关系对象</param>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaObjectProvider.DeleteMetaPCRelation(System.String,System.Int32,System.Guid)">
+            <summary>
+            删除父子关系
+            </summary>
+            <param name="appName">应用程序名</param>
+            <param name="tenantID">租户id</param>
+            <param name="cMetaObjectID">子元数据id</param>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaObjectProvider.GetMetaPCRelation(System.String,System.Int32,System.Guid)">
+            <summary>
+            获取父子关系对象
+            </summary>
+            <param name="appName">应用程序名</param>
+            <param name="tenantID">租户id</param>
+            <param name="cMetaObjectID">子元数据id</param>
+            <returns>父子关系对象</returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaObjectProvider.GetMetaPCRelationByApp(System.String,System.Int32)">
+            <summary>
+            获取租户下的父子关系对象集合
+            </summary>
+            <param name="appName">应用程序名</param>
+            <param name="tenantID">租户id</param>
+            <returns>父子关系对象集合</returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaObjectProvider.GetTestTriggerDS(System.String,System.Int32)">
+            <summary>
+            wuwei: 这只是一个测试用于测试触发器调用ESB的返回问题
+            </summary>
+            <param name="name"></param>
+            <param name="tenantID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaObjectProvider.IsUserSelectPack(System.Guid)">
+            <summary>
+            是否为用户选择控件
+            </summary>
+            <param name="fieldPackId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaObjectProvider.IsMultipleValuePack(System.Guid)">
+            <summary>
+            是否为多选字段
+            </summary>
+            <param name="fieldPackid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaObjectProvider.IsLookupField(System.Guid)">
+            <summary>
+            是否LookUp字段
+            </summary>
+            <param name="fieldPackId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaObjectProvider.IsStandardTimeField(System.Guid)">
+            <summary>
+            是否标准时分控件字段
+            </summary>
+            <param name="fieldPackId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IMetaObjectProvider.GetAllLookupFieldDisplayMetaFieldList(System.Guid,System.Int32)">
+            <summary>
+            获取Lookup字段所有的显示字段
+            </summary>
+            <param name="metaObjectId">实体ID</param>
+            <param name="tenantID">租户ID</param>
+            <returns>实体下所有Lookup字段的显示字段子带你</returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IPermissionProvider.GetProfileByProfileID(System.Guid,System.Int32)">
+            <summary>
+            通过profileID获取身份
+            </summary>
+            <param name="profileID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IPermissionProvider.GetProfilesByUserIDOnly(System.Int32)">
+            <summary>
+            通过UserID获取身份列表
+            </summary>
+            <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IPermissionProvider.GetProFilesByUserIDsAndApplication(System.Int32,System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            通过UserID和应用编码获取身份信息
+            </summary>       
+            <param name="tenantID"></param>
+            <param name="application"></param>
+            <param name="userIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IPermissionProvider.GetProfilesByUserID(System.Int32,System.Int32)">
+            <summary>
+            通过UserID和租户ID获取身份列表
+            </summary>
+            <param name="tenantID"></param>
+            <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IPermissionProvider.GetProfilesByApplication(System.Int32,System.String)">
+            <summary>
+            通过应用和租户ID获取身份列表
+            </summary>
+            <param name="tenantID">租户ID</param>
+            <param name="application">身份编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IPermissionProvider.GetMetaFieldPermission(System.Guid)">
+            <summary>
+            获取当前身份指定实体的字段权限信息(编辑、显示)
+            </summary>
+            <param name="metaObjectID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IPermissionProvider.GetMetaFieldPermission_ByIdList(System.Collections.Generic.List{Beisen.MultiTenant.Model.MetaObjectFiledRelation})">
+            <summary>
+            获取当前身份指定实体列表的字段权限信息(编辑、显示)
+            </summary>
+            <param name="metaObjectID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IPermissionProvider.GetAllApplicationName(System.Int32)">
+            <summary>
+            获取租户开通的所有应用
+            </summary>
+            <param name="tenantID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IPermissionProvider.GetApplicationListByISVTenantID(System.Int32)">
+            <summary>
+            根据ISVTenantID获取应用列表
+            </summary>
+            <param name="ISVTenantID">独立开发商的租户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IPermissionProvider.GetUserIdBySpecifiedProfileIdList(System.Int32,System.String,System.Collections.Generic.List{System.Guid})">
+            <summary>
+            获取拥有指定身份的用户ID列表
+            </summary>
+            <param name="tenantId"></param>
+            <param name="app"></param>
+            <param name="profileIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IPermissionProvider.GetProfileBySpecifiedUserIdList(System.Int32,System.String,System.Collections.Generic.List{System.Int32})">
+            <summary>
+            获取指定用户的身份信息
+            </summary>
+            <param name="tenantId"></param>
+            <param name="app"></param>
+            <param name="userIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IPermissionProvider.GetAllMOUSimpleByApp(System.Int32,System.String)">
+            <summary>
+            获取应用下的所有MOU
+            </summary>
+            <param name="tenantId">租户ID</param>
+            <param name="app">应用名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IPermissionProvider.IsHaveReadDataAuthority(System.String,System.Boolean)">
+            <summary>
+            根据实体名称，判断当前身份是否拥有数据读取权限
+            </summary>
+            <param name="metaName">实体名称</param>
+            <param name="isThrowValidException">是否弹出验证的异常信息(默认false)</param>
+            <returns>验证通过返回true,反之根据isThrowValidException参数值判断是否抛出异常</returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IPermissionProvider.IsHaveReadDataAuthority(System.Collections.Generic.List{System.String},System.Boolean)">
+            <summary>
+            根据实体名称集合，判断当前身份是否拥有数据读取权限
+            </summary>
+            <param name="metaNameList">实体名称集合</param>
+            <param name="isThrowValidException">是否弹出验证的异常信息(默认false)</param>
+            <returns>返回验证Dictionary，key：实体名称   value：实体访问权限（true：有权限  false：无权限）</returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IPermissionProvider.IsHaveOperationDataAuthority(System.String,Beisen.MultiTenant.Model.RuntimeContextInfo)">
+            <summary>
+            根据实体名称，判断当前身份是否拥有实体操作权限
+            </summary>
+            <param name="metaName">实体名称</param>
+            <returns>实体操作权限集合</returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IPermissionProvider.IsHaveOperationDataAuthority(System.Collections.Generic.List{System.String})">
+            <summary>
+            根据实体名称集合，判断当前身份是否拥有实体集合各项操作权限
+            </summary>
+            <param name="metaNameList">实体名称集合</param>
+            <returns>实体操作权限集合。Dictionary(实体名称,Dictionary(操作类型,是否允许))</returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IPermissionProvider.CreateCentralizedPermission(System.Int32,System.Collections.Generic.List{Beisen.MultiTenant.Model.ProfileJsonModel},System.Int32)">
+            <summary>
+            创建授权(应用为集中授权)
+            </summary>
+            <param name="tenantID"></param>
+            <param name="userProfileList"></param>
+            <param name="operateUserID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IPermissionProvider.GetRootMOUSimple(System.Int32,System.String)">
+            <summary>
+            获取根MOU
+            </summary>
+            <param name="tenantId"></param>
+            <param name="app"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.ITemplateProvider.GetMessageTemplateByLastVersion(System.Int32,System.String)">
+            <summary>
+            获取消息模板
+            </summary>
+            <param name="tenantID">租户ID</param>
+            <param name="templateName">消息模板编码</param>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.ITemplateProvider.GetMessageTemplatesByApp(System.Int32,System.String)">
+            <summary>
+            获取消息模板集合
+            </summary>
+            <param name="tenantID">租户ID</param>
+            <param name="application">应用编码</param>
+        </member>
+        <member name="T:Beisen.MultiTenant.ServiceInterface.IUserInterfaceProvider">
+            <summary>
+            UI服务接口
+            wuwei:注意ESB接口及实现只能引用 Beisen.MultiTenant.Model 中的 可序列化的Model
+            </summary>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceProvider.GetApplication(System.Int32,System.String)">
+            <summary>
+            根据租户ID和应用程序名称获取应用信息
+            </summary>
+            <param name="tenantID"></param>
+            <param name="applicationName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceProvider.GetApplicationByUserPermission(System.Int32)">
+            <summary>
+            根据用户ID的UserPermission权限信息获取该租户所有的应用信息
+            </summary>
+            <param name="userID">用户的UserID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceProvider.GetApplicationMenusViewsByApplication(System.String,System.Boolean)">
+            <summary>
+            获取当前用户的产品信息以及产品下的所有菜单
+            </summary>     
+            <param name="application">application为空时,则读取当前条件下的所有应用的菜单信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceProvider.GetApplicationMenusByUserID(System.Boolean)">
+            <summary>
+            获取当前登录用户下的所有应用菜单信息
+            </summary>
+            <param name="isMobile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceProvider.GetApplicationMenusViewsByMenuID(System.Guid,System.Boolean)">
+            <summary>
+            获取指定菜单的所有子菜单
+            </summary>     
+            <param name="id">身份绑定后菜单ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceProvider.GetTabItemViewIDByMenuID(System.Guid,System.String,System.Int32)">
+            <summary>
+            通过MenuID获取实例化后的TabItemViewID
+            </summary>
+            <param name="MenuID">菜单ID</param>
+            <param name="application">应用编码</param>
+            <param name="userid">UserID，为空的情况下会读取当前登录用户的身份信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceProvider.GetFormComponent(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获取Form组件及对应业务数据
+            </summary>
+            <param name="metaObjName">实体名称</param>
+            <param name="viewName">Form视图名</param>
+            <param name="version">Form视图版本</param>
+            <param name="formState">表单状态：create/show/edit 默认为create</param>
+            <param name="ids">实体数据ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceProvider.GetFormListComponent(System.String,System.String,System.String,System.String,System.String[],System.String,System.String)">
+            <summary>
+            获取Form组件及对应业务数据
+            </summary>
+            <param name="metaObjName">实体名称</param>
+            <param name="viewName">Form视图名</param>
+            <param name="version">Form视图版本</param>
+            <param name="formState">表单状态：create/show/edit 默认为create</param>
+            <param name="ids">实体数据ID列表，当有多条数据是，生成多个Form表单</param>
+            <param name="parentMetaObjName">父实体名称，FormList时需要传递</param>
+            <param name="parentDataId">父实体数据ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceProvider.GetTabsView(System.String)">
+            <summary>
+            Tabs视图处理
+            </summary>
+            <param name="app">ApplicationName</param>
+            <returns>TabViewModel JSON</returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceProvider.GetIndexPage(System.String,System.String)">
+            <summary>
+            获取Index页面
+            </summary>
+            <param name="metaObjName">实体名称</param>
+            <param name="viewName">IndexView的Name,可空</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceProvider.GetTableList(System.String,System.String,Beisen.MultiTenant.Model.UIMetaData.SearchCondition,System.String)">
+            <summary>
+            获取列表视图列定义
+            </summary>
+            <param name="viewName">列表视图名称</param>
+            <param name="version">列表视图版本，可空</param>
+            <param name="condition">用户输入条件</param>
+            <param name="metaObjName">实体名称—传递实体名称参数可参与身份操作权限控制</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceProvider.GetDetailPage(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获取Detail页面
+            </summary>
+            <param name="metaObjName">实体名称</param>
+            <param name="viewName">Detail的Name,可空</param>
+            <param name="formState"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceProvider.GetPageModule(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获取Detail页面
+            </summary>
+            <param name="metaObjName">实体名称</param>
+            <param name="viewName">Detail的Name,可空</param>
+            <param name="formState"></param>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceProvider.GetLookupFieldEditState(Beisen.MultiTenant.Model.UIMetaData.SearchCondition)">
+            <summary>
+            获取Lookup字段选择列表
+            </summary>
+            <param name="condition">用户输入条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceProvider.GetLookupFieldShowState(System.String,System.String,System.String)">
+            <summary>
+            获取Lookup字段显示文字
+            </summary>
+            <param name="metaObjectName"></param>
+            <param name="metaFieldName"></param>
+            <param name="dataObjectValue"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Beisen.MultiTenant.ServiceInterface.IDataSourceV2Provider">
+            <summary>
+            wuwei:注意ESB接口及实现只能引用 Beisen.MultiTenant.Model 中的 可序列化的Model
+            </summary>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IDataSourceV2Provider.SearchStaffDataV2(System.String,System.Int32)">
+            <summary>
+            人员查询
+            </summary>
+            <param name="keyWords">查询关键字</param>
+            <param name="showEmail">显示设置 0:只显示名称,1:名称+邮箱</param>
+            <returns>JSON</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Beisen.MultiTenant.ServiceInterface.IDataSourceV2Provider.GetDataSource(System.Int32,System.String,System.String,System.String)" -->
+        <member name="T:Beisen.MultiTenant.ServiceInterface.IFileV2Provider">
+            <summary>
+            add by meibaoqiang at 2015
+            </summary>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IFileV2Provider.UploadFileV2(Beisen.MultiTenant.Model.UIMetaDataV2.FileUploadRequest)">
+            <summary>
+            文件上传
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IFileV2Provider.DeleteFileV2(System.String)">
+            <summary>
+            删除文件
+            </summary>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider">
+            <summary>
+            UI服务接口
+            wuwei:注意ESB接口及实现只能引用 Beisen.MultiTenant.Model 中的 可序列化的Model
+            </summary>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.GetFormComponentV2(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获取Form组件及对应业务数据
+            </summary>
+            <param name="metaObjName">实体名称</param>
+            <param name="viewName">Form视图名</param>
+            <param name="version">Form视图版本</param>
+            <param name="formState">表单状态：create/show/edit 默认为create</param>
+            <param name="id">实体数据ID</param>
+            <param name="parentMetaObjName">父实体名称</param>
+            <param name="parentDataId">父实体数据ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.GetOwnerFormComponentV2(System.String,System.String)">
+            <summary>
+            获取更改所有者Form组件及对应业务数据
+            </summary>
+            <param name="metaObjName">实体名称</param>
+            <param name="id">实体数据ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.GetFormListComponentV2(System.String,System.String,System.String,System.String,System.String[],System.String,System.String)">
+            <summary>
+            获取Form组件及对应业务数据
+            </summary>
+            <param name="metaObjName">实体名称</param>
+            <param name="viewName">Form视图名</param>
+            <param name="version">Form视图版本</param>
+            <param name="formState">表单状态：create/show/edit 默认为create</param>
+            <param name="ids">实体数据ID列表，当有多条数据是，生成多个Form表单</param>
+            <param name="parentMetaObjName">父实体名称，FormList时需要传递</param>
+            <param name="parentDataId">父实体数据ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.GetTabsViewV2(System.String)">
+            <summary>
+            Tabs视图处理
+            </summary>
+            <param name="app">ApplicationName</param>
+            <returns>TabViewModel JSON</returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.GetIndexPageV2(System.String,System.String,System.String,System.String)">
+            <summary>
+            获取Index页面
+            </summary>
+            <param name="metaObjName">实体名称</param>
+            <param name="viewName">默认选中的导航视图，可空</param>
+            <param name="navViewName">指定的导航视图，指定此参数则IndexPage页面仅显示指定导航视图</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.GetTableListV2(System.String,System.String,Beisen.MultiTenant.Model.UIMetaDataV2.SearchCondition,System.String,System.Boolean)">
+            <summary>
+            获取列表视图列定义
+            </summary>
+            <param name="viewName">列表视图名称</param>
+            <param name="version">列表视图版本，可空</param>
+            <param name="condition">用户输入条件</param>
+            <param name="metaObjName">实体名称—传递实体名称参数可参与身份操作权限控制</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.GetButtonListOfTableListRow(System.String,System.String,System.String,System.String)">
+            <summary>
+            获取列表行的可用功能
+            </summary>
+            <param name="metaObjName">实体名称</param>
+            <param name="viewName">列表视图名称</param>
+            <param name="version">列表视图版本</param>
+            <param name="id">数据ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.GetDetailPageV2(System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            获取Detail页面
+            </summary>
+            <param name="metaObjName">实体名称</param>
+            <param name="viewName">Detail的Name,可空</param>
+            <param name="formState">表单状态</param>
+            <param name="id">实体数据ID</param>
+            <param name="parentId">父实体数据ID</param>
+            <param name="detailViewName">自定义详情页名称，如果传递该值，将使用对应详情页内容填充PageView</param>
+            <param name="showCard">主对象有效，是否显示FormCard</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.GetDatailPageNameOfMetaObject(System.Int32,System.String,System.String)">
+            <summary>
+            获取指定实体下的所有详情页
+            </summary>
+            <param name="tenantId">租户ID</param>
+            <param name="applicationName">应用编码</param>
+            <param name="metaObjectName">实体编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.GetUrlOfDeatailPage(System.String,System.String,System.String,System.String)">
+            <summary>
+            获取详情页的Url地址
+            </summary>
+            <param name="applicationName">应用编码</param>
+            <param name="metaObjectName">对象编码</param>
+            <param name="metaDataId">要显示记录的数据主键</param>
+            <param name="detailviewName">要打开的详情页(为空则打开默认详情页)。</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.GetUrlOfIndexPage(System.String,System.String)">
+            <summary>
+            获取视图页的Url地址
+            </summary>
+            <param name="applicationName">应用编码</param>
+            <param name="metaObjectName">实体编码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.GetPageModuleV2(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            获取Detail页面
+            </summary>
+            <param name="metaObjName">实体名称</param>
+            <param name="viewName">Detail的Name,可空</param>
+            <param name="formState">表单状态</param>
+            <param name="id">实体数据ID</param>
+            <param name="parentId">父实体数据ID</param>
+            <param name="detailViewName">自定义详情页名称，如果传递该值，将使用对应详情页内容填充PageView</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.GetPageModuleV2(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            获取详情页模块，不仅可以获取子对象相关对象模块，也可以获取主对象模块
+            </summary>
+            <param name="metaObjName">实体名称</param>
+            <param name="viewName">列表视图名称</param>
+            <param name="formState">表单状态</param>
+            <param name="id">主对象数据ID</param>
+            <param name="parentId">主对象的父对象数据ID</param>
+            <param name="isMainView">是不是主对象</param>
+            <param name="detailViewName">自定义详情页名称，如果传递该值，将使用对应详情页内容填充PageView</param>
+            <param name="showCard">主对象有效，是否显示FormCard</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.GetLookupFieldEditStateV2(Beisen.MultiTenant.Model.UIMetaDataV2.SearchCondition)">
+            <summary>
+            获取Lookup字段选择列表
+            </summary>
+            <param name="condition">用户输入条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.GetAdvancedLookupFieldEditStateV2(Beisen.MultiTenant.Model.UIMetaDataV2.SearchCondition)">
+            <summary>
+            获取LookupV2字段高级编辑
+            </summary>
+            <param name="condition">用户输入条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.GetLookupFieldShowStateV2(System.String,System.String,System.String)">
+            <summary>
+            获取Lookup字段显示文字
+            </summary>
+            <param name="metaObjectName"></param>
+            <param name="metaFieldName"></param>
+            <param name="dataObjectValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.GetMOUListByApp(System.String,System.Int32)">
+            <summary>
+            根据租户ID  应用编码获mou集合
+            </summary>
+            <param name="app"></param>
+            <param name="tenantID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.GetCurrentContextInfo">
+            <summary>
+            获取当前登录用户的上下文信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.CreateWiFiConfig(Beisen.MultiTenant.Model.UIMetaDataV2.SysWiFiConfig)">
+            <summary>
+            创建配置文件信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.GetWiFiConfigList(System.String)">
+            <summary>
+            获取配置文件的所有版本
+            </summary>
+            <param name="label">配置文件标识(M_BeisenCloudCore、P_BeisenCloudCore等)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.GetWiFiConfig(System.String,System.String)">
+            <summary>
+            获取某个配置文件的版本信息
+            </summary>
+            <param name="label">配置文件标识(M_BeisenCloudCore、P_BeisenCloudCore等)</param>
+            <param name="version">版本号</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.GetWifiConfigByID(System.Guid)">
+            <summary>
+            根据主键获取指定的配置信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.GetByApplicationAndSettingKey(System.Int32,System.String,System.String)">
+            <summary>
+            获取应用的扩展信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.GetLookupPrimaryKey(Beisen.MultiTenant.Model.UIMetaDataV2.SearchCondition,System.Int32)">
+            <summary>
+            获取LookUp列表中第一条记录的主键值
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.GetLookupKeyByImport(Beisen.MultiTenant.Model.UIMetaDataV2.SearchCondition,System.String,System.Int32)">
+            <summary>
+            翻译LookUp
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.GetFunctionsByViewName(System.String,System.String,System.String,System.Int32,System.Int32,Beisen.MultiTenant.Model.UIMetaDataV2.ComponentType)">
+            <summary>
+            获取详情页中配置的所有按钮
+            </summary>
+            <param name="app">应用编码</param>
+            <param name="metaObjectName">实体编码</param>
+            <param name="viewName">视图或详情页编码</param>
+            <param name="tenantId">租户ID</param>
+            <param name="userId">UserID</param>
+            <param name="componentType">组件类型(支持详情页、视图)</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.GetFunctionsByFunNames(System.String,System.Int32,System.Guid,System.Collections.Generic.List{System.String})">
+            <summary>
+            获取功能按钮集合
+            </summary>
+            <param name="app"></param>
+            <param name="tenantId"></param>
+            <param name="metaObjId"></param>
+            <param name="names"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.GetFunctionsByFunNamesAndMetaObjName(System.String,System.Int32,System.String,System.Collections.Generic.List{System.String})">
+            <summary>
+            获取功能按钮集合
+            </summary>
+            <param name="app"></param>
+            <param name="tenantId"></param>
+            <param name="metaObjName"></param>
+            <param name="names"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.GetConditionFieldsModel(System.String,System.String,System.Int32,System.Int32,System.String,System.String,System.String)">
+            <summary>
+            获取自定义视图字段列表
+            </summary>
+            <param name="app"></param>
+            <param name="metaObjName"></param>
+            <param name="tenantID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.CreatesCustomNavView(System.String,System.String,Beisen.MultiTenant.Model.UIMetaDataV2.CustomNavView.CustomNavViewJsonModel,System.Int32,System.Int32)">
+            <summary>
+            创建自定义视图
+            </summary>
+            <param name="app"></param>
+            <param name="metaObjName"></param>
+            <param name="jsonModel"></param>
+            <param name="tenantId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.DeleteCustomNavView(System.String,System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            删除自定义视图
+            </summary>
+            <param name="app"></param>
+            <param name="metaObjName"></param>
+            <param name="viewName"></param>
+            <param name="version"></param>
+            <param name="tenantId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.UpdateCustomNavView(System.String,System.String,Beisen.MultiTenant.Model.UIMetaDataV2.CustomNavView.CustomNavViewJsonModel,System.Int32,System.Int32)">
+            <summary>
+            更新自定义视图
+            </summary>
+            <param name="app"></param>
+            <param name="metaObjName"></param>
+            <param name="jsonModel"></param>
+            <param name="tenantId"></param>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.ConvertSearchConditionForOcean(System.Int32,System.Int32,System.String)">
+            <summary>
+            翻译查询条件到Ocean的数据
+            </summary>
+            <param name="userId"></param>
+            <param name="tenantID"></param>
+            <param name="condition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.GetPrintComponent(System.Int32,System.String,System.String,System.String[],System.String)">
+            <summary>
+            根据详情页相关参数生成打印模板的Html
+            </summary>
+            <param name="tenantId"></param>
+            <param name="metaObjName"></param>
+            <param name="detailViewName"></param>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.ServiceInterface.IUserInterfaceV2Provider.GetDetailPageByDetailViewName(System.Int32,System.String,System.String,System.String[])">
+            <summary>
+            根据详情页name和数据ID获取详情页组件
+            </summary>
+            <param name="tenantId"></param>
+            <param name="metaObjName"></param>
+            <param name="detailViewName"></param>
+            <param name="ids"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

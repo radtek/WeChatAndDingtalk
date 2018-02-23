@@ -1,0 +1,208 @@
+/*html{
+	font-size:62.5%;
+}*/
+/*@media screen and (min-width:320px) {
+    html {
+        font-size:31.25%!important
+    }
+}
+@media screen and (min-width:360px) {
+    html {
+        font-size:35.15625%!important
+    }
+}
+@media screen and (min-width:375px) {
+    html {
+        font-size:36.6211%!important
+    }
+}
+@media screen and (min-width:400px) {
+    html {
+        font-size:39.0625%!important
+    }
+}
+@media screen and (min-width:440px) {
+    html {
+        font-size:42.96875%!important
+    }
+}
+@media screen and (min-width:480px) {
+    html {
+        font-size:46.875%!important
+    }
+}
+@media screen and (min-width:520px) {
+    html {
+        font-size:50.78125%!important
+    }
+}
+@media screen and (min-width:560px) {
+    html {
+        font-size:54.6875%!important
+    }
+}
+@media screen and (min-width:600px) {
+    html {
+        font-size:58.59375%!important
+    }
+}
+@media screen and (min-width:640px) {
+    html {
+        font-size:62.5%!important
+    }
+}*/
+body{
+	margin:0;
+	padding:0;
+	background: #f5f3f3;
+}
+input{
+	outline: none;
+}
+.login_italent_content{
+	padding-top:2rem;
+}
+.login_italent_content .weui_btn_default{
+	background: #11ABE8;
+	color:#fff;
+
+}
+.login_italent_content .weui_btn{
+	/*font-size:2.5rem;*/
+}
+.login_italent_content .italent_img,.bound_content .italent_img{
+	display: inline-block;
+    width: 7rem;
+    height: 7rem;
+	background:url('../images/italent-bound.png') no-repeat center center;
+	margin: 2rem 0;
+}
+.weui_icon_success:before{
+	content: "";
+}
+.login_italent_content .login_zh{
+	font-size:1.6rem;
+	margin-bottom:1rem;
+}
+.login_zh:first-child:before{display: block;}
+
+.login_italent_content .weui_text_area .zh_name {
+	margin-bottom: 1.5rem;
+	padding-left:2rem;
+	width:100%;
+	height:3.5rem;
+	border:none;
+	border-bottom:0.1rem solid #fff;
+	margin-bottom:1rem;
+	background: #11ABE8;
+	color:#fff;
+    font-size:1.4rem;
+	box-sizing: border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+}
+.login_italent_content .weui_text_area .zh_content,.login_italent_content .weui_text_area .zh_password_content{
+	position: relative;
+}
+.login_italent_content .weui_text_area .zh_content .zh_name_pic,.login_italent_content .weui_text_area .zh_password_content .zh_password_pic{
+	position: absolute;
+	width:1.5rem;
+	height:1.5rem;
+	left:0;
+	top:0.7rem;
+	/*background: url('../images/yonghuming.png') no-repeat left center;*/
+}
+.login_italent_content .weui_text_area .zh_content .zh_name_pic img,.login_italent_content .weui_text_area .zh_password_content .zh_password_pic img{
+	max-width:100%;
+	height:auto;
+}
+.login_italent_content .weui_opr_area .login_text{
+	color:#11ABE8;
+	background: #fff;
+}
+.login_italent_content .weui_msg .weui_extra_area a.use_email{
+	color:#fff;
+}
+.login_italent_content .weui_msg .weui_extra_area a.use_italent_login{
+	color:#999;
+}
+.login_italent_content .weui_text_area .txt_email{
+	margin:1rem 0;
+	width:100%;
+	height:3rem;
+	border:none;
+	border-top:1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	color:#333;
+	font-size: 1.4rem;
+	background: #f5f3f3;
+	
+}
+.login_italent_content .weui_btn_area .change_email{
+	background:#fff;
+	color:#11ABE8;
+}
+.login_italent_content .weui_text_area .email_send{
+	text-align: left;
+}
+.login_italent_content .weui_msg .italent_platform{
+	display: inline-block;
+	margin-bottom: 1rem;
+	height:6.1rem;
+	background: url('../images/italent_pla_pic.png') no-repeat center center;
+}
+.login_italent_content .weui_msg .login_poto_img{
+	width:6.1rem;
+	height:4.8rem;
+}
+.login_italent_content .weui_msg .login_img{
+	margin-bottom:2rem;
+	display: inline-block;
+	width:10rem;
+	height:10rem;
+	background:#CCC;
+	border-radius: 12.2rem;
+	text-align: center;
+	line-height: 2.5rem;
+	
+}
+.login_italent_content .weui_text_area .please_email{
+	
+	text-align: left;
+	
+}
+.login_italent_content .primary_content {
+	border-bottom:1px solid #fff;
+	padding:0;
+	color:#fff;
+	/*font-size:1.6rem;*/
+}
+.login_italent_content .weui_cell:before{
+	border-top:none;
+}
+.login_italent_content .primary_content .weui_label{
+	text-align: left;
+}
+.login_italent_content .primary_content{
+    height:3.5rem;
+    overflow:hidden;
+}
+.login_italent_content .primary_content .weui_cell_hd{
+    float:left;
+}
+.login_italent_content .primary_content .weui_cell_primary{
+    float:left
+}
+.login_italent_content .primary_content .weui_cell_ft{
+    float:left
+}
+.login_italent_content .error_txt{
+    color:#cc2929;
+}
+/*.login_italent_content input {
+    font-size:2.4rem;
+}
+.login_italent_content .weui_msg .weui_msg_desc{
+
+    font-size:2.8rem;
+}*/

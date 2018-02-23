@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Beisen.CassandraV2</name>
+    </assembly>
+    <members>
+        <member name="M:Beisen.CassandraV2.CassandraClient.InsertOrUpdateRecord``1(System.Int32,System.String,System.String,System.String,Beisen.CassandraV2.ColumnCollection{``0})">
+            <summary>
+            Insert a record, remove columns with null value
+            </summary>
+            <typeparam name="TColumn"></typeparam>
+            <param name="tenantId"></param>
+            <param name="keyspace"></param>
+            <param name="columnFamily"></param>
+            <param name="key"></param>
+            <param name="columns"></param>
+        </member>
+        <member name="M:Beisen.CassandraV2.CassandraClient.InsertOrUpdateRecord``1(System.String,System.String,System.String,Beisen.CassandraV2.ColumnCollection{``0})">
+            <summary>
+            Insert a record, remove columns with null value
+            </summary>
+            <typeparam name="TColumn"></typeparam>
+            <param name="keyspace"></param>
+            <param name="columnFamily"></param>
+            <param name="key"></param>
+            <param name="columns"></param>
+        </member>
+    </members>
+</doc>

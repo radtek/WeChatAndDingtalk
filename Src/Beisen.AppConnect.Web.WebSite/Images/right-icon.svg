@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44 (41411) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="账户设置" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="手机号码已绑定-copy" transform="translate(-12.000000, -76.000000)" fill="#FFFFFF">
+            <g id="Group-2" transform="translate(0.000000, 64.000000)">
+                <path d="M20,28 C15.581722,28 12,24.418278 12,20 C12,15.581722 15.581722,12 20,12 C24.418278,12 28,15.581722 28,20 C28,24.418278 24.418278,28 20,28 Z M17.5142103,23.9876623 C17.8129416,24.2875105 18.2936589,24.2836279 18.5925421,23.9836272 L25.0299854,17.5719656 C25.3300212,17.270808 25.3306684,16.7873744 25.0340054,16.4896022 C24.7352741,16.1897541 24.2545568,16.1936367 23.9556736,16.4936373 L18.0513662,22.3701699 L15.4299854,19.7052989 C15.1338872,19.4080937 14.6536555,19.4088506 14.3569925,19.7066228 C14.0582612,20.0064709 14.059739,20.4865862 14.3556736,20.7836272 L16.9777139,23.4491601 L17.5142103,23.9876623 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

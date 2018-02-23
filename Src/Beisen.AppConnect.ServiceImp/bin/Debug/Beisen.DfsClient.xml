@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Beisen.DfsClient</name>
+    </assembly>
+    <members>
+        <member name="M:Beisen.DfsClient.Dfs.ToClientUrl(System.String,Beisen.DfsClient.UrlSignDomain,System.Int32)">
+            <summary>
+            Translates DfsPath to ClientUrl
+            </summary>
+            <example>
+            DfsPath: dfs://image/tenant/b97c0a5a349e0288ba15b07cd3778a70.jpg
+            ClientUrl: http://xfiles.beisen.com/image/tenant/4dbd119af6c54726a3a364fddbdfb5f2.jpg
+            </example>
+            <param name="dfsPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.DfsClient.Dfs.ToClientUrl(System.String,System.String)">
+            <summary>
+            Translates DfsPath to ClientUrl
+            </summary>
+            <param name="dfsPath"></param>
+            <param name="application">Key of 3 party application</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.DfsClient.Dfs.ToDownloadUrl(System.String,Beisen.DfsClient.UrlSignDomain,System.Int32)">
+            <summary>
+            Translates DfsPath to DownloadUrl(URL that you can use to download the file with the DfsPath)
+            </summary>
+            <example>
+            DfsPath: dfs://image/tenant/b97c0a5a349e0288ba15b07cd3778a70.jpg
+            DownloadUrl: http://xfiles.beisen.com/download/image/tenant/4dbd119af6c54726a3a364fddbdfb5f2.jpg
+            </example>
+            <param name="dfsPath"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.DfsClient.Dfs.Store(Beisen.DfsClient.DfsItem)">
+            <summary>
+            Store a file to DFS
+            </summary>
+            <param name="item">
+            Parameters designated in DfsItem:
+            FileType: string, required, Keyspace is selected according to FileType, e.g. "Image"
+            FileName: string, required, The name of the file, and extension name is required, e.g. "u.jpg"
+            FileId:   string, optional, A unique string identifies the file in DFS, only chars in [A-Za-z0-9_] is allowed,
+                      If not designated(null or empty), a Guid is generated as the file id
+            FileData: Stream or byte[], required, Contents of the file to be stored
+            TenantId: int, required, ID of the tenant owns the file
+            </param>
+            <returns>DfsPath uniquely identifies the file</returns>
+        </member>
+        <member name="M:Beisen.DfsClient.Dfs.Store(Beisen.DfsClient.DfsItem[],System.Int32,System.Boolean@)">
+            <summary>
+            Batch DFS Store
+            </summary>
+            <param name="items">Items to store in DFS</param>
+            <param name="milliseconds">The number of milliseconds to wait, or Timeout.Infinite(-1) to wait indefinitely</param>
+            <param name="timeout">Indicate whether the operation is timeout or not</param>
+            <returns>
+            DfsOperationResult[] in the order of the supplied items
+            DfsOperationResult.Succeeded indicates whether the item stores successfully or not
+            If success, DfsOperationResult.DfsPath contains the unique dfs path to the stored item
+            If fail, DfsOperationResult.ErrorMessage gives information about why the operation is failed
+            </returns>
+        </member>
+        <member name="M:Beisen.DfsClient.Dfs.Delete(System.String)">
+            <summary>
+            Delete file with the designated path in DFS
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="M:Beisen.DfsClient.Dfs.Delete(Beisen.DfsClient.DfsPath)">
+            <summary>
+            Delete file with the designated path in DFS
+            </summary>
+            <param name="dfsPath"></param>
+        </member>
+        <member name="M:Beisen.DfsClient.DfsItem.#ctor(System.String,System.String,System.String,System.IO.Stream,System.Int32)">
+            <summary>
+            Initialize an instance of DfsItem
+            If fileId is not designated(null or empty), a Guid is generated as the file's id
+            </summary>
+        </member>
+        <member name="M:Beisen.DfsClient.DfsItem.#ctor(System.String,System.String,System.String,System.Byte[],System.Int32)">
+            <summary>
+            Initialize an instance of DfsItem
+            If fileId is not designated(null or empty), a Guid is generated as the file's id
+            </summary>
+        </member>
+        <member name="T:Beisen.DfsClient.DfsPath">
+            <summary>
+            Dfs Path Format:
+            dfs://{keyspace}/{tenant id}/{file id}.{file extension}
+            </summary>
+            <example>
+            dfs://image/tenant/b97c0a5a349e0288ba15b07cd3778a70.jpg
+            dfs://report/tenant/b97c0a5a349e0288ba15b07cd3778a70.pdf
+            dfs://audio/tenant/b97c0a5a349e0288ba15b07cd3778a70.mp3
+            dfs://video/tenant/b97c0a5a349e0288ba15b07cd3778a70.avi
+            dfs://flash/tenant/b97c0a5a349e0288ba15b07cd3778a70.swf
+            </example>
+        </member>
+    </members>
+</doc>

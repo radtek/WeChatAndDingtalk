@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>账号注册</title>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <link href="~/css/style2.css" rel="stylesheet">
+</head>
+<body>
+    <div id='main'>
+        <div class='mobile-no-bind-weixin'>
+            <div class='no-bind-header'><img src='@ViewData["Logo"]'></img></div>
+            <div class='no-bind-content'>
+                <div class='content-inputs'>
+                    <div class='input-name'>
+                        <label class='input-name-title'>用户名</label>
+                        <input class='input-name-text' placeholder='用户名' onblur='testUserName(this)'></input>
+                    </div>
+                    <div class='line'></div>
+                    <div class='input-mobile-number'>
+                        <label class='input-mobile-number-title'>+86</label>
+                        <input class='input-mobile-number-text' placeholder='填写手机号' type="tel" onblur='testPhoneNumber(this)'></input>
+                    </div>
+                    <div class='input-password'>
+                        <label class='input-password-title'>密码</label>
+                        <input class='input-password-text input-password-pw' placeholder='填写密码' type='password' onchange='changePassword1(this)' onblur='testPassword(this)' oninput="changePassword1(this)"></input>
+                        <input class='input-password-text input-password-te' placeholder='填写密码' type='text' onchange='changePassword2(this)' onblur='testPassword(this)' style='display:none'></input>
+                        <div class='password-eye close-eye' onclick='clickEye(this)'>
+                            <div class='eye-center'></div>
+                        </div>
+                        <div style='clear:both;'></div>
+                    </div>
+                    <div class='input-verification'>
+                        <label class='input-verification-title'>验证码</label>
+                        <input class='input-verification-text' placeholder='填写验证码' oninput='verficationCodeTest(this)' type="number"></input>
+                        <div class='input-verification-tooltip no-click' onclick='getVerificationCode(this)'>获取验证码</div>
+                    </div>
+                </div>
+                <div class='content-buttons'>
+                    <div id='registeredButton' class='registered-button' onclick='registeredClick()'><label>注册</label></div>
+                    <div id='buttonCover' class='button-cover' display='block'></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id='tooltip-error'>
+        <div class='tooltip-error1 tooltip-error-item'>
+            <span class='error-icon'></span>
+            <label class='error-text1'></label>
+            <span class='close-error' onclick='closeError(1)'></span>
+            <div style='clear:both;'></div>
+        </div>
+        <div class='tooltip-error2 tooltip-error-item'>
+            <span class='error-icon'></span>
+            <label class='error-text2'></label>
+            <span class='close-error' onclick='closeError(2)'></span>
+            <div style='clear:both;'></div>
+        </div>
+        <div class='tooltip-error3 tooltip-error-item'>
+            <span class='error-icon'></span>
+            <label class='error-text3'></label>
+            <span class='close-error' onclick='closeError(3)'></span>
+            <div style='clear:both;'></div>
+        </div>
+        <div class='tooltip-error4 tooltip-error-item'>
+            <span class='error-icon'></span>
+            <label class='error-text4'></label>
+            <span class='close-error' onclick='closeError(4)'></span>
+            <div style='clear:both;'></div>
+        </div>
+    </div>
+    <div id='tooltip-right' style='display:none;'>
+        <span class='right-icon'></span>
+        <label class='right-text'></label>
+        <!--<span onclick='close'>X</span>        -->
+    </div>
+    <script language='javascript'>
+         var ss = '这是移动端的未绑定页面';
+         console.log(ss);
+        //  这是固定需要的数据
+         var defaultData = {
+             tenant_id: '@ViewData["TenantId"]',//（租户id）
+             isv_id: '@ViewData["IsvId"]',//（租户id）
+             inviteuser_id: '@ViewData["InviteUserId"]',//（邀请人id）
+             redirect_url: '@ViewData["RedirectUrl"]',//（登陆回调地址）
+             batch: '@ViewData["Batch"]',//（回调批次id）
+             host: '@ViewData["Host"]',//（host）
+             logo: '@ViewData["Logo"]',//（logo）
+         }
+    </script>
+    <script src="~/Scripts/noBind.js"></script>
+</body>
+</html>

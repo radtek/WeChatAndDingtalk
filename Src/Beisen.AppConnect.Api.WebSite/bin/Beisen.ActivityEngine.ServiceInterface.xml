@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Beisen.ActivityEngine.ServiceInterface</name>
+    </assembly>
+    <members>
+        <member name="T:Beisen.ActivityEngine.ServiceInterface.Activity">
+            <summary>
+            Activity数据结构
+            </summary>
+        </member>
+        <member name="P:Beisen.ActivityEngine.ServiceInterface.Activity.ActivityType">
+            <summary>
+            Activity的类型，如发博客、上传照片等
+            </summary>
+        </member>
+        <member name="P:Beisen.ActivityEngine.ServiceInterface.Activity.Timestamp">
+            <summary>
+            Activity发生的时间，精确到秒
+            </summary>
+        </member>
+        <member name="P:Beisen.ActivityEngine.ServiceInterface.Activity.Resources">
+            <summary>
+            与此Activity相关的其它信息
+            
+            对于用户行为类型的Activity，常用的几个Key如下：
+            ActorId - int，required，Activity的发起者
+              如用户A发了一篇微博客，则用户A就是这个Activity的Actor
+              
+            ObjectId – string，optional，Activity涉及到的Object
+              如用户A发了一篇微博客，则这篇微博客就是这个Activity的Object
+              
+            AcceptorId – int，optional，Activity涉及到的另外一个人
+              如用户A给用户B送了一个礼物，则用户B就是这个Activity的Acceptor
+            </summary>
+        </member>
+        <member name="T:Beisen.ActivityEngine.ServiceInterface.IActivityDispatcher">
+            <summary>
+            Interface to be implemented by concrete Activity Dispatchers whose responsbility is 
+            dispatching activities to the right subscribers
+            </summary>
+        </member>
+        <member name="M:Beisen.ActivityEngine.ServiceInterface.IActivityDispatcher.Dispatch(Beisen.ActivityEngine.ServiceInterface.Activity[])">
+            <summary>
+            Dispatch of subscribed activities
+            </summary>
+            <param name="activities"></param>
+        </member>
+        <member name="M:Beisen.ActivityEngine.ServiceInterface.IActivityDispatcher.ReloadConfig">
+            <summary>
+            Handler executed when ActivityEngineConfig changed
+            </summary>
+        </member>
+        <member name="P:Beisen.ActivityEngine.ServiceInterface.IActivityDispatcher.Name">
+            <summary>
+            The name of the Activity Dispatcher which must be unique
+            Name "EsbInterfaceDispatcher" and "RestfulDispatcher" are reserved
+            </summary>
+        </member>
+        <member name="P:Beisen.ActivityEngine.ServiceInterface.IActivityDispatcher.Enabled">
+            <summary>
+            Whether the Activity Dispatcher is enabled or not
+            If not enabled, Activity Engine will not dispatch any activity to this dispatcher
+            </summary>
+        </member>
+        <member name="M:Beisen.ActivityEngine.ServiceInterface.IActivityEngineProvider.RaiseActivity(Beisen.ActivityEngine.ServiceInterface.Activity)">
+            <summary>
+            Raise an activity to Activity Engine
+            </summary>
+            <param name="activity"></param>
+        </member>
+        <member name="T:Beisen.ActivityEngine.ServiceInterface.IActivityFilter">
+            <summary>
+            Interface for Activity Filters that decide whether an activity is accepted by an activity subscriber
+            </summary>
+        </member>
+        <member name="M:Beisen.ActivityEngine.ServiceInterface.IActivityFilter.Decide(Beisen.ActivityEngine.ServiceInterface.Activity)">
+            <summary>
+            Decide whether an activity is accepted by an activity subscriber
+            </summary>
+            <param name="activity"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Beisen.ActivityEngine.ServiceInterface.IActivityFilter.Next">
+            <summary>
+            The next activity filter to be asked if decision cannot be made by this filter
+            </summary>
+        </member>
+    </members>
+</doc>

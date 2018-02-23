@@ -1,0 +1,313 @@
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+ 
+}
+
+/*
+Copyright (c) 2014,Beisen Inc. All rights reserved.
+http://www.beisen.com
+version: 1.0
+author: liuqichao
+*/
+
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset,
+img,
+iframe {
+  border: 0;
+}
+
+:focus {
+  outline: 0;
+}
+
+address,
+pre,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-weight: normal;
+  font-style: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /*font-size: 100%;*/
+  font-weight: normal;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+}
+
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+@media screen and (min-width:320px) {
+    html {
+        font-size:31.25%!important
+    }
+}
+@media screen and (min-width:360px) {
+    html {
+        font-size:35.15625%!important
+    }
+}
+@media screen and (min-width:375px) {
+    html {
+        font-size:36.6211%!important
+    }
+}
+@media screen and (min-width:400px) {
+    html {
+        font-size:39.0625%!important
+    }
+}
+@media screen and (min-width:440px) {
+    html {
+        font-size:42.96875%!important
+    }
+}
+@media screen and (min-width:480px) {
+    html {
+        font-size:46.875%!important
+    }
+}
+@media screen and (min-width:520px) {
+    html {
+        font-size:50.78125%!important
+    }
+}
+@media screen and (min-width:560px) {
+    html {
+        font-size:54.6875%!important
+    }
+}
+@media screen and (min-width:600px) {
+    html {
+        font-size:58.59375%!important
+    }
+}
+@media screen and (min-width:640px) {
+    html {
+        font-size:62.5%!important
+    }
+}
+
+
+
+
+#ewm_content{
+  padding:20px 10px;
+  width:320px;
+  height:355px;
+  background: #333;
+  color:#fff;
+  text-align: center;
+  margin: 50px auto;
+}
+#ewm_content .wec_login{
+  font-size: 20px;
+}
+#ewm_content .erm_img{
+  margin:20px auto;
+  width:320px;
+  height:320px;
+  background:#fff;
+  border: 1px solid #E2E2E2;
+}
+#ewm_content .erm_zt{
+  width:320px;
+  height:50px;
+  font-size:14px;
+  border:1px solid #333;
+  border-radius: 30px;
+  background: #232323;
+  margin:0 auto;
+}
+#ewm_content .sm_result{
+  
+  width:100%;
+  text-align: center;
+}
+
+#ewm_content .sm_result2 .sm_zt{
+  float:right;
+  width:225px;
+}
+#ewm_content .zt_info{
+  float:left;
+  margin-left:35px;
+  margin-top:5px;
+  width:38px;
+  height:38px;
+}
+#ewm_content .sm_result2 .zt_info{
+    display:block;
+}
+#ewm_content .sm_result .zt_info{
+    display:none;
+}
+#ewm_content .sm_result2 .zt_info_confirm{
+    background:url('../images/icon_status.png') no-repeat 0 -46px;
+}
+#ewm_content .sm_result2 .zt_info_cancel{
+    background:url('../images/icon_status.png') no-repeat 0 -87px;
+}
+#ewm_content .sm_result2 .sm_inform{
+  height:50px;
+  text-align: left;
+}
+#ewm_content .sm_result .sm_inform{
+    width:100%;
+  height:50px;
+  line-height: 50px;
+  text-align:center;
+}
+#ewm_content .sm_result2 .sm_zt_info{
+  display: block;
+  margin:5px 0 7px;
+  text-align: left;
+}
+#ewm_content .sm_result .sm_zt_info{
+  display: none;
+}
+
+/*激活邮件样式*/
+#activate_email{
+  margin:10rem auto;
+  /*width:15rem;*/
+  height:15rem;
+  /*border: 1px solid #333;
+  border-radius: 1rem;
+  -webkit-border-radius:1rem;*/
+  text-align: center;
+}
+#activate_email .erm_img{
+  margin:20px auto 0;
+  width:156px;
+  height:148px;
+  /*background:url("../images/email_logo.png") no-repeat center center;*/
+}
+#activate_email .erm_img img{
+  /*width:10.6rem;
+  
+  height:10.6rem;*/
+  /*background:url("../images/email_logo.png") no-repeat center center;*/
+}
+#activate_email .erm_zt .sm_zt_info{
+  font-size:2.4rem;
+  font-weight: bold;
+  margin:3rem 0 2rem;
+}
+#activate_email .erm_zt .sm_inform{
+  font-size:1.8rem;
+
+}
+#activate_email .erm_zt .sm_inform a:link,#activate_email .erm_zt .sm_inform a:active{
+  color:#000;
+  text-decoration: none;
+
+}
+#activate_email .erm_zt .sm_inform a:hover{
+  color:#000;
+  text-decoration: none;
+}
+#error_content{
+  margin-top:5rem;
+  width:100%;
+  text-align: center;
+}
+#error_content .error_img{
+    width:90%;
+    margin:3rem auto;
+}
+#error_content .error_img img{
+   max-width: 100%;
+    height: auto;
+}
+#error_content .error_txt{
+  margin-top:2rem;
+  font-size:18px;
+}
+#error_content .error_txt a:link,#error_content .error_txt a:active{
+  color:#333;
+  text-decoration: none;
+}
+#error_content .error_txt a:hover{
+  color:#333;
+  text-decoration: none;
+}
+
+
+
+
+
+
+

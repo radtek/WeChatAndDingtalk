@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <link href="~/css/style2.css" rel="stylesheet">
+</head>
+<body>
+    <div id='main'>
+        <div class='mobile-is-bind-weixin'>
+            <div class='is-bind-header'>
+                <img src='@ViewData["Logo"]'></img>
+            </div>
+            <div class='is-bind-content'>
+                <div class='content-info'>
+                    <label>该微信已绑定以下账号无需再注册</label>
+                    <label class='info-name' id='infoName'></label>
+                </div>
+                <div class='content-buttons'>
+                    <div id='loginButton' class='login-button' onclick='loginClick()'>
+                        <label>直接登录</label>
+                    </div>
+                </div>
+            </div>
+            <div id='releaseBind' class='release-bind' onclick='releaseBindClick()'>
+                <label>解除绑定</label>
+            </div>
+        </div>
+    </div>
+    <div id='tooltip-error' style='display:none;'>
+        <span class='error-icon'></span>
+        <label class='error-text'></label>
+        <span class='close-error' onclick='closeError(this)'></span>
+        <div style='clear:both;'></div>
+    </div>
+    <div id='tooltip-right' style='display:none;'>
+        <span class='right-icon'></span>
+        <label class='right-text'></label>
+        <!--<span onclick='close'>X</span>        -->
+    </div>
+    <script language='javascript'>
+        var ss = '这是移动端已绑定页面';
+        console.log(ss);
+         //  这是固定需要的数据
+        var defaultData = {
+            tenant_id: '@ViewData["TenantId"]',//（租户id）
+            isv_id: '@ViewData["IsvId"]',//（租户id）
+            inviteuser_id: '@ViewData["InviteUserId"]',//（邀请人id）
+            redirect_url: '@ViewData["RedirectUrl"]',//（登陆回调地址）
+            batch: '@ViewData["Batch"]',//（回调批次id）
+            email: '@ViewData["Email"]',//（绑定用户名）
+            appaccount_id: '@ViewData["AccountAppId"]',//（AccountAppId）
+            type: '@ViewData["Type"]',//（type）
+            host: '@ViewData["Host"]',//（host）
+            logo: '@ViewData["Logo"]',//（logo）
+        }
+    </script>
+    <script src="~/Scripts/isBind.js"></script>
+</body>
+</html>

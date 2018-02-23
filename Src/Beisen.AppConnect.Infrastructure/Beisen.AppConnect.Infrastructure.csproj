@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BB2B20FD-8E98-4212-9AE0-3ADAAFEC9F61}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Beisen.AppConnect.Infrastructure</RootNamespace>
+    <AssemblyName>Beisen.AppConnect.Infrastructure</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Beisen.CassandraV2, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.CassandraV2.1.1.0.501\lib\net45\Beisen.CassandraV2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.CassandraV2.CqlClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.CassandraV2.1.1.0.501\lib\net45\Beisen.CassandraV2.CqlClient.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.Common.1.1.0.24\lib\net45\Beisen.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.Configuration, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.Configuration.1.1.0.32\lib\net45\Beisen.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.Configuration.XmlSerializers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.Configuration.1.1.0.32\lib\net45\Beisen.Configuration.XmlSerializers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.ConnectionPool, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.ConnectionPool.1.1.0.331\lib\net45\Beisen.ConnectionPool.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.Data">
+      <HintPath>..\..\..\..\packages\Beisen.Data.1.1.0.5\lib\net45\Beisen.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.DfsClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.DfsClient.1.1.0.480\lib\net45\Beisen.DfsClient.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.Entity">
+      <HintPath>..\..\..\..\packages\Beisen.Entity.1.1.0.7\lib\net45\Beisen.Entity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.ESB.ClientProxyFactoryV2, Version=1.1.0.50, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.ESB.ClientProxyFactoryV2.1.1.0.414\lib\net40\Beisen.ESB.ClientProxyFactoryV2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.Log.Trace, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.Log.Trace.1.1.0.47\lib\net45\Beisen.Log.Trace.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.Log.Trace.HttpModule">
+      <HintPath>..\..\..\..\packages\Beisen.Log.Trace.HttpModule.1.1.0.27\lib\net45\Beisen.Log.Trace.HttpModule.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.Logging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.Logging.1.1.0.67\lib\net45\Beisen.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.Logging.Collector, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.Logging.Collector.1.1.0.35\lib\net45\Beisen.Logging.Collector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.MultiTenantV5.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Beisen.MultiTenantV5.ServiceInterface.1.1.0.1126\lib\net45\Beisen.MultiTenantV5.Model.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.MultiTenantV5.ModelOperationSDK, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Beisen.MultiTenantV5.ServiceInterface.1.1.0.1126\lib\net45\Beisen.MultiTenantV5.ModelOperationSDK.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.MultiTenantV5.ServiceInterface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\packages\Beisen.MultiTenantV5.ServiceInterface.1.1.0.1126\lib\net45\Beisen.MultiTenantV5.ServiceInterface.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.RedisV2, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.RedisV2.1.1.0.346\lib\net45\Beisen.RedisV2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Beisen.SearchV3, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\Beisen.SearchV3.1.1.0.681\lib\net45\Beisen.SearchV3.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ccr.Core">
+      <HintPath>..\..\..\..\packages\Ccr.Core.1.5.507.0\lib\net35\Ccr.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.9.0, Culture=neutral, PublicKeyToken=b32731d11ce58905">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\log4net.1.2.10.1\lib\net11\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage">
+      <HintPath>..\..\..\..\packages\WindowsAzure.Storage.4.3.0\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySpace.DataRelay.Client, Version=1.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\MySpace.DataRelay.1.1.0.13\lib\net45\MySpace.DataRelay.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySpace.DataRelay.Common, Version=1.3.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\MySpace.DataRelay.1.1.0.13\lib\net45\MySpace.DataRelay.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySpace.Shared">
+      <HintPath>..\..\..\..\packages\MySpace.Shared.1.1.0.7\lib\net35\MySpace.Shared.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PowerCollections">
+      <HintPath>..\..\..\..\packages\PowerCollections.1.0.2141.24679\lib\net35\PowerCollections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\packages\RestSharp.105.2.3.3\lib\net45\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Common">
+      <HintPath>..\..\..\..\packages\ServiceStack.Common.3.9.25.1\lib\net35\ServiceStack.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Text">
+      <HintPath>..\..\..\..\packages\ServiceStack.Common.3.9.25.1\lib\net35\ServiceStack.Text.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Wintellect.PowerThreading">
+      <HintPath>..\..\..\..\packages\Wintellect.PowerThreading.1.0.0.0\lib\net35\Wintellect.PowerThreading.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="zxing">
+      <HintPath>..\..\..\..\packages\zxing.1.0.0\lib\net40\zxing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppConnectTask\AppConnectTask.cs" />
+    <Compile Include="AppConnectTask\AppContext.cs" />
+    <Compile Include="AppConnectTask\LimitedConcurrencyLevelTaskScheduler.cs" />
+    <Compile Include="Attribute\AccountIdentityAttribute.cs" />
+    <Compile Include="Cache\AppConnectEntityProcedure .cs" />
+    <Compile Include="Cache\IAppConnectExtendedSerializableEntity.cs" />
+    <Compile Include="Cache\AppConnectExtendedSerializableEntity.cs" />
+    <Compile Include="Cloud\CloudDataHelper.cs" />
+    <Compile Include="ConfigHandler\EnterpriseESBConfigHandler.cs" />
+    <Compile Include="ConfigHandler\SystemInfo.cs" />
+    <Compile Include="Configuration\AppConnectAppAccountTypeConfig.cs" />
+    <Compile Include="Configuration\AppConnectCacheVersionConfig.cs" />
+    <Compile Include="Configuration\AppconnectConfig.cs" />
+    <Compile Include="Configuration\AppConnectDomainConfig.cs" />
+    <Compile Include="Configuration\AppConnectHostConfig.cs" />
+    <Compile Include="Configuration\AppConnectISVSettingsConfig.cs" />
+    <Compile Include="Configuration\AppConnectProviderConfig.cs" />
+    <Compile Include="Configuration\AppConnectRedirectUrlConfig.cs" />
+    <Compile Include="Configuration\AppConnectRequestTemplateConfig.cs" />
+    <Compile Include="Configuration\AppConnectTitaAppConfig.cs" />
+    <Compile Include="Configuration\AppConnectTitaAppHostMappingConfig.cs" />
+    <Compile Include="Constants\CloudConstants.cs" />
+    <Compile Include="DatabaseName.cs" />
+    <Compile Include="Enums\BindStatusEnum.cs" />
+    <Compile Include="Enums\ConsumerEnum.cs" />
+    <Compile Include="Enums\Enums.cs" />
+    <Compile Include="Enums\ExceptionCode.cs" />
+    <Compile Include="Exceptions\ESBServiceNotFoundException.cs" />
+    <Compile Include="Exceptions\ExcuteRequestException.cs" />
+    <Compile Include="Exceptions\SDKResultException.cs" />
+    <Compile Include="Exceptions\SMSSendException.cs" />
+    <Compile Include="Exceptions\UserOperateException.cs" />
+    <Compile Include="Helper\AppConnectLogHelper.cs" />
+    <Compile Include="Helper\CaptchImageHelper.cs" />
+    <Compile Include="Helper\ConvertHelper.cs" />
+    <Compile Include="Helper\CookieHelper.cs" />
+    <Compile Include="Helper\CryptographyHelper.cs" />
+    <Compile Include="Helper\DateTimeHelper.cs" />
+    <Compile Include="Helper\DfsHelper.cs" />
+    <Compile Include="Helper\ExcelHelper.cs" />
+    <Compile Include="Helper\HttpClientHelper.cs" />
+    <Compile Include="Helper\ItalentOAuthHelper.cs" />
+    <Compile Include="Helper\MediaDataHelper.cs" />
+    <Compile Include="Helper\QrCodeHelper.cs" />
+    <Compile Include="Helper\RedisHelper.cs" />
+    <Compile Include="Helper\SerializeHelper.cs" />
+    <Compile Include="Helper\SHA1Helper.cs" />
+    <Compile Include="Helper\TitaMessageHelper.cs" />
+    <Compile Include="Helper\UrlHelper.cs" />
+    <Compile Include="HostConst.cs" />
+    <Compile Include="RequestUtility\Request.cs" />
+    <Compile Include="RequestUtility\RequestLogHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProviderFactory.cs" />
+    <Compile Include="Template\MethodHelper.cs" />
+    <Compile Include="Template\ApiTemplate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="RestSharp.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

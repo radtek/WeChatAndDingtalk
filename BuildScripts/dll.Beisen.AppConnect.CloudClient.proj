@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="StandardBuild">
+    <PropertyGroup Condition="$(Branch)=='master' or $(Branch)=='online'">
+        <SlnDir>$(CCNetWorkingDirectory)\solution\AppConnect.CloudClient.sln</SlnDir>
+		<PackVersion>1.1.0.$(GO_PIPELINE_COUNTER)$(Version)</PackVersion>
+		<PackName>Beisen.AppConnect.CloudClient.1.1.0.$(GO_PIPELINE_COUNTER)$(Version).nupkg</PackName>
+		<BuildIncludeDllPath>$(CCNetWorkingDirectory)\Src\Beisen.AppConnect.CloudClient\bin\Release\Beisen.AppConnect.CloudClient.*;</BuildIncludeDllPath>
+        	<BuildExcludeDllPath>$(CCNetWorkingDirectory)\Src\Beisen.AppConnect.CloudClient\bin\Release\*.xml</BuildExcludeDllPath>
+    </PropertyGroup>
+    <PropertyGroup Condition="$(Branch)!='master' and $(Branch)!='online'">
+       <SlnDir>$(CCNetWorkingDirectory)\solution\AppConnect.CloudClient.sln</SlnDir>
+		<BuildIncludeDllPath>$(CCNetWorkingDirectory)\Src\Beisen.AppConnect.CloudClient\bin\Release\Beisen.AppConnect.CloudClient.*;</BuildIncludeDllPath>
+        	<BuildExcludeDllPath>$(CCNetWorkingDirectory)\Src\Beisen.AppConnect.CloudClient\bin\Release\*.xml</BuildExcludeDllPath>
+        <Version>-alpha</Version>
+		<PackVersion>1.1.1.$(GO_PIPELINE_COUNTER)$(Version)</PackVersion>
+        <PackName>Beisen.AppConnect.CloudClient.1.1.1.$(GO_PIPELINE_COUNTER)$(Version).nupkg</PackName>
+    </PropertyGroup>
+	<Import Project="$(ConfigFilePath)\BuildScripts\BaseProj.proj"/>
+</Project>

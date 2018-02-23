@@ -1,0 +1,901 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Beisen.MVCExtension2</name>
+    </assembly>
+    <members>
+        <member name="T:Beisen.MVCExtension.BeisenAuthorizationFilter">
+            <summary>
+            北森自定义验证过滤器，用以对用户的请求进行验证，确保对租户以及用户的授权
+            </summary>
+        </member>
+        <member name="M:Beisen.MVCExtension.BeisenAuthorizationFilter.#ctor(System.Collections.Generic.IList{System.Web.Mvc.IAuthorizationFilter},System.Type,System.String,System.Web.Mvc.ControllerContext)">
+            <summary>
+            北森自定义验证过滤器的构造函数
+            </summary>
+            <param name="controllerType">当前的controllerType</param>
+            <param name="actionName">当前调用的actionName</param>
+        </member>
+        <member name="T:Beisen.MVCExtension.BeisenControllerActionInvoker">
+            <summary>
+            北森自定义ControllerActionInvoker
+            </summary>
+        </member>
+        <member name="T:Beisen.MVCExtension.AuthenticationAsserts">
+            <summary>
+            授权验证的相关断言。
+            </summary>
+        </member>
+        <member name="M:Beisen.MVCExtension.AuthenticationAsserts.IsRequireAuthenticate">
+            <summary>
+            确认系统是否需要权限验证（系统在开发期间，为了开发调试方便，可以不需要权限验证，而在开发完成后，套用框架后才要求验证）。
+            </summary>
+            <returns>如果需要验证，则返回True，否则返回False</returns>
+        </member>
+        <member name="M:Beisen.MVCExtension.AuthenticationAsserts.IsAuthenticated(System.Web.Mvc.ControllerContext)">
+            <summary>
+            判断用户是否已经通过登录验证
+            </summary>
+            <param name="controllerContext">Controller的上下文</param>
+            <returns>如果通过验证，返回True，否则返回False</returns>
+        </member>
+        <member name="M:Beisen.MVCExtension.AuthenticationAsserts.IsActionAvoidAuthenticate(System.Web.Mvc.ControllerContext,System.Collections.Generic.IList{System.Web.Mvc.IAuthorizationFilter})">
+            <summary>
+            判断Action是否标示为避免验证？（AvoidAuthenticateAttribute）
+            </summary>
+            <returns>如果该Action标示为避免验证，返回True，否则返回False。</returns>
+        </member>
+        <member name="M:Beisen.MVCExtension.AuthenticationAsserts.IsAccurateAuthenticate(System.Web.Mvc.ControllerContext,System.Collections.Generic.IList{System.Web.Mvc.IAuthorizationFilter})">
+            <summary>
+            精确授权验证
+            </summary>
+            <param name="Controller"></param>
+            <param name="filters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MVCExtension.AuthenticationAsserts.IsUserHasPermissionAccess(System.Type,System.String)">
+             <summary>
+             判断用户是否拥有访问该URL的权限。
+             用户是否授权访问该URL包括两个部分：
+            1.用户有该URL对应功能的访问角色；
+            2.用户所在租户拥有该功能的使用授权。
+             </summary>
+             <param name="url">当前访问的URL</param>
+             <returns>如果用户有权访问该URL，返回true，否则返回False。</returns>
+        </member>
+        <member name="T:Beisen.MVCExtension.UserNotLoginException">
+            <summary>
+            用户没有登录异常
+            </summary>
+        </member>
+        <member name="T:Beisen.MVCExtension.BeisenDefaultControllerFactory">
+            <summary>
+            北森自定义的ControllerFactory，可以通过ControllerFactory向Controller中植入相关的ActionInvoker
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.CommonBinderModel`1.IsOK">
+            <summary>
+            操作状态
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.CommonBinderModel`1.Hidden">
+            <summary>
+            分页隐藏
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.CommonBinderModel`1.Msg">
+            <summary>
+            操作信息
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.CommonBinderModel`1.Mainlist">
+            <summary>
+            主要Model列表
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.CommonBinderModel`1.MainModel">
+            <summary>
+            主要模型
+            </summary>
+        </member>
+        <member name="F:Beisen.MVCExtension.CommonBinderModel`1.TreeNodeModle">
+            <summary>
+            树状数据
+            </summary>
+        </member>
+        <member name="F:Beisen.MVCExtension.CommonBinderModel`1.SelecterList">
+            <summary>
+            下拉选择框
+            </summary>
+        </member>
+        <member name="F:Beisen.MVCExtension.CommonBinderModel`1.SerModledata">
+            <summary>
+            序列化模型数据
+            </summary>
+        </member>
+        <member name="M:Beisen.MVCExtension.CommonBinderModel`1.DeserializeObject(System.Web.HttpRequestBase)">
+            <summary>
+            反序列化
+            </summary>
+            <param name="Request"></param>
+        </member>
+        <member name="T:Beisen.MVCExtension.OperationLogtype">
+            <summary>
+            日志类型
+            </summary>
+        </member>
+        <member name="F:Beisen.MVCExtension.OperationLogtype.Login">
+            <summary>
+            登录日志
+            </summary>
+        </member>
+        <member name="F:Beisen.MVCExtension.OperationLogtype.Operation">
+            <summary>
+            操作日志
+            </summary>
+        </member>
+        <member name="T:Beisen.MVCExtension.LogTime">
+            <summary>
+            记录时机
+            </summary>
+        </member>
+        <member name="F:Beisen.MVCExtension.LogTime.Before">
+            <summary>
+            执行前
+            </summary>
+        </member>
+        <member name="F:Beisen.MVCExtension.LogTime.After">
+            <summary>
+            执行完成后
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.BSPLogAttribute.Type">
+            <summary>
+            日志类型
+            </summary>
+        </member>
+        <member name="M:Beisen.MVCExtension.BSPLogAttribute.OnActionExecuted(System.Web.Mvc.ActionExecutedContext)">
+            <summary>
+            执行完成 记录日志
+            </summary>
+            <param name="filterContext"></param>
+        </member>
+        <member name="M:Beisen.MVCExtension.BSPLogAttribute.OnActionExecuting(System.Web.Mvc.ActionExecutingContext)">
+            <summary>
+            执行之前记录
+            </summary>
+            <param name="filterContext"></param>
+        </member>
+        <member name="T:Beisen.MVCExtension.ElinkFilterAttribute">
+            <summary>
+            ElinkFilter的标识
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.ElinkFilterAttribute.LinkName">
+            <summary>
+            l约定 并注册的linker定义的名称
+            </summary>
+        </member>
+        <member name="M:Beisen.MVCExtension.ElinkFilterAttribute.OnAuthorization(System.Web.Mvc.AuthorizationContext)">
+            <summary>
+            安全验证  改写路由date 提供拦截白名单
+            </summary>
+            <param name="filterContext"></param>
+        </member>
+        <member name="T:Beisen.MVCExtension.SecureFilterAttribute">
+            <summary>
+            安全action的标识
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.SecureFilterAttribute.ISSecure">
+            <summary>
+            是否验证
+            </summary>
+        </member>
+        <member name="M:Beisen.MVCExtension.SecureFilterAttribute.OnAuthorization(System.Web.Mvc.AuthorizationContext)">
+            <summary>
+            安全验证  改写路由date 提供拦截白名单
+            </summary>
+            <param name="filterContext"></param>
+        </member>
+        <member name="T:Beisen.MVCExtension.AccurateFilterAttribute">
+            <summary>
+            安全action的标识
+            </summary>
+        </member>
+        <member name="M:Beisen.MVCExtension.AccurateFilterAttribute.OnAuthorization(System.Web.Mvc.AuthorizationContext)">
+            <summary>
+            安全验证  改写路由date 提供拦截白名单
+            </summary>
+            <param name="filterContext"></param>
+        </member>
+        <member name="T:Beisen.MVCExtension.SignatureFilterAttribute">
+            <summary>
+            安全action的标识
+            </summary>
+        </member>
+        <member name="M:Beisen.MVCExtension.SignatureFilterAttribute.OnAuthorization(System.Web.Mvc.AuthorizationContext)">
+            <summary>
+            签名验证
+            </summary>
+            <param name="filterContext"></param>
+        </member>
+        <member name="P:Beisen.MVCExtension.CommandButton.text">
+            <summary>
+            按钮显示文本
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.CommandButton.cssClass">
+            <summary>
+            按钮样式名称属性
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.CommandButton.useable">
+            <summary>
+            是否可用
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.CommandButton.handler">
+            <summary>
+            指定onclick事件 函数名 请采用懒惰绑定 保持本属性为null。相见见UED开发规范
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.CommandButton.action">
+            <summary>
+            链接类型按钮的href属性(请求地址以及参数)
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.CommandButton.ischecked">
+            <summary>
+            选择框是否选中
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.CommandButton.toptip">
+            <summary>
+            按钮title提示属性（默认时,取text属性值）
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.CommandButton.type">
+            <summary>
+            按钮类型 默认值枚举值第一个值 即， CommandType.link
+            </summary>
+        </member>
+        <member name="F:Beisen.MVCExtension.CommandButton._HrefTemplate">
+            <summary>
+            链接a标签方式
+            </summary>
+        </member>
+        <member name="F:Beisen.MVCExtension.CommandButton._ButtomTemplate">
+            <summary>
+            按钮Input标签方式
+            </summary>
+        </member>
+        <member name="F:Beisen.MVCExtension.CommandButton._SpanTemplate">
+            <summary>
+            没有权限时现实为span标签
+            </summary>
+        </member>
+        <member name="F:Beisen.MVCExtension.CommandButton._RadioTemplate">
+            <summary>
+            没有权限时现实为span标签
+            </summary>
+        </member>
+        <member name="M:Beisen.MVCExtension.CommandButton.Render">
+            <summary>
+            呈现按钮 根据不同的按钮类型Render出对应的html
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Beisen.MVCExtension.CommandType">
+            <summary>
+            按钮类型
+            </summary>
+        </member>
+        <member name="F:Beisen.MVCExtension.CommandType.link">
+            <summary>
+            超链接{&lt;a href="" &gt;超链接&lt;/a&gt;}
+            </summary>
+        </member>
+        <member name="F:Beisen.MVCExtension.CommandType.button">
+            <summary>
+            按钮{&lt;input type="button" /&gt;}
+            </summary>
+        </member>
+        <member name="F:Beisen.MVCExtension.CommandType.radio">
+            <summary>
+            按钮{&lt;input type="radio" /&gt;}
+            </summary>
+        </member>
+        <member name="F:Beisen.MVCExtension.FunctionButtonBuilder.buttonList">
+            <summary>
+            按钮容器
+            </summary>
+        </member>
+        <member name="M:Beisen.MVCExtension.FunctionButtonBuilder.Add(Beisen.MVCExtension.CommandButton)">
+            <summary>
+            为页面ToolBar 添加按钮
+            </summary>
+            <param name="button">FunctionButton功能按钮对象</param>
+            <returns>ToolBar对象</returns>
+        </member>
+        <member name="M:Beisen.MVCExtension.FunctionButtonBuilder.AddToolList(Beisen.MVCExtension.ToolList)">
+            <summary>
+            怎加一个下拉按钮区域
+            </summary>
+            <param name="toollist"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MVCExtension.FunctionButtonBuilder.RenderTo(System.String,System.String,System.Boolean)">
+            <summary>
+            呈现ToolBar
+            </summary>
+            <param name="id">指定ToolBar DIV的ID属性</param>
+            <param name="cssclass">指定ToolBar DIV的class属性</param>
+            <returns>控件HTML</returns>
+        </member>
+        <member name="T:Beisen.MVCExtension.FunctionCellMenu">
+            <summary>
+            Grid控件cell中的权限按钮
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.FunctionCellMenu.celid">
+            <summary>
+            列号
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.FunctionCellMenu.cellName">
+            <summary>
+            列名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.FunctionCellMenu.paramdate">
+            <summary>
+            参数
+            </summary>
+        </member>
+        <member name="F:Beisen.MVCExtension.FunctionCellMenu.htmls">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="M:Beisen.MVCExtension.FunctionCellBuilder.Add(System.Int32,System.String,System.String[])">
+            <summary>
+            Grid控件表格 添加功能按钮
+            </summary>
+            <param name="cellid">列号 从0开始</param>
+            <param name="htmlFormat">模板数据</param>
+            <param name="date">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MVCExtension.FunctionCellBuilder.Add(System.String,System.String,System.String[])">
+            <summary>
+            Grid控件表格，添加功能按钮
+            </summary>
+            <param name="cellName">列的名称</param>
+            <param name="htmlFormat">模板数据</param>
+            <param name="data">参数列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MVCExtension.FunctionCellBuilder.Render">
+            <summary>
+            Render 出Toolbar 
+            </summary>
+            <param name="PageId"></param>
+            <param name="renderTo"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MVCExtension.FunctionGridCell.FunctionCell(System.Web.Mvc.HtmlHelper)">
+            <summary>
+            权限功能列 
+            </summary>
+            <param name="html"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Beisen.MVCExtension.FunctionMenu">
+            <summary>
+            功能菜单，根据控件对应的FunctionFullname来判断当前的用户是否有权限使用此菜单。
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.FunctionMenu.Children">
+            <summary>
+            菜单子项容器
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.FunctionMenu.ID">
+            <summary>
+             链接链接的ID, 编程使用
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.FunctionMenu.Text">
+            <summary>
+            菜单文本
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.FunctionMenu.Class">
+            <summary>
+            菜单样式
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.FunctionMenu.Href">
+            <summary>
+            链接地址
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.FunctionMenu.Toptip">
+            <summary>
+            鼠标划过提示
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.FunctionMenu.Level">
+            <summary>
+            级别
+            </summary>
+        </member>
+        <member name="M:Beisen.MVCExtension.FunctionMenu.GetPermitedChild">
+            <summary>
+            获取并重组拥有权限的菜单项
+            暂定 废弃 [废弃原因：在添加菜单项的时候过滤权限项]
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:Beisen.MVCExtension.FunctionMenu.templateFunctionMenu">
+            <summary>
+            菜单项模板
+            </summary>
+        </member>
+        <member name="M:Beisen.MVCExtension.FunctionMenu.RenderThis">
+            <summary>
+            呈现菜单项
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MVCExtension.FunctionMenu.AddChildMenu(Beisen.MVCExtension.FunctionMenu)">
+            <summary>
+            添加子菜单项
+            </summary>
+            <param name="childMenu">菜单项</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MVCExtension.FunctionMenu.Render">
+            <summary>
+            呈现功能菜单项
+            </summary>
+        </member>
+        <member name="M:Beisen.MVCExtension.FunctionMenubar.FunctionMenuBar(System.Web.Mvc.HtmlHelper)">
+            <summary>
+            菜单控件
+            </summary>
+            <param name="html"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MVCExtension.FunctionMenubar.FunctionMenuBar(System.Web.Mvc.HtmlHelper,System.String,Beisen.MVCExtension.FunctionMenu[])">
+            <summary>
+            菜单控件
+            </summary>
+            <param name="html"></param>
+            <param name="Id">指定菜单的UL标签的id和class属性</param>
+            <param name="menu">菜单项</param>
+            <returns></returns>
+        </member>
+        <member name="T:Beisen.MVCExtension.FunctionMenuBuilder">
+            <summary>
+            功能菜单容器
+            </summary>
+        </member>
+        <member name="F:Beisen.MVCExtension.FunctionMenuBuilder.MenuList">
+            <summary>
+            按钮容器
+            </summary>
+        </member>
+        <member name="M:Beisen.MVCExtension.FunctionMenuBuilder.Add(Beisen.MVCExtension.FunctionMenu)">
+            <summary>
+            为页面ToolBar 添加按钮
+            </summary>
+            <param name="button">FunctionMenu功能按钮对象</param>
+            <returns>ToolBar对象</returns>
+        </member>
+        <member name="M:Beisen.MVCExtension.FunctionMenuBuilder.#ctor(Beisen.MVCExtension.FunctionMenu[])">
+            <summary>
+            可变参数形式构造函数 添加FunctionMenu到本容器
+            </summary>
+            <param name="menu"></param>
+        </member>
+        <member name="M:Beisen.MVCExtension.FunctionMenuBuilder.RenderTo(System.String)">
+            <summary>
+            呈现菜单
+            </summary>
+            <param name="laveClass">指定菜单的UL标签的id和class属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MVCExtension.FunctionMenuBuilder.SysSeterLeftMenu(System.String)">
+            <summary>
+            产品设置左及其必要的脚本
+            </summary>
+            <param name="laveClass"></param>
+            <returns></returns> 
+        </member>
+        <member name="M:Beisen.MVCExtension.FunctionMenuBuilder.SysSeterLeftMenu(System.String,System.String)">
+            <summary>
+            产品设置左及其必要的脚本
+            </summary>
+            <param name="laveClass"></param>
+            <returns></returns> 
+        </member>
+        <member name="M:Beisen.MVCExtension.FunctionToobar.FunctionToolbar(System.Web.Mvc.HtmlHelper)">
+            <summary>
+            Function 工具栏（ToolBar）
+            </summary>
+            <param name="html"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MVCExtension.FunctionToobar.Command(System.Web.Mvc.HtmlHelper,System.String,Beisen.MVCExtension.CommandType,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            HtmlHelper呈现一个功能按钮
+            </summary>
+            <param name="html"></param>
+            <param name="functionFullname">权限控制名称</param>
+            <param name="type">按钮类型[ CommandType.link | CommandType.button ]</param>
+            <param name="text">显示文字</param>
+            <param name="toptip">鼠标滑过提示文字</param>
+            <param name="action">链接地址</param>
+            <param name="handel">定义onclick事件</param>
+            <param name="cssClass">样式表名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MVCExtension.FunctionToobar.Command(System.Web.Mvc.HtmlHelper,System.String,Beisen.MVCExtension.CommandType,System.String,System.String,System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            HtmlHelper呈现一个功能按钮(带产品许可到期验证)
+            </summary>
+            <param name="html"></param>
+            <param name="functionFullname"></param>
+            <param name="type"></param>
+            <param name="text"></param>
+            <param name="toptip"></param>
+            <param name="action"></param>
+            <param name="handel"></param>
+            <param name="cssClass"></param>
+            <param name="isCheckProvisioning">是否需要验证该产品许可是否到期</param>
+            <returns></returns>
+        </member>
+        <member name="T:Beisen.MVCExtension.IPermisionControl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Beisen.MVCExtension.IPermisionControl.IsPermited">
+            <summary>
+            权限验证机制 接口方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MVCExtension.IPermisionControl.Render">
+            <summary>
+            呈现接口方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MVCExtension.NormalControl.CommandStatecell(System.Web.Mvc.HtmlHelper,System.String,System.String,System.String,System.String)">
+            <summary>
+            状态修改命令按钮
+            </summary>
+            <param name="html"></param>
+            <param name="FunctionFullname">功能全名</param>
+            <param name="ConditionalExpression">状态条件表达式 如：”state==1“  ，行的数据项和其对应的值的关系表达式 </param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MVCExtension.NormalControl.CommandCustomCell(System.Web.Mvc.HtmlHelper,System.String,System.String[])">
+            <summary>
+            自定义逻辑表格  jsFunctionname的返回内容是cell显示的内容
+            </summary>
+            <param name="html"></param>
+            <param name="jsFunctionname">jsfunction名称</param>
+            <param name="date">参数列表  例如 “ID”</param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MVCExtension.NormalControl.CheckCell(System.Web.Mvc.HtmlHelper)">
+            <summary>
+            Checkbox列
+            </summary>
+            <param name="html"></param>
+            <param name="ID">ID 数据绑定索引ID</param>
+            <returns></returns>
+        </member>
+        <member name="T:Beisen.MVCExtension.Permitable">
+            <summary>
+            可验证的组件
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.Permitable.FunctionFullname">
+            <summary>
+            功能全名，全局唯一标示 相见开发规范
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.Permitable.IsCheckProvisioning">
+             <summary>
+            是否检测许可过期
+             </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.Permitable.IsEnableTenantFunction">
+             <summary>
+            是否检测灰度注册租户可用功能
+             </summary>
+        </member>
+        <member name="F:Beisen.MVCExtension.Permitable.isBuyScheme">
+             <summary>
+            是否购买了方案(测评专用)
+             </summary>
+        </member>
+        <member name="M:Beisen.MVCExtension.Permitable.IsPermited">
+            <summary>
+            权限控制验证
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Beisen.MVCExtension.RedirectHelper`1">
+            <summary>
+            强类型Action重定位
+            </summary>
+            <typeparam name="T">目标Controller </typeparam>
+        </member>
+        <member name="M:Beisen.MVCExtension.RedirectHelper`1.ActionRedirectResult(System.String)">
+            <summary>
+            请求定位
+            </summary>
+            <param name="actionname">目标Action 以及参数  例如 “List?id=453564”</param>
+            <returns></returns>
+        </member>
+        <member name="T:Beisen.MVCExtension.ToolList">
+            <summary>
+            按钮区域
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.ToolList.cssClass">
+            <summary>
+            tool list样式
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.ToolList.style">
+            <summary>
+            其他样式
+            </summary>
+        </member>
+        <member name="F:Beisen.MVCExtension.BeisenMasteHandler.UserVoiceSSOUrl">
+            <summary>
+            UserVoice单点登陆URL
+            </summary>
+        </member>
+        <member name="F:Beisen.MVCExtension.BeisenMasteHandler.UserVoiceJavaScriptPath">
+            <summary>
+            UserVoice的Js文件地址
+            </summary>
+        </member>
+        <member name="F:Beisen.MVCExtension.BeisenMasteHandler.Kf5SSOUrl">
+            <summary>
+            kf5单点登陆URL
+            </summary>
+        </member>
+        <member name="M:Beisen.MVCExtension.BeisenMasteHandler.ExecuteHandel(System.Web.HttpContext)">
+             <summary>
+            Mastert
+             </summary>
+             <param name="Context">HttpContext 上下文</param>
+        </member>
+        <member name="M:Beisen.MVCExtension.BeisenMasteHandler.SetPromptInformation">
+            <summary>
+            设置到期提示信息
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.Model.BeisenMaster.CurrentUser">
+            <summary>
+            当前用户信息
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.Model.BeisenMaster.CurrentTenant">
+            <summary>
+            当前租户信息
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.Model.BeisenMaster.ProductList">
+            <summary>
+            用户授权产品列表
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.Model.BeisenMaster.CurrentProduct">
+            <summary>
+            当前用户授权产品信息
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.Model.BeisenMaster.CurrentModules">
+            <summary>
+            当前用户授权产品信息
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.Model.BeisenMaster.IsPermission">
+            <summary>
+            是否有使用该产品权限
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.Model.BeisenMaster.IsDemo">
+            <summary>
+            是否是Demo环境
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.Model.BeisenMaster.RootUrl">
+            <summary>
+            框架URL
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.Model.BeisenMaster.PromptInformation">
+            <summary>
+            母板页提示信息
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.Model.BeisenMaster.PlatformIndexUrl">
+            <summary>
+            平台首页URL
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.Model.BeisenMaster.UserVoiceSSOUrl">
+            <summary>
+            UserVoice单点登陆URL
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.Model.BeisenMaster.UserVoiceJavaScriptPath">
+            <summary>
+            UserVoice的Js文件地址
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.Model.BeisenMaster.Kf5SSOUrl">
+            <summary>
+            kf5单点登陆URL
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.Model.BeisenMaster.ServerYear">
+            <summary>
+            服务器年份
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.Model.BeisenMaster.CurrentCustomModule">
+            <summary>
+            已定制的当前产品模块数据
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.Model.ProductExpire.ExpirState">
+            <summary>
+            到期状态: 0:未到期 1:已过期 2:即将到期
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.Model.ProductExpire.ExpirMessage">
+            <summary>
+            已过期或者即将到期的提示信息
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.Model.ProductMaintain.IsMaintaining">
+            <summary>
+            是否升级维护中
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.Model.ProductMaintain.MaintainingMessage">
+            <summary>
+            升级维护信息
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.Model.Product.IndexUrl">
+            <summary>
+            产品首页Url
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.Model.Product.CurrentModuleIsIndex">
+            <summary>
+            当前链接的模块是否为产品首页
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.Model.Product.IsCurrent">
+            <summary>
+            是否是当前产品
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.Model.Product.Order">
+            <summary>
+            显示顺序
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.Model.Product.Status">
+            <summary>
+            产品状态
+            </summary>
+        </member>
+        <member name="P:Beisen.MVCExtension.Model.CurrentModule.IsCurrent">
+            <summary>
+            是否是当前模块
+            </summary>
+        </member>
+        <member name="T:Beisen.MVCExtension.Model.PromptInformation">
+            <summary>
+            母板页提示信息
+            </summary>
+        </member>
+        <member name="T:Beisen.MVCExtension.Model.InformationLevel">
+            <summary>
+            信息等级
+            </summary>
+        </member>
+        <member name="F:Beisen.MVCExtension.Model.InformationLevel.Serious">
+            <summary>
+            严重
+            </summary>
+        </member>
+        <member name="F:Beisen.MVCExtension.Model.InformationLevel.Ordinary">
+            <summary>
+            普通
+            </summary>
+        </member>
+        <member name="M:Beisen.MVCExtension.Provider.BeisenMasterProvider.GetCurrentUserProducts">
+            <summary>
+            获取当前用户有权限的产品列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MVCExtension.Provider.BeisenMasterProvider.SetPromptInformation(System.String,Beisen.MVCExtension.Model.BeisenMaster)">
+            <summary>
+            设置到期提示信息
+            </summary>
+        </member>
+        <member name="T:System.Web.Mvc.Html.FunctionTreeBuilder">
+            <summary>
+            节点类型 v10  
+            
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.Html.FunctionTreeBuilder.FunctionTree(System.Web.Mvc.HtmlHelper,Beisen.BeisenUser.TreeNode,System.String,System.String,System.String,System.String,System.Boolean,System.String)">
+             <summary>
+             扩展 树形控件 v1  lwq
+             </summary>
+             <param name="html"></param>
+             <param name="Treedate">树状根节点 </param>
+             <param name="renderTo">显示位置divid</param>
+             <param name="ScrPath">资源文件路径</param>
+             <param name="clickHandler">节点单击事件</param>
+             <param name="Cancheck">是否选择</param>
+            <param name="StateCheckboxes">是否联动选择</param>
+               
+             <returns></returns>
+             
+        </member>
+        <member name="M:System.Web.Mvc.ImageCheck.CreateValidateCode(System.Int32)">
+            <summary>ImageCheck
+            生成验证码
+            </summary>
+            <param name="length">指定验证码的长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.ImageCheck.CreateValidateGraphic(System.String,System.Web.HttpResponseBase,System.String)">
+            <summary>
+            创建验证码的图片
+            </summary>
+            <param name="containsPage">要输出到的page对象</param>
+            <param name="validateNum">验证码</param>
+            <param name="Backgrund">背景图片位置</param>
+            @"G:\工作文档\常用\UED页面\验证码背景图.gif"
+        </member>
+        <member name="T:System.Web.Mvc.CAController">
+            <summary>
+            跨域控制
+            </summary>
+        </member>
+        <member name="M:System.Web.Mvc.CAController.V_idv">
+            <summary>
+            获取当前站点合法票据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:System.Web.Mvc.CAController.Get_VTicket(System.String,System.String,System.String)">
+            <summary>
+            获取跨域跳转票据
+            </summary>
+            <param name="fromHost">跳转原始站点域名</param>
+            <param name="returnUrl">获得验证过后跳转到的路径</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

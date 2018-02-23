@@ -1,0 +1,15 @@
+E:\GitCode\appconnect\Src\Beisen.AppConnect.ISV.Model\bin\Debug\Beisen.AppConnectISV.Model.dll
+E:\GitCode\appconnect\Src\Beisen.AppConnect.ISV.Model\bin\Debug\Beisen.AppConnectISV.Model.pdb
+E:\GitCode\appconnect\Src\Beisen.AppConnect.ISV.Model\bin\Debug\Beisen.MultiTenantV5.Model.dll
+E:\GitCode\appconnect\Src\Beisen.AppConnect.ISV.Model\bin\Debug\Beisen.MultiTenantV5.ModelOperationSDK.dll
+E:\GitCode\appconnect\Src\Beisen.AppConnect.ISV.Model\bin\Debug\Beisen.MultiTenantV5.ServiceInterface.dll
+E:\GitCode\appconnect\Src\Beisen.AppConnect.ISV.Model\bin\Debug\Newtonsoft.Json.dll
+E:\GitCode\appconnect\Src\Beisen.AppConnect.ISV.Model\bin\Debug\Beisen.MultiTenantV5.Model.pdb
+E:\GitCode\appconnect\Src\Beisen.AppConnect.ISV.Model\bin\Debug\Beisen.MultiTenantV5.Model.xml
+E:\GitCode\appconnect\Src\Beisen.AppConnect.ISV.Model\bin\Debug\Beisen.MultiTenantV5.ModelOperationSDK.pdb
+E:\GitCode\appconnect\Src\Beisen.AppConnect.ISV.Model\bin\Debug\Beisen.MultiTenantV5.ServiceInterface.pdb
+E:\GitCode\appconnect\Src\Beisen.AppConnect.ISV.Model\bin\Debug\Beisen.MultiTenantV5.ServiceInterface.xml
+E:\GitCode\appconnect\Src\Beisen.AppConnect.ISV.Model\bin\Debug\Newtonsoft.Json.xml
+E:\GitCode\appconnect\Src\Beisen.AppConnect.ISV.Model\obj\Debug\Beisen.AppConnectISV.Model.csproj.CoreCompileInputs.cache
+E:\GitCode\appconnect\Src\Beisen.AppConnect.ISV.Model\obj\Debug\Beisen.AppConnectISV.Model.dll
+E:\GitCode\appconnect\Src\Beisen.AppConnect.ISV.Model\obj\Debug\Beisen.AppConnectISV.Model.pdb

@@ -1,0 +1,84 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>微信登录</title>
+    <link rel="stylesheet" href="~/css/style.css">
+    <script type="text/javascript" src="~/scripts/jquery.js"></script>
+    <script>
+        var PageData = {
+            Code: '@ViewData["Code"]',
+            TenantId: @ViewData["TenantId"],
+            AppAccountId: '@ViewData["AppAccountId"]',
+            Type: @ViewData["Type"],
+            RedirectUrl:'@ViewData["RedirectUrl"]'
+        };
+    </script>
+</head>
+<body>
+    <div id="ewm_content">
+        <p class="wec_login">微信登录</p>
+        <div class="erm_img">
+            <img src="" />
+        </div>
+        <div class="erm_zt status_normal sm_result">
+            <span class="zt_info"></span>
+            <div class="sm_zt ">
+                <p class="sm_zt_info">扫码成功</p>
+                <p class="sm_inform">请使用微信扫描二维码登录</p>
+            </div>
+
+        </div>
+        
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            $('body').css('background', '#333');
+            var getPicUrl = '../QrCode/Image?code='+PageData.Code+'&tenant_id='+PageData.TenantId+'&appaccount_id='+PageData.AppAccountId+'&type='+PageData.Type+'&r='+Math.random();
+            $('.erm_img img').attr('src',getPicUrl);
+            if (this.timer) {
+                clearInterval(this.timer);
+                
+            } else {
+                this.timer = setInterval(function () {
+                    $.ajax({
+                        url:'../QrCode/_GetState?code='+PageData.Code+'&r='+Math.random(),
+                        type: 'get'
+                    }).done(function (resp) {
+                        var data = resp.Data;
+                        if (data.State == 0) {
+                            $('.erm_zt').removeClass('sm_result2').addClass('sm_result').find('.sm_inform').html('请使用微信扫描二维码登录');
+                        } else if (data.State==1) {
+                            
+                            $('.erm_zt').removeClass('sm_result').addClass('sm_result2').find('.sm_inform').html('请在微信中按提示操作');
+                            $('.erm_zt .sm_zt_info').html('扫描成功');
+                            $('.zt_info').removeClass('zt_info_cancel').addClass('zt_info_confirm');
+                        } else if (data.State == 2) {
+                            var signQuery = data.SignQuery
+                            var markIndex = signQuery.indexOf("?");                          
+                            if(markIndex > -1){
+                                window.location.href=PageData.RedirectUrl+'&'+signQuery;
+                            } else {
+                                window.location.href=PageData.RedirectUrl+'?'+signQuery;
+                            }
+                                                   
+                        } else if (data.State == 3) {
+                            $('.erm_zt').removeClass('sm_result').addClass('sm_result2').find('.sm_inform').html('您可再次扫描登录，或关闭窗口');
+                            $('.erm_zt .sm_zt_info').html('您已经取消此次登录 ');
+                            $('.zt_info').removeClass('zt_info_confirm').addClass('zt_info_cancel');
+                        }
+                    })
+ 
+                }, 2000);
+            }
+
+        })
+    </script>
+</body>
+</html>

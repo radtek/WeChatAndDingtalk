@@ -1,0 +1,67 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection" />
+    <title>用户绑定</title>
+    <link rel="stylesheet" href="~/css/animate.css">
+    <link rel="stylesheet" href="~/css/weui.css">
+    <link rel="stylesheet" href="~/css/jq-weui-css.css">
+    <link rel="stylesheet" href="~/css/phone.css">
+    <script type="text/javascript" src="~/scripts/jquery.js"></script>
+    <script>
+        var PageData = {
+            Type: 0,//0:登录绑定 1：邮箱绑定
+        };
+    </script>
+</head>
+<body>
+    <div class="login_italent_content">
+        <div class="weui_msg" style="display:none;">
+            <div class="weui_icon_area">
+                <img width="160" height="62" src="~/images/italent_pla_pic.png" />
+            </div>
+            <div class="error_message">
+                <i class="error_pic"><img src="~/images/error_message.png" /></i>
+                <span class="error_txt"></span>
+            </div>
+            <div class="weui_text_area">
+                <div class="zh_content">
+                    <span class="zh_name_pic"><img src="~/images/yonghuming.png"></span>
+                    <input class="weui-input zh_name zh_name_txt" type="text" placeholder="邮箱/手机号">
+                </div>
+                <div class="zh_password_content">
+                    <span class="zh_password_pic"><img src="~/images/mima.png"></span>
+                    <input class="weui-input zh_name zh_password_txt" type="password" placeholder="密码">
+                </div>
+                <div class="weui_cell weui_vcode primary_content" style="display:none">
+                    <div class="primary_img">
+                        <span class="primary_pic"><img src="../images/confirm.png" /></span>
+                    </div>
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <input class="weui_input primary_input_txt" type="text" placeholder="请输入验证码">
+                    </div>
+                    <div class="weui_cell_ft">
+                        <img src="">
+                    </div>
+                </div>
+            </div>
+            <div class="weui_opr_area">
+                <p class="weui_btn_area">
+                    <a href="javascript:;" class="weui_btn weui_btn_default login_text bind_btn" data-ctime="">登录</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="~/scripts/fastclick.js"></script>
+    <script type="text/javascript" src="~/scripts/jq-weui.js"></script>
+    <script type="text/javascript" src="~/Scripts/ISVBind.js"></script>
+</body>
+</html>

@@ -1,0 +1,4709 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Beisen.MultiTenantV5.Model</name>
+    </assembly>
+    <members>
+        <member name="T:Beisen.MultiTenant.Model.BeisenCloudAppTracker">
+            <summary>
+            BeisenCloud应用跟踪日志
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BeisenCloudAppTracker.SessionId">
+            <summary>
+            会话ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BeisenCloudAppTracker.ServerAppName">
+            <summary>
+            支持"."分词 服务的应用名
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BeisenCloudAppTracker.CloudAppName">
+            <summary>
+            不分词 BeisenCloud的应用名
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BeisenCloudAppTracker.TraceType">
+            <summary>
+            不分词 跟踪类型（Feed）
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BeisenCloudAppTracker.TraceLevel">
+            <summary>
+            不分词 INFO、WARN、ERROR、FATAL
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BeisenCloudAppTracker.PrimaryId">
+            <summary>
+            不分词 识别的数据主键
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BeisenCloudAppTracker.Message">
+            <summary>
+             分词  识别的数据主键
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BeisenCloudAppTracker.DetailInfo">
+            <summary>
+            分词  详细信息
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BeisenCloudAppTracker.Tag">
+            <summary>
+            标准分词 标签
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BeisenCloudAppTracker.TenantId">
+            <summary>
+            租户ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BeisenCloudAppTracker.OperateTime">
+            <summary>
+            操作时间
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BeisenCloudAppTracker.TimeStamp">
+            <summary>
+            操作时间戳
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BeisenCloudAppTracker.OperaterID">
+            <summary>
+            操作用户ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BeisenCloudAppTracker.ClientIP">
+            <summary>
+            客户端IP
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BeisenCloudAppTracker.RequestInfo">
+            <summary>
+            请求信息
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DetailPageGetAfterParam.DetailPage">
+            <summary>
+            详情页组件
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DetailPageGetBeforeParam.MetaObjName">
+            <summary>
+            实体名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DetailPageGetBeforeParam.ViewName">
+            <summary>
+            Detail的相关对象的当前加载列表视图名称，TabPage下可以传递
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DetailPageGetBeforeParam.FormState">
+            <summary>
+            表单状态(show/edit/create)可以不传
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DetailPageGetBeforeParam.Id">
+            <summary>
+            实体对应数据ID，show/edit状态不能为空
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DetailPageGetBeforeParam.ParentId">
+            <summary>
+            实体的父实体数据ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DetailPageGetBeforeParam.ShowCard">
+            <summary>
+            是否显示主题
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.PageModuleGetAfterParam.IsMainView">
+            <summary>
+            是否是主实体模块
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.PageModuleGetAfterParam.RelateView">
+            <summary>
+            相关实体模块
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.PageModuleGetAfterParam.MainView">
+            <summary>
+            主实体模块
+            </summary>
+        </member>
+        <member name="M:Beisen.MultiTenant.Model.PageModuleGetAfterParam.GetModel">
+            <summary>
+            获取模块
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.PageModuleGetBeforeParam.MetaObjName">
+            <summary>
+            实体名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.PageModuleGetBeforeParam.ViewName">
+            <summary>
+            Detail的相关对象的当前加载列表视图名称，TabPage下可以传递
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.PageModuleGetBeforeParam.FormState">
+            <summary>
+            表单状态(show/edit/create)可以不传
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.PageModuleGetBeforeParam.Id">
+            <summary>
+            实体对应数据ID，show/edit状态不能为空
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.PageModuleGetBeforeParam.ParentId">
+            <summary>
+            实体的父实体数据ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.PageModuleGetBeforeParam.IsMainView">
+            <summary>
+            是否是主实体模块
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.PageModuleGetBeforeParam.ModuleId">
+            <summary>
+            默认模块标识
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.DataScopeType">
+            <summary>
+            数据范围类型
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.DataScopeType.All">
+            <summary>
+            全部
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.DataScopeType.CurrentUser">
+            <summary>
+            本人
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.DataScopeType.CurrentMou">
+            <summary>
+            本管理单元
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.DataScopeType.ChildrenMou">
+            <summary>
+            所有下级管理单元
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.DataScopeType.CurrentAndChildrenMou">
+            <summary>
+            本管理单元及所有下级管理单元
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.Enums.EnumOperateAuthority">
+            <summary>
+            数据操作权限枚举
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.Enums.EnumOperateAuthority.Insert">
+            <summary>
+            新增权限
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.Enums.EnumOperateAuthority.Edit">
+            <summary>
+            编辑权限
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.Enums.EnumOperateAuthority.Delete">
+            <summary>
+            删除权限
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.FormatType.Default">
+            <summary>
+            默认格式
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.FormatType.PercentageSymbol">
+            <summary>
+            百分数
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.FormatType.ThousandSymbol">
+            <summary>
+            千分位
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.FormatType.ThousandPercentageSymbol">
+            <summary>
+            百分数千分位
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.Exception.ErrorCode">
+            <summary>
+            Beisen异常代码结构类
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.Exception.ErrorCode.OperateAuthority_Insert">
+            <summary>
+            新增权限的ErrorCode
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.Exception.ErrorCode.OperateAuthority_Edit">
+            <summary>
+            编辑权限的ErrorCode
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.Exception.ErrorCode.OperateAuthority_Delete">
+            <summary>
+            删除权限的ErrorCode
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.Exception.ErrorCode.OperateAuthority_View">
+            <summary>
+            查看权限的ErrorCode
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.Exception.ModelJsonConverterException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.Exception.RestApiException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.Helper.DataContractHelper">
+            <summary>
+            ESB 中标记DataContract 的MODEL的 序列化及反序列化方法，（一般用于检测MODEL是否正常序列化）
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaDataManage.MagicBaseEntity.ID">
+            <summary>
+            GUID唯一标识
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaDataManage.MagicBaseEntity.TenantID">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaDataManage.MagicBaseEntity.CreatedBy">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaDataManage.MagicBaseEntity.CreatedTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaDataManage.MagicBaseEntity.ModifiedBy">
+            <summary>
+            编辑人
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaDataManage.MagicBaseEntity.ModifiedTime">
+            <summary>
+            编辑时间
+            </summary>
+        </member>
+        <member name="M:Beisen.MultiTenant.Model.MetaDataManage.MagicBaseEntity.DerivedTypes">
+            <summary>
+            指明数据契约类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.Model.MetaDataManage.MagicBaseEntity.GetGuidValue(System.String)">
+            <summary>
+            获取类型为Guid的属性值
+            </summary>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.Model.MetaDataManage.MagicBaseEntity.GetDateTimeValue(System.String)">
+            <summary>
+            获取类型为Guid的属性值
+            </summary>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.Model.MetaDataManage.MagicBaseEntity.GetInt32Value(System.String)">
+            <summary>
+            获取类型为Guid的属性值
+            </summary>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.Model.MetaDataManage.MagicBaseEntity.GetEnumValue``1(System.String)">
+            <summary>
+            获取类型为Guid的属性值
+            </summary>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.Model.MetaDataManage.MagicBaseEntity.GetStringValue(System.String)">
+            <summary>
+            获取类型为Guid的属性值
+            </summary>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaDataManage.MagicDataSource.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaDataManage.MagicDataSource.Label">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaDataManage.MagicDataSource.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaDataManage.MagicDataSource.Version">
+            <summary>
+            版本
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaDataManage.MagicDataSource.ServiceUrl">
+            <summary>
+            服务名称
+            </summary>
+        </member>
+        <member name="M:Beisen.MultiTenant.Model.MetaDataManage.MagicDataSource.DerivedTypes">
+            <summary>
+            指明数据契约类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaDataManage.MagicMetaField.ObjectId">
+            <summary>
+            字段所属元数据id
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaDataManage.MagicMetaField.MetaDataType">
+            <summary>
+            字段类型
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaDataManage.MagicMetaField.Name">
+            <summary>
+            编码  
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaDataManage.MagicMetaField.Label">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaDataManage.MagicMetaField.Description">
+            <summary>
+            描述信息
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaDataManage.MagicMetaField.MetaFieldFormat">
+            <summary>
+            字段格式
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaDataManage.MagicMetaField.MetaFieldGroupName">
+            <summary>
+            分组
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaDataManage.MagicMetaField.DataSourceName">
+            <summary>
+            数据源名
+            </summary>
+        </member>
+        <member name="M:Beisen.MultiTenant.Model.MetaDataManage.MagicMetaField.DerivedTypes">
+            <summary>
+            指明数据契约类型
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.Application.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.Application.Label">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.Application.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.Application.Image">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.Application.SortNum">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.Application.ActionParams">
+            <summary>
+            事件参数
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.Application.ActionType">
+            <summary>
+            system/customzation
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.Application.GroupName">
+            <summary>
+            事件分组名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.Application.TitaAPPID">
+            <summary>
+            TitaAppID，用于Tita接口区分不用产品线
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BatchImportConfig.BacthImport">
+            <summary>
+            是否需要导入服务批量操作,如果是的话，需要每条数据指明是否要继续，是更新还是创建
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BatchImportConfig.IsBizSelfImport">
+            <summary>
+            是否业务自行导入
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BatchImportConfig.EnableAddBeforeTrigger">
+            <summary>
+            是否走Add的Before触发器
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BatchImportConfig.EnableAddAfterTrigger">
+            <summary>
+            是否走Add的After触发器
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BatchImportConfig.EnableUpdateBeforeTrigger">
+            <summary>
+            是否走Update的Before触发器
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BatchImportConfig.EnableUpdateAfterTrigger">
+            <summary>
+            是否走Update的After触发器
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BatchImportConfig.Record_id">
+            <summary>
+            导入实体ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BatchImportConfig.Monitor_id">
+            <summary>
+            监控实体ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BatchImportConfig.Operator_id">
+            <summary>
+            操作日志实体ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BatchImportConfig.ImportFilePath">
+            <summary>
+            用户导入Dfiles路径
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BatchImportConfig.AppName">
+            <summary>
+            应用名
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BatchImportConfig.MetaObjName">
+            <summary>
+            实体名
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BatchImportConfig.TenantId">
+            <summary>
+            租户ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BatchImportConfig.UserId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BatchImportConfig.IP">
+            <summary>
+            导入用户IP
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BatchImportConfig.Terminal">
+            <summary>
+            终端
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BatchImportConfig.ImportDataID">
+            <summary>
+            导入元数据ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BatchImportConfig.ImportSumCount">
+            <summary>
+            客户Excel中导入总条数
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BatchImportConfig.BizInsertCount">
+            <summary>
+            业务自行导入新建条数
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BatchImportConfig.BizUpdateCount">
+            <summary>
+            业务自行导入更新条数
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BatchObjectDataWrap.ExtMessage">
+            <summary>
+            额外消息
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BatchObjectDataWrap.Passable">
+            <summary>
+            是否可继续
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BatchObjectDataWrap.IsUpdateMode">
+            <summary>
+            是否为更新,默认不是
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BatchObjectDataWrap.BizData">
+            <summary>
+            真是业务数据
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.Model.BatchUpdateObjectData">
+            <summary>
+            批量更新模板对象
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.Model.BatchUpdateObjectData.ids">
+            <summary>
+            更新的业务对象id串
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.Model.BatchUpdateObjectData.targetModels">
+            <summary>
+            更新的目标业务对象，包含id与更新失败后提示的标志信息
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.Model.BatchUpdateSingleModel">
+            <summary>
+            批量编辑单个对象传输对象
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.Model.BatchUpdateSingleModel.id">
+            <summary>
+            对象id
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.Model.BatchUpdateSingleModel.showText">
+            <summary>
+            更新失败提示标识信息，即列表页第一个字段text
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.Model.BatchUpdateField">
+            <summary>
+            提供给前端添加或更新ObjectData时使用
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.Model.BatchUpdateField.name">
+            <summary>
+            DataKey
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.Model.BatchUpdateField.value">
+            <summary>
+            DataValue
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.Model.MOUSimple.ID">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.Model.MOUSimple.Application">
+            <summary>
+            应用
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.Model.MOUSimple.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.Model.MOUSimple.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.Model.MOUSimple.ParentID">
+            <summary>
+            上级ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.Model.MOUSimple.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.Model.MOUSimple.ReferenceObjectIDs">
+            <summary>
+            关联ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.Model.MOUSimple.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.Model.MOUSimple.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.Model.MOUSimple.HasChildren">
+            <summary>
+            是否包含子节点
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.Model.MOUSimple.Path">
+            <summary>
+            路径
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.Model.MOUSimple.Level">
+            <summary>
+            级别
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.Model.MOUSimple.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.Model.MOUSimple.TenantID">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.Model.MOUSimple.CreatedBy">
+            <summary>
+            创建人
+            </summary>     
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.Model.MOUSimple.CreatedTime">
+            <summary>
+            创建时间
+            </summary>      
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.Model.MOUSimple.ModifiedBy">
+            <summary>
+            编辑人
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.Model.MOUSimple.ModifiedTime">
+            <summary>
+            编辑时间
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DashBoard.Id">
+             <summary>
+            ID
+             </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DashBoard.ReportName">
+             <summary>
+            ReportName,编号
+             </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DashBoard.PluginTitle">
+            <summary>
+            PluginTitle，标题
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DashBoard.MetaObjectName">
+             <summary>
+            MetaObjectName
+             </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DashBoard.ApplicationName">
+             <summary>
+            ApplicationName
+             </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DashBoard.Url">
+             <summary>
+            Url
+             </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.DataScope">
+            <summary>
+            数据范围模型
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DataScope.ProfileID">
+            <summary>
+            身份ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DataScope.MetaObjectName">
+            <summary>
+            实体名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DataScope.ShowDataScopeType">
+            <summary>
+            显示的数据范围
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DataScope.AddDataScopeType">
+            <summary>
+            新增的数据范围
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DataScope.EditDataScopeType">
+            <summary>
+            编辑的数据范围
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DataScope.DeleteDataScopeType">
+            <summary>
+            删除的数据范围
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DataScope.EditOwnerDataScopeType">
+            <summary>
+            更改所有者的数据范围
+            </summary>
+        </member>
+        <member name="M:Beisen.MultiTenant.Model.DataScope.DerivedTypes">
+            <summary>
+            获取KnownType的方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.Model.DataScope.WriteJson(Newtonsoft.Json.JsonWriter)">
+            <summary>
+            自定义JSON序列化
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DistinctView.MetaObjectID">
+            <summary>
+            元数据ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DistinctView.IsValid">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DistinctView.Description">
+            <summary>
+            描述，提示语
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DistinctView.Item">
+            <summary>
+            DistinctItem
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DistinctView.MetaObject">
+            <summary>
+            元数据对象
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DistinctView.MetaObjectLabel">
+            <summary>
+            元数据对象标签
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DistinctView.MetaObjectDescription">
+            <summary>
+            元数据对象描述
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DistinctView.MetaObjectName">
+            <summary>
+            元数据名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DistinctItem.FieldID">
+            <summary>
+            字段ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DistinctItem.FieldName">
+            <summary>
+            字段名
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DistinctItem.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DistinctItem.ConditionType">
+            <summary>
+            各项的运算符 and 或者 or
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DistinctItem.Items">
+            <summary>
+            Item列表
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DistinctItem.Type">
+            <summary>
+            Item类型 Group或者空
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DistinctItem.MetaField">
+            <summary>
+            字段元数据
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DistinctItem.MetaObject">
+            <summary>
+            元数据
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DistinctItem.ItemMetaObjectName">
+            <summary>
+            每个子项是属于哪个对象的字段
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DistinctItem.DataType">
+            <summary>
+            字段的数据类型
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.LookUpFieldRelation">
+            <summary>
+            字段关联信息
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.LookUpFieldRelation.LeftRelation">
+            <summary>
+            逻辑左关联实体字段关系
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.LookUpFieldRelation.RightRelation">
+            <summary>
+            逻辑右关联实体字段关系
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.LookUpFieldRelation.RefFieldRelation">
+            <summary>
+            关联对象
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.MetaObjectFiledRelation">
+            <summary>
+            关联字段基本信息
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaObjectFiledRelation.Application">
+            <summary>
+            当前应用编码
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaObjectFiledRelation.MetaObjectID">
+            <summary>
+            实体主键
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaObjectFiledRelation.MetaObjectName">
+            <summary>
+            实体编码
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaObjectFiledRelation.MetaFieldID">
+            <summary>
+            字段主键
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaObjectFiledRelation.MetaFieldName">
+            <summary>
+            字段编码
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.MessageTemplate">
+            <summary>
+            消息模板
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MessageTemplate.Application">
+            <summary>
+            应用编码
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MessageTemplate.Name">
+            <summary>
+            任务编码
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MessageTemplate.Label">
+            <summary>
+            任务名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MessageTemplate.Title">
+            <summary>
+            邮件标题
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MessageTemplate.EmailContent">
+            <summary>
+            邮件内容
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MessageTemplate.SMSContent">
+            <summary>
+            短信内容
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MessageTemplate.MessageContent">
+            <summary>
+            消息内容
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.ImpPermission.UserID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.ImpPermission.UserTenantID">
+            <summary>
+            用户所属租户ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.ImpPermission.StartTime">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.ImpPermission.EndTime">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.ImpPermission.Applications">
+            <summary>
+            应用名
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.ImpPermission.Status">
+            <summary>
+            状态（启用，停用）
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.JsonWriteExtension.IgnoreNull">
+            <summary>
+            忽略空值 
+            </summary>
+        </member>
+        <member name="M:Beisen.MultiTenant.Model.JsonWriteExtension.WriteValueOrNullWithStandardType(Newtonsoft.Json.JsonWriter,System.String,System.Object)">
+            <summary>
+            普通 类型 
+            </summary>
+            <param name="writer"></param>
+            <param name="writePropertyName"></param>
+            <param name="writePropertyValue"></param>
+        </member>
+        <member name="M:Beisen.MultiTenant.Model.JsonWriteExtension.WriteValueOrNullWithNonStandardType(Newtonsoft.Json.JsonWriter,System.String,System.Object)">
+            <summary>
+            DateTime ,Enum 。。。。类型
+            </summary>
+            <param name="writer"></param>
+            <param name="writePropertyName"></param>
+            <param name="writePropertyValue"></param>
+        </member>
+        <member name="M:Beisen.MultiTenant.Model.KnownTypeContainer.GetDerivedTypes(System.Type,System.Reflection.Assembly)">
+            <summary>
+            获取继承类型
+            </summary>
+            <param name="baseType"></param>
+            <param name="assembly"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.MetaLookupField">
+            <summary>
+            Lookup字段
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaLookupField.DeleteOperationType">
+            <summary>
+            删除操作类型 0：关联对象删除时，自动删除该字段 1：若字段有值，不允许删除关联对象
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaLookupField.MetaObjectID">
+            <summary>
+            源对象ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaLookupField.MetaFieldID">
+            <summary>
+            源字段ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaLookupField.RefMetaObjectID">
+            <summary>
+            引用对象ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaLookupField.RefMetaFieldID">
+            <summary>
+            引用字段ID
+            </summary>
+        </member>
+        <member name="M:Beisen.MultiTenant.Model.MetaLookupField.WriteJson(Newtonsoft.Json.JsonWriter)">
+            <summary>
+            自定义JSON序列化
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.MetaObjectFieldPermissionESB">
+             <summary>
+            实体字段权限
+             </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaObjectFieldPermissionESB.FieldPermissions">
+            <summary>
+            当前实体的所有字段的编辑权限信息
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.MetaObjectFieldPermissionESB.FieldPermissionESB">
+            <summary>
+            字段权限
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.MetaObjectSimple">
+            <summary>
+            MetaObject简化版
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaObjectSimple.Application">
+            <summary>
+            对象所属的应用
+            </summary>      
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaObjectSimple.Name">
+            <summary>
+            对象的名称，为英文字符
+            </summary>     
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaObjectSimple.Label">
+            <summary>
+            对象的显示名称，默认的语种是中文
+            </summary>       
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaObjectSimple.ID">
+            <summary>
+            GUID唯一标识
+            </summary>       
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaObjectSimple.Fields">
+            <summary>
+            对象的字段集合
+            </summary>      
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.MetaFieldSimple">
+            <summary>
+            MetaField简化版
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaFieldSimple.Name">
+            <summary>
+            字段的名称，为英文字符
+            </summary>     
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaFieldSimple.Label">
+            <summary>
+            字段的显示名称 
+            </summary>       
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaFieldSimple.ID">
+            <summary>
+            GUID唯一标识
+            </summary>       
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaFieldSimple.DataType">
+            <summary>
+            数据类型
+            </summary>      
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaFieldSimple.ControlName">
+            <summary>
+            控件名
+            </summary>       
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaFieldSimple.DataSourceName">
+            <summary>
+            数据源名
+            </summary>      
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaFieldSimple.PackID">
+            <summary>
+            控件包ID
+            </summary>      
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaFieldSimple.ControlPackName">
+            <summary>
+            控件名
+            </summary>      
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaFieldSimple.cmp_data">
+            <summary>
+            Template模板中解析出来的cmp_data
+            </summary>       
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaFieldSimple.cmp_type">
+            <summary>
+            Template模板中解析出来的CMPType
+            </summary>      
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaFieldSimple.DataSourceType">
+            <summary>
+            数据源类型
+            </summary>      
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaRefRelation.Name">
+            <summary>
+            关联关系名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaRefRelation.Expression">
+            <summary>
+            表达式
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaRefRelation.MetaObjectID">
+            <summary>
+            源对象ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaRefRelation.RefMetaObjectID">
+             <summary>
+            引用对象ID
+             </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaRefRelation.Status">
+             <summary>
+            状态0：草稿，1：启用，2：停用
+             </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BaseEntity.ID">
+            <summary>
+            GUID唯一标识
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BaseEntity.TenantID">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BaseEntity.CreatedBy">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BaseEntity.CreatedTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BaseEntity.ModifiedBy">
+            <summary>
+            编辑人
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.BaseEntity.ModifiedTime">
+            <summary>
+            编辑时间
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaFunction.Application">
+            <summary>
+            应用名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaFunction.FK_MetaObject_ID">
+            <summary>
+            数据对象ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaFunction.Name">
+            <summary>
+            功能按钮名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaFunction.Label">
+            <summary>
+            功能按钮显示名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaFunction.Level">
+            <summary>
+            级别
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaFunction.Action">
+            <summary>
+            action
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaFunction.SortNum">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaFunction.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaFunction.ActionParams">
+            <summary>
+            事件参数
+            </summary>
+        </member>
+        <member name="M:Beisen.MultiTenant.Model.MetaFunction.WriteJson(Newtonsoft.Json.JsonWriter)">
+            <summary>
+            自定义json序列化
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.MultipleObjectData">
+            <summary>
+            多实体数据模型，应对复合表单保存
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MultipleObjectData.ContactList">
+            <summary>
+            常用联系人用
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MultipleObjectData.FormViewName">
+            <summary>
+            表单名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MultipleObjectData.ObjectDatas">
+            <summary>
+            多实体数据模型
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MultipleObjectData.MultipleObjectDataSavedResults">
+            <summary>
+            多实体数据操作结果
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MultipleObjectData.IsSuccessedPartially">
+            <summary>
+            是否是部分保存成功
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.OperationResult">
+            <summary>
+            返回状态描述
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.OperationResult.Code">
+            <summary>
+            状态码, 200成功，其它参考http返回码
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.OperationResult.Message">
+            <summary>
+            附加信息
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.OperationResult.Param">
+            <summary>
+            参数
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.OperationResult.ID">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.OperationResult.TipType">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.OperationResult.MoreMessage">
+            <summary>
+            更多的错误信息
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.OperationType">
+            <summary>
+            数据操作类型
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.OperationType.Default">
+            <summary>
+            默认
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.OperationType.NotSendFeed">
+            <summary>
+            数据变更之后，不发送Feed
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.OperationType.FixData">
+            <summary>
+            数据变更之后，不发送Feed
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.ProfileJsonModel">
+            <summary>
+            身份对象
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.ProfileJsonModel.name">
+            <summary>
+            身份编码
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.ProfileJsonModel.application">
+            <summary>
+            应用编码
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.ProfileJsonModel.label">
+            <summary>
+            身份的名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.ProfileJsonModel.mouName">
+            <summary>
+            Mou编码
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.ProfileJsonModel.mouTitle">
+            <summary>
+            Mou中文名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.ProfileJsonModel.userID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.ProfileJsonModel.mouID">
+            <summary>
+            MOUID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.RelateMetaObjectModel.MetaObjectName">
+            <summary>
+            相关对象或者子对象名字
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.RelateMetaObjectModel.MetaObject">
+            <summary>
+            元数据对象
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.RelateMetaObjectModel.FunctionNames">
+            <summary>
+            FunctionsName列表
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.RelateMetaObjectModel.ListViewName">
+            <summary>
+            ListViewName
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.RelateMetaObjectModel.Expression">
+            <summary>
+            表达式
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.RelateMetaObjectModel.RelationObjectType">
+            <summary>
+            对象关联类型 1-子对象  2-相关对象
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.RelateMetaObjectModel.IsDefault">
+            <summary>
+            是否是默认显示的对象
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.RelateMetaObjectModel.DisplayNum">
+            <summary>
+            排序顺序
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.RelateMetaObjectModel.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.RelateMetaObjectModel.ComponentType">
+            <summary>
+            组件类型 0-列表  1-视图
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.RelateMetaObjectModel.NavViewName">
+            <summary>
+            视图
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.RelateMetaObjectModel.ModuleID">
+            <summary>
+            模块的唯一标识
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.ObjectDataFromJson">
+            <summary>
+            提供给前端添加或更新ObjectData时使用
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.ObjectDataFromJson.metaFields">
+            <summary>
+            字段结合
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.ObjectDataFromJson.metaDataID">
+            <summary>
+            实体对象ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.ObjectDataFromJson.id">
+            <summary>
+            数据对象ID
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.ObjectFieldFromJson">
+            <summary>
+            提供给前端添加或更新ObjectData时使用
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.ObjectFieldFromJson.name">
+            <summary>
+            DataKey
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.ObjectFieldFromJson.value">
+            <summary>
+            DataValue
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.RuntimeContextInfo.UserID">
+            <summary>
+            当前登录用户的UserID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.RuntimeContextInfo.UserName">
+            <summary>
+            当前登录用户的名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.RuntimeContextInfo.TenantID">
+            <summary>
+            当前登录用户的租户ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.RuntimeContextInfo.Application">
+            <summary>
+            当前应用的编码
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.RuntimeContextInfo.Email">
+            <summary>
+            当前登录用户的邮箱地址
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.RuntimeContextInfo.AppDomain">
+            <summary>
+            当前应用的域名,不包含站点的域名
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.RuntimeContextInfo.WebDomain">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.SearchResultData">
+            <summary>
+            查询结果包装对象
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.SearchResultData.RecordCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.SearchResultData.Datas">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.SimpleData">
+             <summary>
+            用于前后台交互，处理简单的数据类型。复杂类需要专门定义,不能写在此处
+             </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.SysMetaObjectExportData">
+            <summary>
+            系统导出实体
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.SysMetaObjectImportData">
+            <summary>
+            系统导入实体
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.SysMetaObjectImportData.BeginDate">
+            <summary>
+            开始时间
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.SysMetaObjectImportData.EndDate">
+            <summary>
+            结束时间
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.SysMetaObjectImportData.State">
+            <summary>
+            执行状态(执行中、成功、失败)
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.SysMetaObjectImportData.ImportAttachPath">
+            <summary>
+            导入附件的Dfs文件路径
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.SysMetaObjectImportData.ImportAttachEncoding">
+            <summary>
+            导入附件的编码格式
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.SysMetaObjectImportData.Result">
+            <summary>
+            执行结果
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.SysMetaObjectImportData.ErrorReportPath">
+            <summary>
+            错误报告路径
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.SysMetaObjectImportData.CaseDistinct">
+            <summary>
+            数据重复时的操作（不导入、更新）
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.SysMetaObjectMonitorData">
+            <summary>
+            作业监控
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.SysMetaObjectMonitorData.Operation">
+            <summary>
+            操作
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.SysMetaObjectMonitorData.State">
+            <summary>
+            状态(执行中、成功、失败)
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.SysMetaObjectMonitorData.Result">
+            <summary>
+            结果
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.SysMetaObjectMonitorData.Pramas">
+            <summary>
+            作业执行参数(用于作业的暂时、恢复、查询等)
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.SysMetaObjectMonitorData.Remark">
+            <summary>
+            备注信息
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.SysMetaObjectOperateLog">
+            <summary>
+            操作日志
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UpdateOwnerModel">
+            <summary>
+            更新所有者的参数模块
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UpdateOwnerModel.Value">
+            <summary>
+            更新的值
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UpdateOwnerModel.Keys">
+            <summary>
+            需要处理的数据Key(包含ID和指定的显示内容)
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UpdateOwnerKeyModel">
+            <summary>
+            更新所有者的参数项模块
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UpdateOwnerKeyModel.ID">
+            <summary>
+            数据ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UpdateOwnerKeyModel.Text">
+            <summary>
+            数据显示键值
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.Advance.CmpRender">
+            <summary>
+            渲染信息
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.Advance.Layout">
+            <summary>
+            布局信息
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.CmpRender.ViewPath">
+            <summary>
+            控件路径
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.CmpRender.Status">
+            <summary>
+            是否启用当前扩展，默认启用enable
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ApplicationMenu.ID">
+            <summary>
+            GUID唯一标识
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ApplicationMenu.TenantID">
+            <summary>
+            租户Id
+            </summary> 
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ApplicationMenu.CreatedBy">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ApplicationMenu.CreatedTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ApplicationMenu.ModifiedBy">
+            <summary>
+            编辑人
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ApplicationMenu.ModifiedTime">
+            <summary>
+            编辑时间
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ApplicationMenu.ActionParams">
+            <summary>
+            事件参数
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ApplicationMenu.ActionType">
+            <summary>
+            system/customzation
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ApplicationMenu.GroupName">
+            <summary>
+            事件分组名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ApplicationMenu.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ApplicationMenu.Label">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ApplicationMenu.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ApplicationMenu.Image">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ApplicationMenu.EngineType">
+            <summary>
+            引擎类型
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ApplicationMenu.SortNum">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ApplicationPage.ApplicationPageCmpData.MetaObjectName">
+            <summary>
+            实体名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ApplicationPage.ApplicationPageCmpData.ViewName">
+            <summary>
+            视图名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ApplicationPage.ApplicationPageCmpData.SortNum">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ApplicationPage.ApplicationPageCmpData.Visible">
+            <summary>
+            是否显示
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ApplicationPage.ApplicationPageCmpData.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ApplicationPage.ApplicationPageCmpData.IsShowTitle">
+            <summary>
+            是否显示标题
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ApplicationPage.ApplicationPageCmpData.TitleIcon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ApplicationPage.ApplicationPageCmpData.IsDefault">
+            <summary>
+            是否为默认显示的组件，只有在TabPage下有用
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ApplicationPage.ApplicationPageCmpData.PageRenderType">
+            <summary>
+            OnePage:OnePage展现
+            TabPage:TabPage展现
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ApplicationPage.ApplicationPageCmpData.RelationObjectType">
+            <summary>
+            对象关联类型 1-子对象  2-相关对象
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ApplicationPage.ApplicationPageCmpData.ProfilePageViewName">
+            <summary>
+            身份配置的详情页的名字
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ApplicationPage.ApplicationPageCmpData.CurrentDetailPageViewName">
+            <summary>
+            当前使用的详情页的名字（可能会使用自定义详情页）
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ApplicationPage.ApplicationPageCmpData.Advance">
+            <summary>
+            组件的布局信息
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ApplicationPage.ApplicationPageComponent.SubCmps">
+            <summary>
+            DetailPageMainViewComponent , DetailPageRelateViewComponent
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.BaseComponent.CmpId">
+            <summary>
+            组件ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.BaseComponent.CmpName">
+            <summary>
+            组件名
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.BaseComponent.CmpType">
+            <summary>
+            组件类型
+            CmpType 符合组件参照ComponentType
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ButtonList.ButtonItemCmpData.Title">
+            <summary>
+            按钮显示文字
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ButtonList.ButtonItemCmpData.ActionType">
+            <summary>
+            按钮类型:系统按钮："system",自定义按钮："customzation"
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ButtonList.ButtonItemCmpData.Params">
+            <summary>
+            按钮触发事件所必须的参数
+            <example>
+            <![CDATA["id=asassa&app=dfaer"]]>
+            </example>
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ButtonList.ButtonItemCmpData.Action">
+            <summary>
+            /按钮行为对应的文件名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ButtonList.ButtonItemCmpData.Level">
+            <summary>
+            index,detail
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ButtonList.ButtonItemCmpData.Description">
+            <summary>
+            按钮描述
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ButtonList.ButtonItemCmpData.Visible">
+            <summary>
+            按钮是否显示
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ButtonList.ButtonItemCmpData.IsApprovalCompleteVisible">
+            <summary>
+            审批完成时是否显示
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ButtonList.ButtonItemCmpData.Disable">
+            <summary>
+            按钮是否可用
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ButtonList.ButtonItemCmpData.ActionMicroServiceList">
+            <summary>
+            微服务接口信息
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ButtonList.ActionMicroService.Key">
+            <summary>
+            微服务类型
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ButtonList.ActionMicroService.ApiUrl">
+            <summary>
+            微服务Url
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ButtonList.ActionMicroService.Method">
+            <summary>
+            微服务请求方式
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ButtonList.ActionMicroService.Token">
+            <summary>
+            微服务Token
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ButtonList.ActionMicroService.ApiCode">
+            <summary>
+            微服务ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ButtonList.ButtonListCmpData.TargetCmpName">
+            <summary>
+            操作组件
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ButtonList.ButtonListCmpData.IsExtButton">
+            <summary>
+            标示是否Ext
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ButtonList.ButtonListComponent.RelatedCmpId">
+            <summary>
+            新增的属性，按钮关联的组件ID
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UIMetaDataV2.CustomNavView.ConditionFieldsModelOfCusNavView">
+            <summary>
+            自定义视图字段编辑条件
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.CustomNavView.ConditionFieldsModelOfCusNavView.isSystemReserved">
+            <summary>
+            系统预留
+            </summary>
+            创建者:孙加乐
+            创建日期：2017/11/28 14:03
+            ----------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.CustomNavView.ConditionFieldsModelOfCusNavView.metaDataType">
+            <summary>
+            数据字段类型
+            </summary>
+            <value>
+            The type of the meta data.
+            </value>
+            创建者:孙加乐
+            创建日期：2017/11/28 17:13
+            ----------------------------------------------------------------------------------------
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.CustomNavView.ConditionFieldsModelOfCusNavView.packID">
+            <summary>
+            控件包Id
+            </summary>
+            创建者:孙加乐
+            创建日期：2017/11/29 15:50
+            ----------------------------------------------------------------------------------------
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UIMetaDataV2.CustomNavView.OperatorModel">
+            <summary>
+            自定义视图控件操作符
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.CustomNavView.OperatorModel.CompareLabel">
+            <summary>
+            比较的标识
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaDataV2.CustomNavView.OperatorModel.cmp_operator">
+            <summary>
+            操作符
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UIMetaDataV2.CustomNavView.ConditionOperator">
+            <summary>
+            自定义视图操作符
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.CustomNavView.ConditionOperator.customDefaultValue">
+            <summary>
+            快捷选项的默认值
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.CustomNavView.ConditionOperator.render_data">
+            <summary>
+            操作符对应的类型
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.CustomNavView.ConditionOperator.op_cmp_data">
+            <summary>
+            于波要求，新增加操作符对应的整个组件-待考虑
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.CustomNavView.ConditionItem.FieldID">
+            <summary>
+            字段ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.CustomNavView.ConditionItem.Num">
+            <summary>
+            序号(V2.4版本新增)
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.CustomNavView.ConditionItem.Relation">
+            <summary>
+            关系
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.CustomNavView.ConditionItem.VariableCode">
+            <summary>
+            参数编码
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.CustomNavView.ConditionItem.Operator">
+            <summary>
+            运算符
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.CustomNavView.ConditionItem.Type">
+            <summary>
+            类型(值,变量)
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.CustomNavView.ConditionItem.Value">
+            <summary>
+            值(多值时，逗号隔开)
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.CustomNavView.ConditionItem.IsHaveChild">
+            <summary>
+            是否包含下级
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UIMetaDataV2.DataSourceResult">
+            <summary>
+            数据来源于UIV3的DataSourceObject
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.DataSourceResult.Text">
+            <summary>
+            数据源显示值
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.DataSourceResult.Value">
+            <summary>
+            数据源编码
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.DataSourceResult.TextJson">
+            <summary>
+            数据源复杂存储格式JSON串（例如父关系存储）
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.DetailPage.DetailPageCmpData.MetaObjectName">
+            <summary>
+            实体名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.DetailPage.DetailPageCmpData.ViewName">
+            <summary>
+            视图名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.DetailPage.DetailPageCmpData.SortNum">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.DetailPage.DetailPageCmpData.Visible">
+            <summary>
+            是否显示
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.DetailPage.DetailPageCmpData.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.DetailPage.DetailPageCmpData.IsShowTitle">
+            <summary>
+            是否显示标题
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.DetailPage.DetailPageCmpData.TitleIcon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.DetailPage.DetailPageCmpData.IsDefault">
+            <summary>
+            是否为默认显示的组件，只有在TabPage下有用
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.DetailPage.DetailPageCmpData.PageRenderType">
+            <summary>
+            OnePage:OnePage展现
+            TabPage:TabPage展现
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.DetailPage.DetailPageCmpData.RelationObjectType">
+            <summary>
+            对象关联类型 1-子对象  2-相关对象
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.DetailPage.DetailPageCmpData.ProfilePageViewName">
+            <summary>
+            身份配置的详情页的名字
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.DetailPage.DetailPageCmpData.CurrentDetailPageViewName">
+            <summary>
+            当前使用的详情页的名字（可能会使用自定义详情页）
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.DetailPage.DetailPageCmpData.Advance">
+            <summary>
+            组件的布局信息
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.DetailPage.DetailPageComponent.SubCmps">
+            <summary>
+            DetailPageMainViewComponent , DetailPageRelateViewComponent
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.DetailPage.DetailPageItemComponent.PageBuilderFormCards">
+            <summary>
+            通过pagebuilder而非老配置方式生成的FormCard数组
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UIMetaDataV2.EditBatch.EditBatchPart">
+            <summary>
+            批量编辑复合组件
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaDataV2.ComponentType.Unknown">
+            <summary>
+            默认0时，为未知枚举值
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaDataV2.ComponentType.Form">
+            <summary>
+            表单
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaDataV2.ComponentType.FormTitle">
+            <summary>
+            表头
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaDataV2.ComponentType.FormPart">
+            <summary>
+            表内区块
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaDataV2.ComponentType.FormPartTitle">
+            <summary>
+            表内区块表头
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaDataV2.ComponentType.SearchForm">
+            <summary>
+            搜索表单
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaDataV2.ComponentType.ListView">
+            <summary>
+            列表：对应页面的普通列表和复合列表
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaDataV2.ComponentType.FormListView">
+            <summary>
+            表单式列表
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaDataV2.ComponentType.TableList">
+            <summary>
+            表格控件
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaDataV2.ComponentType.ButtonList">
+            <summary>
+            功能按钮集合
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaDataV2.ComponentType.ButtonItem">
+            <summary>
+            功能按钮
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaDataV2.ComponentType.Column">
+            <summary>
+            列
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaDataV2.ComponentType.TableListRow">
+            <summary>
+            表格行
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UIMetaDataV2.FormViewType">
+            <summary>
+            表单分类
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UIMetaDataV2.LayoutType">
+            <summary>
+            系统内置的部分布局类型
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UIMetaDataV2.ListViewType">
+            <summary>
+            列表视图分类
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UIMetaDataV2.ModuleType">
+            <summary>
+            模块类型
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaDataV2.PageRenderType.Unknown">
+            <summary>
+            默认0时，为未知枚举值
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaDataV2.TabItemViewType.Unknown">
+            <summary>
+            默认0时，为未知枚举值
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaDataV2.TabItemViewType.ObjectEntity">
+            <summary>
+            对象实体
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaDataV2.TabItemViewType.CustomLink">
+            <summary>
+            自定义链接
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaDataV2.TabItemViewType.ReportCenter">
+            <summary>
+            报表中心
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaDataV2.FormState.Unknown">
+            <summary>
+            默认0时，为未知枚举值
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.FeedView.ID">
+            <summary>
+            guid
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.FeedView.IsActive">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.FeedView.IsTrack">
+            <summary>
+            是否跟踪记录
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.FeedView.Application">
+            <summary>
+            应用名
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.FeedView.MetaObjectName">
+            <summary>
+            实体名
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.FeedView.Subscriber">
+            <summary>
+            订阅者
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.FeedView.ExtensionField">
+            <summary>
+            配置字段
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.FeedView.TitaAppObjType">
+            <summary>
+            TitaAppObjType
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.FeedView.TitaAppID">
+            <summary>
+            TitaAppID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.FeedView.TenantID">
+            <summary>
+            租户ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.FeedView.CreatedTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.FeedView.ModifiedTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.FeedView.CreatedBy">
+            <summary>
+            创建人ID
+            </summary>
+        </member>
+        <member name="M:Beisen.MultiTenant.Model.UIMetaDataV2.FieldBizData.#ctor">
+            <summary>
+            方便前端出现自定义视图按钮，先默认各个视图都可以创建自定义视图
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.FieldBizData.Num">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.FieldBizData.Name">
+            <summary>
+            字段名
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.FieldBizData.Text">
+            <summary>
+            显示文本
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.FieldBizData.Value">
+            <summary>
+            存储值
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.FieldBizData.ClientUrl">
+            <summary>
+            存储值
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.FieldBizData.DownloadUrl">
+            <summary>
+            存储值
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.FieldBizData.Avatars">
+            <summary>
+            用户头像信息
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.FileUploadRequest.KeySpace">
+            <summary>
+            附件上传KeySpace
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.FileUploadRequest.FileName">
+            <summary>
+            文件名
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.FileUploadRequest.FileReName">
+            <summary>
+            重命名
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UIMetaDataV2.Form.FormComponent">
+            <summary>
+            表单复合组件
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UIMetaDataV2.Form.FormComponentData">
+            <summary>
+            表单复合组件的组件数据
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.Form.FormComponentData.StyleSpace">
+            <summary>
+            间距
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.Form.FormComponentData.StyleTitle">
+            <summary>
+            标题风格
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.Form.FormComponentData.DataContext">
+            <summary>
+            表单数据上下文
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.Form.FormComponentData.Advance">
+            <summary>
+            组件的布局信息
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.Form.FormComponentData.FormViewType">
+            <summary>
+            表单类型
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.Form.FormPartCmpData.MaxColumnCount">
+            <summary>
+            区块布局显示列
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.Form.FormPartCmpData.Visible">
+            <summary>
+            标题图标
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.Form.FormPartCmpData.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.Form.FormPartCmpData.TitleIcon">
+            <summary>
+            Title的图标
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UIMetaDataV2.ICompositeCmpData">
+            <summary>
+            组件元数据接口
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.IndexPage.IndexNavViewCmpData.Advance">
+            <summary>
+            组件的布局信息
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.IndexPage.IndexNavViewComponent.CurrentViewName">
+            <summary>
+            当前选中的视图
+            不可序列化
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.IndexPage.IndexNavViewComponent.CurrentItem">
+            <summary>
+            根据CurrentViewName获取当前选中的Index视图
+            不可序列化
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.IndexPage.IndexNavViewItemCmpData.IsCustomView">
+            <summary>
+            当前视图是否为自定义视图，如果是自定义视图，允许编辑、删除
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.IndexPage.IndexNavViewItemCmpData.IsPageBuilderGenerate">
+            <summary>
+            当前视图是否为自定义视图，如果是自定义视图，允许编辑、删除
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.IndexPage.IndexNavViewItemCmpData.IsNavViewListHidden">
+            <summary>
+            是否允许切换列表
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.IndexPage.IndexNavViewItemCmpData.AllowCustomView">
+            <summary>
+            当前视图是否允许自定义视图
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.IndexPage.IndexPageCmpData.TitleIcon">
+            <summary>
+            图标
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.IndexPage.IndexPageCmpData.Advance">
+            <summary>
+            组件的布局信息
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.IndexPage.IndexPageCmpData.IsNavViewListHidden">
+            <summary>
+            视图列表是否隐藏，指定视图页时才需要隐藏视图列表
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.IndexPage.IndexPageBuilderModel.viewName">
+            <summary>
+            创建或编辑的视图ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.IndexPage.IndexPageBuilderModel.layout">
+            <summary>
+            运行态渲染需要部分，pageBuilder创建
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.IndexPage.IndexPageBuilderModel.page">
+            <summary>
+            基于模板创建视图时数据部分，Save所需数据提取部分
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UIMetaDataV2.IndexPage.Layout">
+            <summary>
+            pageBuilder创建视图的布局部分，前端原样返回
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UIMetaDataV2.IndexPage.Section">
+            <summary>
+            PageSettings下SectionList包含类
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.IndexPage.IndexPageComponent.SubCmps">
+            <summary>
+            Nav,IndexView{SearchForm,ButtonList,TableList}
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.IndexPage.IndexViewComponentCmpData.Advance">
+            <summary>
+            组件的布局信息
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ListView.Column.CmpData">
+            <summary>
+            列数据
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ListView.Column.Validators">
+            <summary>
+            编辑时的验证
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ListView.ColumnCmpData.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ListView.ColumnCmpData.ColumnType">
+            <summary>
+            列表类型
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ListView.ColumnCmpData.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ListView.ColumnCmpData.Alignment">
+            <summary>
+            对齐方式
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ListView.ColumnCmpData.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ListView.ColumnCmpData.CssClass">
+            <summary>
+            前端类名
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ListView.ColumnCmpData.IsLink">
+            <summary>
+            是否需要渲染为链接
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ListView.ColumnCmpData.IsEditable">
+            <summary>
+            是否可以编辑
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ListView.ColumnCmpData.IsFrozenColumn">
+            <summary>
+            是否是冻结列
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ListView.ColumnCmpData.LinkURL">
+            <summary>
+            连接URL
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ListView.ColumnCmpData.OpenMode">
+            <summary>
+            打开方式
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ListView.ColumnCmpData.ShowIndex">
+            <summary>
+            当前列在行的位置索引
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ListView.ColumnCmpData.Visible">
+            <summary>
+            是否可以显示
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ListView.ColumnCmpData.IsDownload">
+            <summary>
+            是否是下载链接
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ListView.ColumnCmpData.CanShow">
+            <summary>
+            有权限显示
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ListView.ColumnCmpData.CanEdit">
+            <summary>
+            有权限编辑
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ListView.ColumnCmpData.IsTreeNodeColumn">
+            <summary>
+            是否是可树形展开列
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ListView.ListViewComponent.DefaultSort">
+            <summary>
+            默认排序字段
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ListView.ListViewComponent.DefaultSortDirection">
+            <summary>
+            默认排序字段排序方式
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ListView.ListViewComponent.FormViewName">
+            <summary>
+            如果类型为Form类型的List则需要设置FormViewName
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ListView.ListViewComponent.ListViewType">
+            <summary>
+            列表视图类型
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ListView.ListViewComponent.MetaObjectLabel">
+            <summary>
+            元数据对象标签
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ListView.ListViewComponent.MetaObjectDescription">
+            <summary>
+            元数据对象描述
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ListView.ListViewComponent.MetaObjectID">
+            <summary>
+            元数据ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.ListView.ListViewComponent.MetaObject">
+            <summary>
+            元数据对象
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.MetaFieldComponent.CmpLabel">
+            <summary>
+            组件ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.SearchData.MetaFieldRelationIDPath">
+            <summary>
+            Lookup递归查询ID的Path路径
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UIMetaDataV2.MouComponent">
+            <summary>
+            管理单元的Component组件
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.MouComponent.Application">
+            <summary>
+            应用
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.MouComponent.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.MouComponent.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.MouComponent.ParentID">
+            <summary>
+            上级ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.MouComponent.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.MouComponent.ReferenceObjectIDs">
+            <summary>
+            关联ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.MouComponent.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.MouComponent.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.MouComponent.IsDelete">
+            <summary>
+            是否删除
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.MouComponent.Sort">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.OceanSearchItem.MetaObjId">
+            <summary>
+            元数据对象ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.OceanSearchItem.FieldId">
+            <summary>
+            字段ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.OceanSearchItem.FieldName">
+            <summary>
+            字段编码
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.OceanSearchItem.Operator">
+            <summary>
+            查询操作符
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.OceanSearchItem.Value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.Print.PrintComponent.Content">
+            <summary>
+            返回的打印内容，html格式
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.Print.PrintComponent.Message">
+            <summary>
+            附加消息
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.Print.PrintComponent.Code">
+            <summary>
+            成功200，其他失败
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.Print.PrintComponent.ContentType">
+            <summary>
+            Single/Multiple
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UIMetaDataV2.PageSearchContext">
+            <summary>
+            页面查询上下文
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.PageSearchContext.ViewName">
+            <summary>
+            DetailPage的视图名（身份详情页的页面PageView名称）
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.PageSearchContext.CurrentDetailPageViewName">
+            <summary>
+            当前使用的详情页的名字（详情页的名称，用户自定义时）
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.PageSearchContext.NavViewName">
+            <summary>
+            详情页中相关对象组件类型为视图的，需要传递视图名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.PageSearchContext.DataId">
+            <summary>
+            页面数据ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.SearchCondition.PageContext">
+            <summary>
+            PageContext
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.SearchCondition.SearchData">
+            <summary>
+            SearchData
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.SearchCondition.TableListData">
+            <summary>
+            查询条件
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.SearchConditionCmpData.MetaObjName">
+            <summary>
+            实体名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.SearchConditionCmpData.SearchView">
+            <summary>
+            搜索视图名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.SearchConditionCmpData.SearchVersion">
+            <summary>
+            搜索视图版本
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.SearchConditionCmpData.Items">
+            <summary>
+            查询条件
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.SearchConditionCmpData.FilterJson">
+            <summary>
+            自定义Filter的Json表示
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.SearchConditionCmpData.SearchItemsFilterJson">
+            <summary>
+            用户自定义的字段搜索条件(Key:字段的全称Application.MetaObjectName.MetaFieldName, Value:FilterJson)
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.SearchConditionCmpData.SearchFormFilterJson">
+            <summary>
+            搜索表单里指定的额外自定义Filter的Json表示。
+            目前仅用于Lookup字段高级模式展开的视图页中，搜索表单自定义Filter保留了Lookup触发器扩展的自定义Filter，TableList请求时使用
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.SearchConditionItem.Num">
+            <summary>
+            新增加，同一字段多个过滤条件，按序号对应
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UIMetaDataV2.SortField">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.SortField.SortColumn">
+            <summary>
+            排序字段名
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.SortField.SortColumnIndex">
+            <summary>
+            排序列索引
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.SortField.SortDirction">
+            <summary>
+            排序方向
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UIMetaDataV2.SearchForm.SearchComponent">
+            <summary>
+            查询表单复合组件
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.SearchForm.SearchComponent.CustomviewBizData">
+            <summary>
+            新增自定义视图高级表达式部分bizdata
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UIMetaDataV2.SearchForm.SearchComponentData">
+            <summary>
+            搜索表单复合组件的组件数据
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.SearchForm.SearchComponentData.Advance">
+            <summary>
+            组件的布局信息
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.SearchForm.SearchComponentData.FilterJson">
+            <summary>
+            如果是Lookup字段展开的视图发出的请求，将带Lookup触发器中定义的过滤条件
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.SysWiFiConfig.Name">
+            <summary>
+            前端CI发版名称,例如BeisencloudCore
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.SysWiFiConfig.MajorVersion">
+            <summary>
+            主版本号
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.SysWiFiConfig.Label">
+            <summary>
+            标识
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.SysWiFiConfig.State">
+             <summary>
+            状态。1、正式版;2、预发行版
+             </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.SysWiFiConfig.Remark">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.SysWiFiConfig.Author">
+            <summary>
+            作者
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.SysWiFiConfig.Content">
+            <summary>
+            发版内容
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListBizData">
+            <summary>
+            列表数据行数据
+            </summary>
+            <remarks>
+            调用触发器需要传递数据行数据时，由于配置文件的原因无法直接传递Dictionary[string, FieldBizData]
+            </remarks>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListCmpData.IsCheckAll">
+            <summary>
+            是否显示CheckBox列
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListCmpData.Paging">
+            <summary>
+            分页信息
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListCmpData.MetaObjName">
+            <summary>
+            实体名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListCmpData.ViewName">
+            <summary>
+            列表视图名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListCmpData.SortFields">
+            <summary>
+            排序的字段
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListCmpData.Advance">
+            <summary>
+            组件的布局信息
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListCmpData.IsColVis">
+            <summary>
+            是否显示自定义列
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListCmpData.IsUserCustomListView">
+            <summary>
+            是否已经存在的用户自定义列
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListCmpData.IsAvatars">
+            <summary>
+            是否显示头像
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListCmpData.HasRowHandler">
+            <summary>
+            是否显示数据行功能
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListCmpData.IsSyncRowHandler">
+            <summary>
+            是否是同步数据行功能
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListCmpData.GetTreeNodeUrl">
+            <summary>
+            树形展开行数据请求地址
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListCmpDataFromJson.sColumns">
+            <summary>
+            需要获取的列集合
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListCmpDataFromJson.IsCheckAll">
+            <summary>
+            是否显示CheckBox列
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListCmpDataFromJson.Paging">
+            <summary>
+            分页信息
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListCmpDataFromJson.MetaObjName">
+            <summary>
+            实体名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListCmpDataFromJson.ViewName">
+            <summary>
+            列表视图名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListCmpDataFromJson.SortFields">
+            <summary>
+            排序的列数,默认为0
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListPaging.Total">
+            <summary>
+            总记录数
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListPaging.Capacity">
+            <summary>
+            每页显示条数
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListPaging.Page">
+            <summary>
+            读取数据的开始位置，默认为-1
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListPaging.CapacityList">
+            <summary>
+            每页显示数据条数的选项, 例如：[15,30,60,100]
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListPagingFromJson.Total">
+            <summary>
+            总记录数
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListPagingFromJson.Capacity">
+            <summary>
+            每页显示条数
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListPagingFromJson.Page">
+            <summary>
+            读取数据的开始位置，默认为0
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListPagingFromJson.CapacityList">
+            <summary>
+            每页显示数据条数的选项, 例如：[15,30,60,100]
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListRow.CmpData">
+            <summary>
+            列表行的属性
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListRow.SubCmps">
+            <summary>
+            列表行的子组件（功能行）
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListRowCmpData.ID">
+            <summary>
+            行数据ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListRowCmpData.HasRowHandler">
+            <summary>
+            是否显示数据行功能
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListRowCmpData.IsSyncRowHandler">
+            <summary>
+            是否是同步数据行功能
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListSortField">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListSortField.SortColumn">
+            <summary>
+            排序字段名
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListSortField.SortColumnIndex">
+            <summary>
+            排序列索引
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TableList.TableListSortField.SortDirction">
+            <summary>
+            排序方向
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TabView.TabItemViewComponent.TabItemViews">
+            <summary>
+            子组件
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TabView.TabItemViewComponent.TabItemCmpData">
+            <summary>
+            组件数据
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.TabView.TabViewComponent.TabItemViews">
+            <summary>
+            子组件
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.Plugin.DashboardCmpDataItem.CmpID">
+            <summary>
+            插件CmpID，Pagebuilder布局需要
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UIMetaDataV2.UserInfo.UserInfo">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.UserInfo.UserInfo.UserId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.UserInfo.UserInfo.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.UserInfo.UserInfo.Email">
+            <summary>
+            用户邮箱
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaDataV2.UserInfo.UserInfo.Avatar">
+            <summary>
+            用户头像
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.ApplicationMenu.ID">
+            <summary>
+            GUID唯一标识
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.ApplicationMenu.TenantID">
+            <summary>
+            租户Id
+            </summary> 
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.ApplicationMenu.CreatedBy">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.ApplicationMenu.CreatedTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.ApplicationMenu.ModifiedBy">
+            <summary>
+            编辑人
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.ApplicationMenu.ModifiedTime">
+            <summary>
+            编辑时间
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.ApplicationMenu.ActionParams">
+            <summary>
+            事件参数
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.ApplicationMenu.ActionType">
+            <summary>
+            system/customzation
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.ApplicationMenu.GroupName">
+            <summary>
+            事件分组名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.ApplicationMenu.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.ApplicationMenu.Label">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.ApplicationMenu.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.ApplicationMenu.Image">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.ApplicationMenu.EngineType">
+            <summary>
+            引擎类型
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.ApplicationMenu.SortNum">
+            <summary>
+            排序号
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.ApplicationMenuView.ApplicationMenuData.openMode">
+            <summary>
+            打开方式,弹出页、当前页
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.ButtonList.ButtonItemCmpData.Label">
+            <summary>
+            按钮显示文字
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.ButtonList.ButtonItemCmpData.ActionType">
+            <summary>
+            按钮类型:系统按钮："system",自定义按钮："customzation"
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Beisen.MultiTenant.Model.UIMetaData.ButtonList.ButtonItemCmpData.Params" -->
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.ButtonList.ButtonItemCmpData.Action">
+            <summary>
+            /按钮行为对应的文件名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.ButtonList.ButtonItemCmpData.Level">
+            <summary>
+            index,detail
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.ButtonList.ButtonItemCmpData.Description">
+            <summary>
+            按钮描述
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.ButtonList.ButtonListCmpData.TargetCmpName">
+            <summary>
+            操作组件
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.DetailPage.DetailPageCmpData.MetaObjectName">
+            <summary>
+            实体名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.DetailPage.DetailPageCmpData.ViewName">
+            <summary>
+            视图名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.DetailPage.DetailPageCmpData.SortNum">
+            <summary>
+            排序
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.DetailPage.DetailPageCmpData.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.DetailPage.DetailPageCmpData.IsShowTitle">
+            <summary>
+            是否显示标题
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.DetailPage.DetailPageCmpData.IsDefault">
+            <summary>
+            是否为默认显示的组件，只有在TabPage下有用
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.DetailPage.DetailPageCmpData.PageRenderType">
+            <summary>
+            OnePage:OnePage展现
+            TabPage:TabPage展现
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.DetailPage.DetailPageComponent.SubCmps">
+            <summary>
+            DetailPageMainViewComponent , DetailPageRelateViewComponent
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UIMetaData.ListViewType">
+            <summary>
+            列表视图分类
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.Feed.FeedView.ID">
+            <summary>
+            guid
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.Feed.FeedView.IsActive">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.Feed.FeedView.IsTrack">
+            <summary>
+            是否跟踪记录
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.Feed.FeedView.Application">
+            <summary>
+            应用名
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.Feed.FeedView.MetaObjectName">
+            <summary>
+            实体名
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.Feed.FeedView.Subscriber">
+            <summary>
+            订阅者
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.Feed.FeedView.ExtensionField">
+            <summary>
+            配置字段
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.Feed.FeedView.TitaAppObjType">
+            <summary>
+            TitaAppObjType
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.Feed.FeedView.TitaAppID">
+            <summary>
+            TitaAppID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.Feed.FeedView.TenantID">
+            <summary>
+            租户ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.Feed.FeedView.CreatedTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.Feed.FeedView.ModifiedTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.Feed.FeedView.CreatedBy">
+            <summary>
+            创建人ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.FieldBizData.Name">
+            <summary>
+            字段名
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.FieldBizData.Text">
+            <summary>
+            显示文本
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.FieldBizData.Value">
+            <summary>
+            存储值
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.FieldBizData.ClientUrl">
+            <summary>
+            存储值
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.FieldBizData.DownloadUrl">
+            <summary>
+            存储值
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UIMetaData.DataSourceResult">
+            <summary>
+            数据来源于UIV3的DataSourceObject
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.DataSourceResult.Text">
+            <summary>
+            数据源显示值
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.DataSourceResult.Value">
+            <summary>
+            数据源编码
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.DataSourceResult.TextJson">
+            <summary>
+            数据源复杂存储格式JSON串（例如父关系存储）
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UIMetaData.ModuleType">
+            <summary>
+            模块类型
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaData.PageRenderType.Unknown">
+            <summary>
+            默认0时，为未知枚举值
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaData.TabItemViewType.Unknown">
+            <summary>
+            默认0时，为未知枚举值
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaData.TabItemViewType.ObjectEntity">
+            <summary>
+            对象实体
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaData.TabItemViewType.CustomLink">
+            <summary>
+            自定义链接
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaData.TabItemViewType.ReportCenter">
+            <summary>
+            报表中心
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaData.FormState.Unknown">
+            <summary>
+            默认0时，为未知枚举值
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.FileUploadRequest.KeySpace">
+            <summary>
+            附件上传KeySpace
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.FileUploadRequest.FileName">
+            <summary>
+            文件名
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.FileUploadRequest.FileReName">
+            <summary>
+            重命名
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UIMetaData.Form.FormComponent">
+            <summary>
+            表单复合组件
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UIMetaData.Form.FormComponentData">
+            <summary>
+            表单复合组件的组件数据
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.Form.FormComponentData.DataContext">
+            <summary>
+            表单数据上下文
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.Form.FormPartCmpData.MaxColumnCount">
+            <summary>
+            区块布局显示列
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.Form.FormPartCmpData.Visible">
+            <summary>
+            标题图标
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.Form.FormPartCmpData.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.Form.FormPartCmpData.TitleIcon">
+            <summary>
+            Title的图标
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.IndexPage.IndexNavViewCmpData.CurrentItem">
+            <summary>
+            根据CurrentViewName获取当前选中的Index视图
+            不可序列化
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.IndexPage.IndexPageComponent.SubCmps">
+            <summary>
+            Nav,IndexView{SearchForm,ButtonList,TableList}
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.ListView.Column.isLink">
+            <summary>
+            是否需要渲染为链接
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.ListView.Column.bVisible">
+            <summary>
+            当前列在前台是否显示
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.ListView.Column.ShowIndex">
+            <summary>
+            当前列在行的位置索引
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.ListView.ListViewComponent.DefaultSort">
+            <summary>
+            默认排序字段
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.ListView.ListViewComponent.DefaultSortDirection">
+            <summary>
+            默认排序字段排序方式
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.ListView.ListViewComponent.FormViewName">
+            <summary>
+            如果类型为Form类型的List则需要设置FormViewName
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.ListView.ListViewComponent.ListViewType">
+            <summary>
+            列表视图类型
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.ListView.ListViewComponent.MetaObjectLabel">
+            <summary>
+            元数据对象标签
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.ListView.ListViewComponent.MetaObjectDescription">
+            <summary>
+            元数据对象描述
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.ListView.ListViewComponent.MetaObjectID">
+            <summary>
+            元数据ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.ListView.ListViewComponent.MetaObject">
+            <summary>
+            元数据对象
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.SearchCondition.PageContext">
+            <summary>
+            PageContext
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.SearchCondition.SearchData">
+            <summary>
+            SearchData
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.SearchCondition.TableListData">
+            <summary>
+            查询条件
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UIMetaData.PageSearchContext">
+            <summary>
+            页面查询上下文
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.PageSearchContext.ViewName">
+            <summary>
+            DetailPage的视图名
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.PageSearchContext.DataId">
+            <summary>
+            页面数据ID
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UIMetaData.SortField">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.SortField.SortColumn">
+            <summary>
+            排序字段名
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.SortField.SortColumnIndex">
+            <summary>
+            排序列索引
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.SortField.SortDirction">
+            <summary>
+            排序方向
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.SearchConditionCmpData.MetaObjName">
+            <summary>
+            实体名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.SearchConditionCmpData.SearchView">
+            <summary>
+            搜索视图名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.SearchConditionCmpData.SearchVersion">
+            <summary>
+            搜索视图版本
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.SearchConditionCmpData.Items">
+            <summary>
+            查询条件
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UIMetaData.SearchForm.SearchComponent">
+            <summary>
+            查询表单复合组件
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UIMetaData.SearchForm.SearchComponentData">
+            <summary>
+            搜索表单复合组件的组件数据
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.TableList.TableListCmpData.PageSize">
+            <summary>
+            每页显示条数
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.TableList.TableListCmpData.iDisplayStart">
+            <summary>
+            读取数据的开始位置，默认为-1
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.TableList.TableListCmpData.sEcho">
+            <summary>
+            前端组件使用，标识是否服务器端分页
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.TableList.TableListCmpData.IsColVis">
+            <summary>
+            是否显示自定义列
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.TableList.TableListCmpData.IsAvatars">
+            <summary>
+            是否头像
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.TableList.TableListCmpData.IsCheckAll">
+            <summary>
+            是否显示CheckBox列
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.TableList.TableListCmpData.iTotalRecords">
+            <summary>
+            总记录数
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.TableList.TableListCmpData.iTotalDisplayRecords">
+            <summary>
+            当前页实际显示的记录数
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.TableList.TableListCmpData.MetaObjName">
+            <summary>
+            实体名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.TableList.TableListCmpData.ViewName">
+            <summary>
+            列表视图名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.TableList.TableListCmpData.SortFields">
+            <summary>
+            排序的列数,默认为0
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UIMetaData.TableList.TableListSortField">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.TableList.TableListSortField.SortColumn">
+            <summary>
+            排序字段名
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.TableList.TableListSortField.SortColumnIndex">
+            <summary>
+            排序列索引
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.TableList.TableListSortField.SortDirction">
+            <summary>
+            排序方向
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.TableList.TableListCmpDataFromJson.sColumns">
+            <summary>
+            需要获取的列集合
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.TableList.TableListCmpDataFromJson.PageSize">
+            <summary>
+            每页显示条数 iDisplayLength
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.TableList.TableListCmpDataFromJson.iDisplayStart">
+            <summary>
+            读取数据的开始位置，默认为-1
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.TableList.TableListCmpDataFromJson.sEcho">
+            <summary>
+            前端组件使用，标识是否服务器端分页
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.TableList.TableListCmpDataFromJson.IsColVis">
+            <summary>
+            是否显示自定义列
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.TableList.TableListCmpDataFromJson.IsCheckAll">
+            <summary>
+            是否显示CheckBox列
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.TableList.TableListCmpDataFromJson.iTotalRecords">
+            <summary>
+            总记录数
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.TableList.TableListCmpDataFromJson.iTotalDisplayRecords">
+            <summary>
+            当前页实际显示的记录数
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.TableList.TableListCmpDataFromJson.MetaObjName">
+            <summary>
+            实体名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.TableList.TableListCmpDataFromJson.ViewName">
+            <summary>
+            列表视图名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.TableList.TableListCmpDataFromJson.SortFields">
+            <summary>
+            排序的列数,默认为0
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.TabView.TabViewComponent.TabItemViews">
+            <summary>
+            子组件
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.TabView.TabViewComponent.CMP_Data">
+            <summary>
+            数据组件
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.TabView.TabItemViewComponent.TabItemViews">
+            <summary>
+            子组件
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.TabView.TabItemViewComponent.CMP_Data">
+            <summary>
+            菜单数据区组件
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UIMetaData.ICompositeCmpData">
+            <summary>
+            组件元数据接口
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaData.ComponentType.Unknown">
+            <summary>
+            默认0时，为未知枚举值
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaData.ComponentType.Form">
+            <summary>
+            表单
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaData.ComponentType.FormTitle">
+            <summary>
+            表头
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaData.ComponentType.FormPart">
+            <summary>
+            表内区块
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaData.ComponentType.FormPartTitle">
+            <summary>
+            表内区块表头
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaData.ComponentType.SearchForm">
+            <summary>
+            搜索表单
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaData.ComponentType.ListView">
+            <summary>
+            列表：对应页面的普通列表和复合列表
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaData.ComponentType.FormListView">
+            <summary>
+            表单式列表
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaData.ComponentType.TableList">
+            <summary>
+            表格控件
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaData.ComponentType.ButtonList">
+            <summary>
+            功能按钮集合
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaData.ComponentType.ButtonItem">
+            <summary>
+            功能按钮
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.UIMetaData.ComponentType.Column">
+            <summary>
+            列
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.UIMetaData.LayoutType">
+            <summary>
+            系统内置的部分布局类型
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.BaseComponent.CmpId">
+            <summary>
+            组件ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.BaseComponent.CmpName">
+            <summary>
+            组件名
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.BaseComponent.CmpType">
+            <summary>
+            组件类型
+            CmpType 符合组件参照ComponentType
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.UIMetaData.MetaFieldComponent.CmpLabel">
+            <summary>
+            组件ID
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.Analyzer">
+            <summary>
+            分词器
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.Analyzer.none">
+            <summary>
+            不分词
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.Analyzer.standard">
+            <summary>
+            适用于大多数欧洲语言文档（转小写，默认停止词为英语停止词），中文时是以单个汉字停词
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.Analyzer.simple">
+            <summary>
+            仅仅转小写
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.Analyzer.whitespace">
+            <summary>
+            按空格分词
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.Analyzer.stop">
+            <summary>
+            转小写，默认停止词为英语停止词
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.Analyzer.keyword">
+            <summary>
+            不分词，适用于zip数据、ids等
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.Analyzer.pattern">
+            <summary>
+            通过正则表达式分词
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.Analyzer.ik">
+            <summary>
+            中文分词
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.Analyzer.comma_spliter">
+            <summary>
+            按，和空白符分词，正则表达式："[,|\\s]+"
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.Analyzer.keyword_chinese_collator">
+            <summary>
+            不分词，用于中文排序
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.Analyzer.lowercase_keyword_without_standard">
+            <summary>
+            不分词，转换成小写
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.Analyzer.paths">
+            <summary>
+            路径分词A/B/C 根据"/丰富"进行分词，结合PathLevel可以进行更加丰富的树形结构查询
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.CurrentStatus.Unknown">
+            <summary>
+            默认0时，为未知枚举值
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.DataSourceType.Unknown">
+            <summary>
+            默认0时，为未知枚举值
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.DataSourceType.Custom">
+            <summary>
+            用户自定义输入数据
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.DataSourceType.System">
+            <summary>
+            系统Const数据
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.DataSourceType.ReferenceField">
+            <summary>
+            引用数据
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.DataSourceType.ReferenceInterface">
+            <summary>
+            接口数据
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.DataSourceType.RatingScale">
+            <summary>
+            RatingScale
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.DataSourceType.Rest">
+            <summary>
+            Rest
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.DataSourceType.ReferenceObjectInterface">
+            <summary>
+            反射对象接口
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.DataSourceType.Trigger">
+            <summary>
+            触发器数据源
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.DataSourceDataType">
+            <summary>
+            用来区别返回的数据是复杂的(json)，还是简单的
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.DataSourceDataType.Simple">
+            <summary>
+            简单数据
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.DataSourceDataType.Complex">
+            <summary>
+            复杂数据
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.DataType">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.DataType.Unknown">
+            <summary>
+            默认0时，为未知枚举值
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.DataType.Number">
+            <summary>
+            数值型
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.DataType.Text">
+            <summary>
+            文本型
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.DataType.DateTime">
+            <summary>
+            日期时间型 
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.DataType.Boolean">
+            <summary>
+            Bool型
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.DataType.Date">
+            <summary>
+            日期型
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.DataType.StandradDate">
+            <summary>
+            标准日期类型
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.DataType.StandradDateTime">
+            <summary>
+            标准日期时间类型
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.IndexType">
+            <summary>
+            索引类别
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.IndexType.NotAnalyzed">
+            <summary>
+            索引，但不分析
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.IndexType.Analyzed">
+            <summary>
+            索引，采用分词索引，并统计频率等，只对字符串有效
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.IndexType.None">
+            <summary>
+            不索引
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.IndexType.ForeignKey">
+            <summary>
+            Foreign Key
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.MetaDataType">
+            <summary>
+            元数据的类型
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.MetaDataType.Unknown">
+            <summary>
+            默认0时，为未知枚举值
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.MetaStatus">
+            <summary>
+            元数据状态
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.MetaStatus.Unknown">
+            <summary>
+            默认0时，为未知枚举值
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.MetaStatus.New">
+            <summary>
+            新建
+            </summary>  
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.MetaStatus.Editing">
+            <summary>
+            编辑中
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.MetaStatus.Released">
+            <summary>
+            发布状态
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.MetaStatus.Deleted">
+            <summary>
+            停用/删除状态
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.MultiTenantConstant.DB_MetaFunction">
+            <summary>
+            功能按钮
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.MultiTenantConstant.DB_MetaFunction.ActionType_System">
+            <summary>
+            按钮类型—系统按钮
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.MultiTenantConstant.DB_MetaFunction.ActionType_Customzation">
+            <summary>
+            按钮类型—customzation
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.DataSource">
+            <summary>
+                数据源对象
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DataSource.TenantID">
+            <summary>
+            租户Id
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DataSource.Name">
+            <summary>
+                名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DataSource.Label">
+            <summary>
+                标签
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DataSource.Description">
+            <summary>
+                描述
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DataSource.Version">
+            <summary>
+                版本
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DataSource.DataSourceType">
+            <summary>
+                控件绑定数据源类型
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DataSource.Data">
+            <summary>
+                用户自定数据，仅当DataSourceType为Custom时生效
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DataSource.ConstName">
+            <summary>
+                系统Const数据，仅当DataSourceType为System时生效
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DataSource.InheritDataSourceName">
+            <summary>
+                继承的数据源名
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DataSource.ReferenceData">
+            <summary>
+                引用数据
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DataSource.InterfaceData">
+            <summary>
+                接口定义代码
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DataSource.RatingScale">
+            <summary>
+                RatingScale
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DataSource.CurrentStatus">
+            <summary>
+                状态
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DataSource.Application">
+            <summary>
+                应用名
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.DataSourceContext">
+            <summary>
+                接口数据源上下文参数
+            </summary>
+        </member>
+        <member name="M:Beisen.MultiTenant.Model.DataSourceContext.#ctor(System.String[],System.String,System.String[])">
+            <summary>
+                通过值批量获取数据源
+            </summary>
+            <param name="textFieldNames">文本字段集合</param>
+            <param name="valueFieldName">值字段</param>
+            <param name="values">值集合</param>
+        </member>
+        <member name="M:Beisen.MultiTenant.Model.DataSourceContext.#ctor(System.String[],System.String,System.String,System.Collections.Generic.Dictionary{System.String,Beisen.MultiTenant.Model.SortDirection},System.Int32,System.Int32)">
+            <summary>
+                通过ES搜索条件批量获取数据源（适用于使用了多租赁的应用）
+            </summary>
+            <param name="textFieldNames">文本字段集合</param>
+            <param name="valueFieldName">值字段</param>
+            <param name="filter">es dsl</param>
+            <param name="eSOrder">es sort</param>
+            <param name="from">从第几条开始</param>
+            <param name="size">获取多少条</param>
+        </member>
+        <member name="M:Beisen.MultiTenant.Model.DataSourceContext.#ctor(System.String[],System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+                通过DB搜索条件批量获取数据源（适用于使用了数据库的应用）
+            </summary>
+            <param name="textFieldNames">文本字段集合</param>
+            <param name="valueFieldName">值字段</param>
+            <param name="filter">数据库查询语句</param>
+            <param name="order">排序属性</param>
+            <param name="from">从第几条开始</param>
+            <param name="size">获取多少条</param>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DataSourceContext.DataSourceFilter">
+            <summary>
+                数据源过滤条件
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DataSourceContext.DataSourceKey">
+            <summary>
+            数据源Key
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DataSourceContext.TextValues">
+            <summary>
+            数据源方向翻译值
+            </summary>
+        </member>
+        <member name="M:Beisen.MultiTenant.Model.DataSourceObject.#ctor(System.String,System.String,System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <param name="text"></param>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DataSourceObject.Text">
+            <summary>
+            当key为复合数据(json串)时,将需要显示的文本赋值到Text字段上,20150526添加
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DataSourceObject.ObjectDataId">
+            <summary>
+                数据主键ID，只用于跟时间轴有关系的数据源接口
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.RestSourceObject">
+            <summary>
+            Rest接口用到的数据结构
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.DataSourceFilter">
+            <summary>
+                DataSource查询条件实体类
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DataSourceFilter.DsName">
+            <summary>
+            数据源名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DataSourceFilter.Filter">
+            <summary>
+            过滤条件
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DataSourceFilter.FilterKey">
+            <summary>
+            过滤值
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.DataSourceQuery">
+            <summary>
+            DataSource查询条件实体类
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DataSourceQuery.DsName">
+            <summary>
+                数据源名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DataSourceQuery.N">
+            <summary>
+            数据源名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DataSourceQuery.Q">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DataSourceQuery.Filter">
+            <summary>
+            过滤条件
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.DataSourceQuery.FilterKey">
+            <summary>
+            过滤值
+            </summary>
+        </member>
+        <member name="T:Beisen.MultiTenant.Model.FormDataContext">
+            <summary>
+                表单的数据上下文
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.FormDataContext.FormData">
+            <summary>
+                表单数据
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.FormDataContext.FormState">
+            <summary>
+                表单状态show,create,edit
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.FormDataContext.FormName">
+            <summary>
+                表单名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.FormDataContext.FieldName">
+            <summary>
+                字段名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaField.MetaDataType">
+            <summary>
+            字段类型
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaField.ObjectId">
+            <summary>
+            字段所属元数据id
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaField.Name">
+            <summary>
+            一、旧版本：    
+            1、标准：英文名称    
+            2、自定义：ext英文名称_租户ID_GuidHash    
+            二、新版本：    
+            1、标准：英文名称    
+            2、自定义：英文名称_租户ID    
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaField.ShortName">
+            <summary>
+            字段名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaField.FullName">
+            <summary>
+            应用名.对象名.字段名
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaField.Label">
+            <summary>
+            字段显示名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaField.Description">
+            <summary>
+            描述信息
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaField.DataType">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaField.IsRequired">
+            <summary>
+            是否必填
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaField.Length">
+            <summary>
+            字段长度
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaField.DefaultValue">
+            <summary>
+            字段默认值
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaField.FieldSetting">
+            <summary>
+            字段设置
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaField.IndexType">
+            <summary>
+            索引状态
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaField.Boost">
+            <summary>
+            搜索权重，影响搜索结果的排序。
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaField.StoreInIndex">
+            <summary>
+            是否将具体的数据保存在索引中，默认是False.
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaField.CurrentStatus">
+            <summary>
+            元数据状态
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaField.SortNum">
+            <summary>
+            排序值
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaField.MetaFieldGroupName">
+            <summary>
+            分组
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaField.MetaFieldLength">
+            <summary>
+            长度
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaField.MetaFieldPrecision">
+            <summary>
+            精度
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaField.ControlName">
+            <summary>
+            控件名
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaField.ValidateName">
+            <summary>
+            验证名
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaField.DataSourceName">
+            <summary>
+            数据源名
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaField.ScriptName">
+            <summary>
+            脚本模版名
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaField.PackID">
+            <summary>
+            控件包ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaField.IsSystemReserved">
+            <summary>
+            是否是系统保留字段
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaField.IsExtensible">
+            <summary>
+            是否可扩展编辑
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaField.IsCommonUse">
+            <summary>
+            是否常用字段
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaField.ControlPackName">
+            <summary>
+            控件名
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaField.cmp_data">
+            <summary>
+            Template模板中解析出来的cmp_data
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaField.cmp_type">
+            <summary>
+            Template模板中解析出来的CMPType
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaField.InnerName">
+            <summary>
+            字段的内部名称，为英文字符，供Cassandra存储使用
+            </summary>   
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaField.FullInnerName">
+            <summary>
+            字段的内部名称，为英文字符，供ElasticSearch存储使用
+            </summary>   
+        </member>
+        <member name="M:Beisen.MultiTenant.Model.MetaField.DerivedTypes">
+            <summary>
+            ESB类型继承关系获取
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Beisen.MultiTenant.Model.MetaField.WriteJson(Newtonsoft.Json.JsonWriter)">
+            <summary>
+            自定义JSON序列化
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaObject.MetaDataType">
+            <summary>
+            对象的类型
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaObject.Application">
+            <summary>
+            对象所属的应用
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaObject.Name">
+            <summary>
+            对象的名称，为英文字符
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaObject.Label">
+            <summary>
+            对象的显示名称，默认的语种是中文
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaObject.Description">
+            <summary>
+            对象描述
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaObject.IsExtensible">
+            <summary>
+            是否可扩展
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaObject.CurrentStatus">
+            <summary>
+            元数据对象的状态
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaObject.SortNum">
+            <summary>
+            排序值
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaObject.IsPublic">
+            <summary>
+            实体的可见性
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaObject.Fields">
+            <summary>
+            对象的字段集合
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaObject.MetaObjectGroup">
+            <summary>
+            分组
+            </summary>
+        </member>
+        <member name="F:Beisen.MultiTenant.Model.MetaObject.IconStyle">
+            <summary>
+            元数据对象图标
+            </summary>
+        </member>
+        <member name="M:Beisen.MultiTenant.Model.MetaObject.WriteJson(Newtonsoft.Json.JsonWriter)">
+            <summary>
+            自定义JSON序列化
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaPCRelation.Application">
+            <summary>
+            应用名称
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaPCRelation.PMetaObjectID">
+            <summary>
+            父对象ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.MetaPCRelation.CMetaObjectID">
+            <summary>
+            子对象ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.ObjectData.OperationType">
+            <summary>
+            数据操作类型
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.PageViewNew.ID">
+            <summary>
+            页面ID
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.PageViewNew.Title">
+            <summary>
+            页面标题
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.PageViewNew.Name">
+            <summary>
+            Name
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.PageViewNew.MetaObjectName">
+            <summary>
+            metaobjName
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.PageViewNew.MetaObject">
+            <summary>
+            元数据对象
+            </summary>
+        </member>
+        <member name="P:Beisen.MultiTenant.Model.PageViewNew.PageType">
+            <summary>
+            页面类型
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="StandardBuild">
+    <PropertyGroup>
+        <SlnDir>$(CCNetWorkingDirectory)\Solution\AppConnect.sln</SlnDir>
+        <BuildIncludeDllPath>
+            $(CCNetWorkingDirectory)\Src\Beisen.AppConnect.Api.WebSite\**\*;
+        </BuildIncludeDllPath>
+        <BuildExcludeDllPath>
+            $(CCNetWorkingDirectory)\Src\Beisen.AppConnect.Api.WebSite\bin\Release\*.xml
+        </BuildExcludeDllPath>
+    </PropertyGroup>
+    <Import Project="$(ConfigFilePath)\BuildScripts\BaseProj.proj"/>
+</Project>
